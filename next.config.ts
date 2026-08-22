@@ -13,6 +13,7 @@ const csp = [
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
   `connect-src 'self' https://api.web3forms.com https://plausible.io${isDev ? " ws:" : ""}`,
+  "frame-src https://www.google.com https://maps.google.com",
   "frame-ancestors 'none'",
   "object-src 'none'",
   "base-uri 'self'",
