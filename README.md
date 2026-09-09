@@ -4,6 +4,9 @@
 
 **Site web officiel de NJTECH Solution**, spécialiste du déploiement, de l'intégration et de la maintenance des infrastructures télécom mobiles 4G / 5G en France.
 
+[![CI](https://img.shields.io/github/actions/workflow/status/MOUADx4/njtech/ci.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white&label=CI)](https://github.com/MOUADx4/njtech/actions/workflows/ci.yml)
+[![Tests](https://img.shields.io/badge/tests-50%20passing-3DDC84?style=for-the-badge&logo=vitest&logoColor=white)](./tests)
+
 [![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
