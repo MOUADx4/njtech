@@ -158,9 +158,13 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <SmoothScroll />
+        {/* Lien d'évitement : premier élément focusable, visible au clavier uniquement */}
+        <a href="#contenu" className="skip-link">
+          Aller au contenu principal
+        </a>
         <Navbar />
         <PageTransition>
-          <main className="flex-1">{children}</main>
+          <main id="contenu" className="flex-1">{children}</main>
         </PageTransition>
         <Footer />
         <CookieConsent />

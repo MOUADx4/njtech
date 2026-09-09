@@ -63,7 +63,7 @@ export default function ContactPage() {
         <Container className="relative z-10">
           <div className="mb-9 flex items-center gap-3">
             <span className="h-px w-8 bg-signal-500" />
-            <span className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-white/38">
+            <span className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-white/55">
               Contact
             </span>
           </div>
@@ -71,7 +71,7 @@ export default function ContactPage() {
             Un projet télécom ?<br />
             <span className="text-signal-400">Parlons-en.</span>
           </h1>
-          <p className="mt-6 max-w-md text-[1rem] leading-[1.72] text-white/42">
+          <p className="mt-6 max-w-md text-[1rem] leading-[1.72] text-white/60">
             Notre équipe vous répond dans les 24h ouvrées.
           </p>
         </Container>
@@ -95,7 +95,7 @@ export default function ContactPage() {
                     className="group flex items-start justify-between gap-4 py-5 transition-colors"
                   >
                     <div>
-                      <div className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/25">
+                      <div className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/50">
                         {label}
                       </div>
                       <div className="mt-1.5 text-[0.875rem] font-medium text-white/55 transition-colors group-hover:text-white/90">
@@ -103,14 +103,14 @@ export default function ContactPage() {
                       </div>
                     </div>
                     {external && (
-                      <ExternalLink className="mt-1 size-3.5 shrink-0 text-white/20 transition-colors group-hover:text-white/50" />
+                      <ExternalLink className="mt-1 size-3.5 shrink-0 text-white/50 transition-colors group-hover:text-white/50" />
                     )}
                   </a>
                 ))}
               </div>
 
               <div className="mt-14">
-                <div className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/25">
+                <div className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/50">
                   Domaines d'intervention
                 </div>
                 <div className="mt-6 space-y-3.5">
@@ -136,7 +136,7 @@ export default function ContactPage() {
                   <div className="text-[0.875rem] font-semibold text-white/80 transition-colors group-hover:text-white">
                     WhatsApp
                   </div>
-                  <div className="mt-0.5 text-[0.72rem] text-white/35">
+                  <div className="mt-0.5 text-[0.72rem] text-white/55">
                     Réponse en 2h
                   </div>
                 </div>
@@ -164,13 +164,13 @@ export default function ContactPage() {
                   </div>
 
                   <div className="mt-8">
-                    <label htmlFor="contact-type" className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/25">
+                    <label htmlFor="contact-type" className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/50">
                       Type d'intervention
                     </label>
                     <select
                       id="contact-type"
                       name="type"
-                      className="mt-4 w-full appearance-none border-b border-white/[0.14] bg-transparent py-3 text-[0.9rem] text-white/60 outline-none transition-colors focus:border-signal-400"
+                      className="mt-4 w-full appearance-none border-b border-white/[0.14] bg-transparent py-3 text-[0.9rem] text-white/60 transition-colors focus:border-signal-400"
                     >
                       <option className="bg-[#070d18]">Déploiement antennes 4G/5G</option>
                       <option className="bg-[#070d18]">Faisceaux hertziens</option>
@@ -181,7 +181,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="mt-8">
-                    <label htmlFor="contact-message" className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/25">
+                    <label htmlFor="contact-message" className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/50">
                       Votre message
                       <span className="ml-1 text-signal-400" aria-hidden="true">*</span>
                       <span className="sr-only">(obligatoire)</span>
@@ -193,7 +193,7 @@ export default function ContactPage() {
                       required
                       aria-required="true"
                       placeholder="Décrivez votre besoin — localisation, technologie, délais…"
-                      className="mt-4 w-full resize-none border-b border-white/[0.14] bg-transparent py-3 text-[0.9rem] text-white/60 placeholder:text-white/18 outline-none transition-colors focus:border-signal-400"
+                      className="mt-4 w-full resize-none border-b border-white/[0.14] bg-transparent py-3 text-[0.9rem] text-white/60 placeholder:text-white/50 transition-colors focus:border-signal-400"
                     />
                   </div>
 
@@ -229,7 +229,7 @@ export default function ContactPage() {
           <div className="mt-20 border-t border-white/[0.07] pt-20">
             <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
               <div>
-                <div className="mb-2 text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/25">
+                <div className="mb-2 text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/50">
                   Localisation
                 </div>
                 <p className="text-[0.875rem] text-white/55">
@@ -240,7 +240,7 @@ export default function ContactPage() {
                 href={mapsLinkHref}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-[0.75rem] text-white/30 transition-colors hover:text-white/60"
+                className="inline-flex items-center gap-1.5 text-[0.75rem] text-white/55 transition-colors hover:text-white/60"
               >
                 Voir sur Google Maps
                 <ExternalLink className="size-3" />
@@ -274,7 +274,7 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/25">
+      <label htmlFor={name} className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/50">
         {label}
         {required && <span className="ml-1 text-signal-400" aria-hidden="true">*</span>}
         {required && <span className="sr-only">(obligatoire)</span>}
@@ -286,7 +286,7 @@ function Field({
         placeholder={placeholder}
         required={required}
         aria-required={required}
-        className="mt-4 w-full border-b border-white/[0.14] bg-transparent py-3 text-[0.9rem] text-white/60 placeholder:text-white/18 outline-none transition-colors focus:border-signal-400"
+        className="mt-4 w-full border-b border-white/[0.14] bg-transparent py-3 text-[0.9rem] text-white/60 placeholder:text-white/50 transition-colors focus:border-signal-400"
       />
     </div>
   );

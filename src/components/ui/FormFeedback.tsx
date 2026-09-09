@@ -21,7 +21,7 @@ export default function FormFeedback({ status, onReset, dark = true }: Props) {
           <p className={`text-[1.05rem] font-semibold ${dark ? "text-white" : "text-navy-900"}`}>
             Message envoyé avec succès !
           </p>
-          <p className={`mt-2 text-[0.85rem] ${dark ? "text-white/45" : "text-navy-600/70"}`}>
+          <p className={`mt-2 text-[0.85rem] ${dark ? "text-white/60" : "text-navy-600/70"}`}>
             Notre équipe vous répondra sous 24h ouvrées.
           </p>
         </div>
@@ -29,7 +29,7 @@ export default function FormFeedback({ status, onReset, dark = true }: Props) {
           onClick={onReset}
           className={`inline-flex items-center gap-2 text-[0.78rem] font-medium transition-colors ${
             dark
-              ? "text-white/35 hover:text-white/70"
+              ? "text-white/55 hover:text-white/70"
               : "text-navy-400 hover:text-navy-700"
           }`}
         >
@@ -53,7 +53,7 @@ export default function FormFeedback({ status, onReset, dark = true }: Props) {
         <p className={`text-[0.95rem] font-semibold ${dark ? "text-white" : "text-navy-900"}`}>
           Une erreur est survenue
         </p>
-        <p className={`mt-1.5 text-[0.82rem] ${dark ? "text-white/40" : "text-navy-600/65"}`}>
+        <p className={`mt-1.5 text-[0.82rem] ${dark ? "text-white/60" : "text-navy-600/65"}`}>
           Veuillez réessayer ou nous contacter par téléphone.
         </p>
       </div>

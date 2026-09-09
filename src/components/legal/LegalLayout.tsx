@@ -45,7 +45,7 @@ export default function LegalLayout({ title, lastUpdated, sections, children }: 
           <h1 className="text-[2.2rem] font-semibold tracking-[-0.033em] text-white md:text-[3rem]">
             {title}
           </h1>
-          <div className="mt-4 flex items-center gap-2 text-[0.75rem] text-white/38">
+          <div className="mt-4 flex items-center gap-2 text-[0.75rem] text-white/55">
             <Calendar className="size-3.5" />
             Dernière mise à jour : <strong className="font-semibold text-white/55">{lastUpdated}</strong>
           </div>

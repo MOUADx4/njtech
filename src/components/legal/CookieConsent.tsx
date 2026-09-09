@@ -82,7 +82,7 @@ export default function CookieConsent() {
           </div>
           <button
             onClick={() => dismiss(refuse)}
-            className="rounded-md p-1 text-white/30 transition-colors hover:text-white/70"
+            className="rounded-md p-1 text-white/55 transition-colors hover:text-white/70"
             aria-label="Refuser et fermer"
           >
             <X className="size-4" />
@@ -103,7 +103,7 @@ export default function CookieConsent() {
           {/* Panneau de préférences dépliable */}
           <button
             onClick={() => setExpanded((v) => !v)}
-            className="mt-3 flex items-center gap-1.5 text-[0.72rem] font-medium text-white/38 transition-colors hover:text-white/65"
+            className="mt-3 flex items-center gap-1.5 text-[0.72rem] font-medium text-white/55 transition-colors hover:text-white/65"
           >
             Personnaliser
             {expanded ? <ChevronUp className="size-3.5" /> : <ChevronDown className="size-3.5" />}
@@ -115,7 +115,7 @@ export default function CookieConsent() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-[0.75rem] font-semibold text-white/80">Nécessaires</p>
-                  <p className="text-[0.68rem] text-white/35">Fonctionnement du site</p>
+                  <p className="text-[0.68rem] text-white/55">Fonctionnement du site</p>
                 </div>
                 <div className="flex h-5 w-9 items-center justify-end rounded-full bg-signal-500/60 px-1">
                   <div className="size-3.5 rounded-full bg-white" />
@@ -125,7 +125,7 @@ export default function CookieConsent() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-[0.75rem] font-semibold text-white/80">Analytiques</p>
-                  <p className="text-[0.68rem] text-white/35">Mesure d'audience anonymisée</p>
+                  <p className="text-[0.68rem] text-white/55">Mesure d'audience anonymisée</p>
                 </div>
                 <button
                   role="switch"

@@ -52,7 +52,7 @@ export default function NotFound() {
           </h1>
 
           {/* Sub */}
-          <p className="mt-5 max-w-md text-[0.95rem] leading-[1.75] text-white/42">
+          <p className="mt-5 max-w-md text-[0.95rem] leading-[1.75] text-white/60">
             Le lien que vous avez suivi est incorrect ou la page a été supprimée.
             Utilisez la navigation ci-dessous pour retrouver votre chemin.
           </p>
@@ -71,7 +71,7 @@ export default function NotFound() {
 
           {/* Accès rapides */}
           <div className="mt-12 border-t border-white/[0.07] pt-10 w-full max-w-lg">
-            <p className="mb-6 text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/22">
+            <p className="mb-6 text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/50">
               Pages principales
             </p>
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
@@ -79,7 +79,7 @@ export default function NotFound() {
                 <Link
                   key={l.href}
                   href={l.href}
-                  className="group flex items-center justify-center gap-1.5 rounded-lg border border-white/[0.07] bg-white/[0.03] px-4 py-3 text-[0.78rem] font-medium text-white/45 transition-all duration-300 hover:border-signal-500/25 hover:bg-white/[0.07] hover:text-white"
+                  className="group flex items-center justify-center gap-1.5 rounded-lg border border-white/[0.07] bg-white/[0.03] px-4 py-3 text-[0.78rem] font-medium text-white/60 transition-all duration-300 hover:border-signal-500/25 hover:bg-white/[0.07] hover:text-white"
                 >
                   <l.icon className="size-3.5 shrink-0 text-signal-400/60 transition-colors group-hover:text-signal-400" />
                   {l.label}

@@ -91,7 +91,7 @@ export default function Clients() {
                     height={p.logoH}
                     className="h-8 w-auto object-contain opacity-85 transition-all duration-300 group-hover:opacity-100"
                   />
-                  <div className="shrink-0 rounded-md border border-white/[0.08] px-2.5 py-1 text-[0.58rem] font-semibold text-white/25">
+                  <div className="shrink-0 rounded-md border border-white/[0.08] px-2.5 py-1 text-[0.58rem] font-semibold text-white/50">
                     {p.tag}
                   </div>
                 </div>
@@ -114,7 +114,7 @@ export default function Clients() {
                 {/* Geography */}
                 <div className="mt-5 flex items-center gap-2">
                   <div className="size-1.5 rounded-full bg-signal-500/55" />
-                  <span className="text-[0.65rem] font-medium text-white/28">{p.geo}</span>
+                  <span className="text-[0.65rem] font-medium text-white/55">{p.geo}</span>
                 </div>
               </div>
             </motion.div>
@@ -129,7 +129,7 @@ export default function Clients() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mt-14 border-t border-white/[0.065] pt-10"
         >
-          <div className="mb-8 text-center text-[0.6rem] font-bold uppercase tracking-[0.3em] text-white/18">
+          <div className="mb-8 text-center text-[0.6rem] font-bold uppercase tracking-[0.3em] text-white/50">
             Également partenaires de
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
@@ -157,7 +157,7 @@ export default function Clients() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.36 }}
             >
-              <span className="text-[0.78rem] font-bold tracking-[0.2em] text-white/28 transition-colors duration-300 hover:text-white/65">
+              <span className="text-[0.78rem] font-bold tracking-[0.2em] text-white/55 transition-colors duration-300 hover:text-white/65">
                 HIVORY
               </span>
             </motion.div>

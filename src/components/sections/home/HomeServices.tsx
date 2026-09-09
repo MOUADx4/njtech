@@ -45,7 +45,7 @@ export default function Services() {
           />
           <Link
             href="/services"
-            className="group shrink-0 inline-flex items-center gap-2 text-[0.78rem] font-semibold text-white/38 hover:text-signal-400 transition-colors"
+            className="group shrink-0 inline-flex items-center gap-2 text-[0.78rem] font-semibold text-white/55 hover:text-signal-400 transition-colors"
           >
             Voir toutes les prestations
             <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />

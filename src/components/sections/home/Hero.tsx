@@ -95,7 +95,7 @@ function AnimatedStat({ value, label }: { value: string; label: string }) {
       <div className="text-[2rem] font-black tabular-nums leading-none tracking-tight text-white">
         {display}
       </div>
-      <div className="mt-2 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-white/45">
+      <div className="mt-2 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-white/60">
         {label}
       </div>
     </div>
@@ -142,7 +142,7 @@ export default function Hero() {
             {/* Overline */}
             <div className="mb-10 flex items-center gap-3">
               <span className="h-px w-8 shrink-0 bg-signal-500" />
-              <span className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-white/40">
+              <span className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-white/60">
                 Infrastructures Télécom &middot; France Métropolitaine
               </span>
             </div>
@@ -198,7 +198,7 @@ export default function Hero() {
               </Link>
               <a
                 href={`tel:${contact.phone.switchboardE164}`}
-                className="hidden items-center gap-2 text-[0.8rem] font-medium text-white/45 transition-colors hover:text-white/75 md:flex"
+                className="hidden items-center gap-2 text-[0.8rem] font-medium text-white/60 transition-colors hover:text-white/75 md:flex"
               >
                 <PhoneCall className="size-3.5" />
                 {contact.phone.switchboard}

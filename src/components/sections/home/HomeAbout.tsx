@@ -44,7 +44,7 @@ export default function HomeAbout() {
               en France.
             </h2>
 
-            <p className="mt-8 text-[1.02rem] leading-[1.82] text-navy-700/62">
+            <p className="mt-8 text-[1.02rem] leading-[1.82] text-navy-700/70">
               Basée à Épinay-sur-Seine, NJTECH Solution accompagne les opérateurs
               et intégrateurs nationaux dans le déploiement, l'intégration et la
               maintenance des infrastructures télécom 4G et 5G.

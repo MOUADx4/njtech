@@ -205,10 +205,10 @@ export default function Navbar() {
                 transition={{ delay: 0.42 }}
                 className="mt-auto"
               >
-                <a href={`tel:${contact.phone.switchboardE164}`} className="block text-[0.75rem] text-white/45 transition-colors hover:text-white/70">
+                <a href={`tel:${contact.phone.switchboardE164}`} className="block text-[0.75rem] text-white/60 transition-colors hover:text-white/70">
                   {contact.phone.switchboard}
                 </a>
-                <a href={mailtoHref} className="mt-1 block text-[0.75rem] text-white/45 transition-colors hover:text-white/70">
+                <a href={mailtoHref} className="mt-1 block text-[0.75rem] text-white/60 transition-colors hover:text-white/70">
                   {contact.email}
                 </a>
               </motion.div>
