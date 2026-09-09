@@ -7,6 +7,7 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Container from "@/components/ui/Container";
 import Logo from "@/components/ui/Logo";
+import Button from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { contact, mailtoHref, mainNav as links } from "@/config/site";
 
@@ -188,14 +189,15 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.32, duration: 0.35 }}
               >
-                <Link
+                <Button
                   href="/contact"
+                  size="lg"
                   onClick={() => setOpen(false)}
-                  className="btn-shimmer flex items-center justify-between bg-signal-500 px-5 py-3.5 text-[0.9rem] font-semibold text-white transition-colors hover:bg-signal-600 active:scale-[0.98]"
+                  className="w-full justify-between"
                 >
                   Nous contacter
                   <ArrowRight className="size-4" />
-                </Link>
+                </Button>
               </motion.div>
 
               {/* Coordonnées en pied de panneau */}

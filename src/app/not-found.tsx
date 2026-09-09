@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Home, Phone } from "lucide-react";
 import Container from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
   title: "Page introuvable",
@@ -58,16 +59,10 @@ export default function NotFound() {
           </p>
 
           {/* Bouton de retour */}
-          <Link
-            href="/"
-            className="group relative mt-10 inline-flex items-center gap-2.5 overflow-hidden rounded-lg bg-signal-500 px-7 py-3.5 text-[0.88rem] font-semibold text-white shadow-[0_4px_24px_rgba(3,151,231,0.4)] transition-shadow duration-300 hover:shadow-[0_6px_32px_rgba(3,151,231,0.55)] active:scale-[0.97]"
-          >
-            <span className="absolute inset-0 -translate-x-full bg-white/15 transition-transform duration-300 ease-out group-hover:translate-x-0" />
-            <span className="relative z-10 inline-flex items-center gap-2.5">
-              <ArrowLeft className="size-4" />
-              Retour à l'accueil
-            </span>
-          </Link>
+          <Button href="/" className="mt-10">
+            <ArrowLeft className="size-4" />
+            Retour à l'accueil
+          </Button>
 
           {/* Accès rapides */}
           <div className="mt-12 border-t border-white/[0.07] pt-10 w-full max-w-lg">

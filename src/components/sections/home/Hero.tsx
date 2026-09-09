@@ -2,9 +2,9 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import { ArrowRight, PhoneCall } from "lucide-react";
 import Container from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { contact } from "@/config/site";
 
@@ -152,19 +152,13 @@ export default function Hero() {
 
             {/* Boutons d'action */}
             <div className="mt-10 flex flex-wrap items-center gap-3">
-              <Link
-                href="/services"
-                className="btn-shimmer inline-flex items-center gap-2.5 bg-signal-500 px-7 py-3.5 text-[0.875rem] font-semibold text-white transition-colors duration-200 hover:bg-signal-600 active:scale-[0.98]"
-              >
+              <Button href="/services">
                 Nos prestations
                 <ArrowRight className="size-4" />
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2.5 border border-white/[0.18] px-7 py-3.5 text-[0.875rem] font-semibold text-white/70 transition-all duration-200 hover:border-white/40 hover:text-white active:scale-[0.98]"
-              >
+              </Button>
+              <Button href="/contact" variant="secondary">
                 Nous contacter
-              </Link>
+              </Button>
               <a
                 href={`tel:${contact.phone.switchboardE164}`}
                 className="hidden items-center gap-2 text-[0.8rem] font-medium text-white/60 transition-colors hover:text-white/75 md:flex"

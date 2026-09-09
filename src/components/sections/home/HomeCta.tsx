@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, PhoneCall } from "lucide-react";
 import Container from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
 import { contact } from "@/config/site";
 
 const trustedLogos = [
@@ -61,20 +61,14 @@ export default function HomeCta() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.28 }}
           className="mt-11 flex flex-wrap items-center justify-center gap-3"
         >
-          <Link
-            href="/contact"
-            className="btn-shimmer inline-flex items-center gap-2.5 bg-signal-500 px-8 py-3.5 text-[0.9rem] font-semibold text-white transition-colors hover:bg-signal-600 active:scale-[0.98]"
-          >
+          <Button href="/contact" size="lg">
             Démarrer un projet <ArrowRight className="size-4" />
-          </Link>
+          </Button>
 
-          <a
-            href={`tel:${contact.phone.switchboardE164}`}
-            className="inline-flex items-center gap-2.5 border border-white/[0.18] px-8 py-3.5 text-[0.9rem] font-semibold text-white/70 transition-all hover:border-white/40 hover:text-white active:scale-[0.98]"
-          >
+          <Button href={`tel:${contact.phone.switchboardE164}`} variant="secondary" size="lg">
             <PhoneCall className="size-4" />
             {contact.phone.switchboard}
-          </a>
+          </Button>
         </motion.div>
 
         {/* Trust logos */}

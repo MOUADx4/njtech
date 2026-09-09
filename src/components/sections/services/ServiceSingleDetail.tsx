@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Building2, Antenna, Cable, Wrench, ArrowRight, ArrowLeft } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Container from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
 import { SERVICES, type ServiceData } from "@/lib/services-data";
 
 const ICONS: Record<ServiceData["icon"], LucideIcon> = {
@@ -74,13 +75,10 @@ export default function ServiceSingleDetail({ service }: { service: ServiceData 
               </ul>
 
               <div className="mt-12">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2.5 bg-signal-500 px-7 py-3.5 text-[0.875rem] font-semibold text-white transition-colors hover:bg-signal-600 active:scale-[0.98]"
-                >
+                <Button href="/contact">
                   Demander un devis
                   <ArrowRight className="size-4" />
-                </Link>
+                  </Button>
               </div>
             </motion.div>
 

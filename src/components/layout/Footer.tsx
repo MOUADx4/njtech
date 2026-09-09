@@ -3,6 +3,7 @@ import Image from "next/image";
 import { MapPin, PhoneCall, Smartphone, Mail, ArrowRight, ArrowUpRight, Shield, Clock } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Logo from "@/components/ui/Logo";
+import Button from "@/components/ui/Button";
 import ManageCookiesButton from "@/components/legal/ManageCookiesButton";
 import { contact, footerNav, mailtoHref, social } from "@/config/site";
 
@@ -39,12 +40,9 @@ export default function Footer() {
               {" "}Notre équipe vous répond sous 24h.
             </p>
           </div>
-          <Link
-            href="/contact"
-            className="inline-flex shrink-0 items-center gap-2.5 bg-signal-500 px-7 py-3 text-[0.85rem] font-semibold text-white transition-colors hover:bg-signal-600 active:scale-[0.98]"
-          >
+          <Button href="/contact" className="shrink-0">
             Nous contacter <ArrowRight className="size-4" />
-          </Link>
+            </Button>
         </Container>
       </div>
 

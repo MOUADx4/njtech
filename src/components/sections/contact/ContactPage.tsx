@@ -5,6 +5,7 @@ import { Send, Loader2, ExternalLink, MessageCircle } from "lucide-react";
 import FormFeedback from "@/components/ui/FormFeedback";
 import { useContactForm } from "@/hooks/useContactForm";
 import Container from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
 import HeroBackground from "@/components/effects/HeroBackground";
 import {
   contact,
@@ -198,17 +199,13 @@ export default function ContactPage() {
                   </div>
 
                   <div className="mt-10 flex flex-wrap items-center gap-6 border-t border-white/[0.07] pt-8">
-                    <button
-                      type="submit"
-                      disabled={status === "loading"}
-                      className="inline-flex cursor-pointer items-center gap-2.5 bg-signal-500 px-7 py-3.5 text-[0.875rem] font-semibold text-white transition-colors hover:bg-signal-600 disabled:cursor-not-allowed disabled:opacity-60 active:scale-[0.98]"
-                    >
+                    <Button type="submit" disabled={status === "loading"}>
                       {status === "loading" ? (
                         <><Loader2 className="size-4 animate-spin" />Envoi…</>
                       ) : (
                         <>Envoyer<Send className="size-3.5" /></>
                       )}
-                    </button>
+                    </Button>
 
                     <a
                       href={whatsappHref}
