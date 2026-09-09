@@ -10,6 +10,7 @@
 
 import type { Metadata } from "next";
 import LegalLayout, { type LegalSection } from "@/components/legal/LegalLayout";
+import { contact, formattedAddress, mailtoHref } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité — NJTECH Solution",
@@ -52,9 +53,9 @@ export default function PolitiqueConfidentialitePage() {
         <li><strong>Société :</strong> NJTECH Solution</li>
         <li><strong>Forme juridique :</strong> [À COMPLÉTER]</li>
         <li><strong>SIREN :</strong> [À COMPLÉTER]</li>
-        <li><strong>Adresse :</strong> 9 rue de l'Église, 93800 Épinay-sur-Seine</li>
-        <li><strong>Téléphone :</strong> 09 88 50 40 15</li>
-        <li><strong>Email :</strong> <a href="mailto:contact@njtech-solution.fr">contact@njtech-solution.fr</a></li>
+        <li><strong>Adresse :</strong> {formattedAddress}</li>
+        <li><strong>Téléphone :</strong> {contact.phone.switchboard}</li>
+        <li><strong>Email :</strong> <a href={mailtoHref}>{contact.email}</a></li>
         <li><strong>Contact RGPD / DPO :</strong> [À COMPLÉTER — ex. rgpd@njtech.fr si DPO désigné]</li>
       </ul>
 
@@ -215,7 +216,7 @@ export default function PolitiqueConfidentialitePage() {
       <h2 id="exercice">Exercer vos droits</h2>
       <p>
         Pour exercer l'un de ces droits, adressez votre demande par email à{" "}
-        <a href="mailto:contact@njtech-solution.fr">contact@njtech-solution.fr</a> en indiquant votre nom,
+        <a href={mailtoHref}>{contact.email}</a> en indiquant votre nom,
         prénom et, si possible, votre email de contact.
       </p>
       <p>

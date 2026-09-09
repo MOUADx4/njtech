@@ -8,6 +8,7 @@
 
 import type { Metadata } from "next";
 import LegalLayout, { type LegalSection } from "@/components/legal/LegalLayout";
+import { contact, mailtoHref } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Politique de cookies — NJTECH Solution",
@@ -173,7 +174,7 @@ export default function PolitiqueCookiesPage() {
       <p>
         Pour toute question relative à notre utilisation des cookies ou pour exercer vos droits,
         contactez-nous à :{" "}
-        <a href="mailto:contact@njtech-solution.fr">contact@njtech-solution.fr</a>.
+        <a href={mailtoHref}>{contact.email}</a>.
       </p>
       <p>
         Pour en savoir plus sur vos droits, consultez notre{" "}

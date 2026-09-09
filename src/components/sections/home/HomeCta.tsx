@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, PhoneCall } from "lucide-react";
 import Container from "@/components/ui/Container";
+import { contact } from "@/config/site";
 
 const trustedLogos = [
   { name: "Bouygues Telecom", logo: "/images/BouyguesTelecom.png", w: 120, h: 36 },
@@ -68,11 +69,11 @@ export default function HomeCta() {
           </Link>
 
           <a
-            href="tel:+33988504015"
+            href={`tel:${contact.phone.switchboardE164}`}
             className="inline-flex items-center gap-2.5 border border-white/[0.18] px-8 py-3.5 text-[0.9rem] font-semibold text-white/70 transition-all hover:border-white/40 hover:text-white active:scale-[0.98]"
           >
             <PhoneCall className="size-4" />
-            09 88 50 40 15
+            {contact.phone.switchboard}
           </a>
         </motion.div>
 

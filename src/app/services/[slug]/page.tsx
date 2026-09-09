@@ -4,6 +4,7 @@ import { SERVICES, getService } from "@/lib/services-data";
 import PageHero from "@/components/layout/PageHero";
 import ServiceSingleDetail from "@/components/sections/services/ServiceSingleDetail";
 import HomeCta from "@/components/sections/home/HomeCta";
+import { siteConfig } from "@/config/site";
 
 // Pre-render all 4 service pages at build time
 export function generateStaticParams() {
@@ -24,13 +25,13 @@ export async function generateMetadata(
     openGraph: {
       title:       service.seo.title,
       description: service.seo.description,
-      url:         `https://njtech-solution.fr/services/${slug}`,
+      url:         `${siteConfig.url}/services/${slug}`,
       type:        "website",
       locale:      "fr_FR",
-      siteName:    "NJTECH Solution",
+      siteName:    siteConfig.name,
       images: [
         {
-          url:    "https://njtech-solution.fr/opengraph-image",
+          url:    `${siteConfig.url}/opengraph-image`,
           width:  1200,
           height: 630,
           alt:    service.seo.title,
@@ -43,7 +44,7 @@ export async function generateMetadata(
       description: service.seo.description,
     },
     alternates: {
-      canonical: `https://njtech-solution.fr/services/${slug}`,
+      canonical: `${siteConfig.url}/services/${slug}`,
     },
   };
 }

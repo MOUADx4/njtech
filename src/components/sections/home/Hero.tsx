@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowRight, PhoneCall } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { contact } from "@/config/site";
 
 const cyclingPhrases = [
   "le réseau mobile",
@@ -196,11 +197,11 @@ export default function Hero() {
                 Nous contacter
               </Link>
               <a
-                href="tel:+33988504015"
+                href={`tel:${contact.phone.switchboardE164}`}
                 className="hidden items-center gap-2 text-[0.8rem] font-medium text-white/45 transition-colors hover:text-white/75 md:flex"
               >
                 <PhoneCall className="size-3.5" />
-                09 88 50 40 15
+                {contact.phone.switchboard}
               </a>
             </div>
 

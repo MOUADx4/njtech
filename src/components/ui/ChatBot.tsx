@@ -5,6 +5,7 @@ import { MessageSquare, X, RotateCcw } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/cn";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { contact, formattedAddress } from "@/config/site";
 
 type Suggestion = { label: string; nextId: string };
 type Node       = { message: string; suggestions: Suggestion[] };
@@ -67,7 +68,7 @@ const nodes: Record<string, Node> = {
   },
 
   contact: {
-    message: "Voici nos coordonnées :\n\n9 rue de l'Église, 93800 Épinay-sur-Seine\n\nStandard — 09 88 50 40 15\nDirection — 06 59 31 37 51\nEmail — contact@njtech-solution.fr\n\nNous répondons sous 24h ouvrées.",
+    message: `Voici nos coordonnées :\n\n${formattedAddress}\n\nStandard — ${contact.phone.switchboard}\nDirection — ${contact.phone.direction}\nEmail — ${contact.email}\n\nNous répondons sous 24h ouvrées.`,
     suggestions: [
       { label: "Délais de réponse",       nextId: "contact_delais" },
       { label: "Envoyer un message",      nextId: "contact_form"   },

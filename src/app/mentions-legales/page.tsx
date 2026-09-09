@@ -12,6 +12,7 @@
 
 import type { Metadata } from "next";
 import LegalLayout, { type LegalSection } from "@/components/legal/LegalLayout";
+import { contact, formattedAddress, mailtoHref } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Mentions légales — NJTECH Solution",
@@ -43,13 +44,13 @@ export default function MentionsLegalesPage() {
         [À COMPLÉTER : forme juridique — ex. SASU] au capital de [À COMPLÉTER] euros.
       </p>
       <ul>
-        <li><strong>Siège social :</strong> 9 rue de l'Église, 93800 Épinay-sur-Seine, France</li>
+        <li><strong>Siège social :</strong> {formattedAddress}, France</li>
         <li><strong>SIREN :</strong> [À COMPLÉTER]</li>
         <li><strong>SIRET :</strong> [À COMPLÉTER]</li>
         <li><strong>RCS :</strong> [À COMPLÉTER — ex. RCS Bobigny XXX XXX XXX]</li>
         <li><strong>Numéro de TVA intracommunautaire :</strong> [À COMPLÉTER]</li>
-        <li><strong>Téléphone :</strong> 09 88 50 40 15</li>
-        <li><strong>Email :</strong> contact@njtech-solution.fr</li>
+        <li><strong>Téléphone :</strong> {contact.phone.switchboard}</li>
+        <li><strong>Email :</strong> {contact.email}</li>
       </ul>
 
       <h2 id="directeur">Directeur de la publication</h2>
@@ -59,7 +60,7 @@ export default function MentionsLegalesPage() {
       </p>
       <p>
         Pour toute question relative au contenu du site, vous pouvez nous contacter à
-        l'adresse suivante : <a href="mailto:contact@njtech-solution.fr">contact@njtech-solution.fr</a>.
+        l'adresse suivante : <a href={mailtoHref}>{contact.email}</a>.
       </p>
 
       <h2 id="hebergeur">Hébergeur</h2>

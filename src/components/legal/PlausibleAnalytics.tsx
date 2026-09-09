@@ -17,8 +17,10 @@
 
 import Script from "next/script";
 import { useConsent } from "@/hooks/useConsent";
+import { siteConfig } from "@/config/site";
 
-const PLAUSIBLE_DOMAIN = "njtech-solution.fr"; /* [À COMPLÉTER si domaine différent] */
+/** Domaine déclaré dans Plausible — dérivé de l'URL canonique du site. */
+const PLAUSIBLE_DOMAIN = new URL(siteConfig.url).hostname;
 
 export default function PlausibleAnalytics() {
   const { consent, mounted } = useConsent();
