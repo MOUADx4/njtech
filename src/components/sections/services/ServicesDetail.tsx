@@ -77,7 +77,7 @@ function ServiceBlock({
 
             <Link
               href={`/services/${s.slug}`}
-              className="mt-8 inline-flex items-center gap-2 text-[0.82rem] font-semibold text-signal-600 transition-colors hover:text-signal-500"
+              className="tap-target mt-8 inline-flex items-center gap-2 text-[0.82rem] font-semibold text-signal-600 transition-colors hover:text-signal-500"
             >
               En savoir plus <ArrowRight className="size-3.5" />
             </Link>

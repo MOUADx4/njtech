@@ -73,6 +73,24 @@ h1, h2, h3, h4, h5, h6 {
   color: transparent;
 }
 
+/* ── Cibles tactiles ───────────────────────────────────────────────────────
+   Sur écran tactile uniquement, garantit 44px de hauteur utile — seuil
+   recommandé par WCAG 2.5.5 et les Human Interface Guidelines. Les
+   pointeurs précis (souris, trackpad) ne sont pas concernés : la mise en
+   page desktop reste strictement identique. */
+@media (pointer: coarse) {
+  .tap-target {
+    min-height: 44px;
+    min-width: 44px;
+    align-items: center;
+  }
+  /* Ne force inline-flex que si l'élément n'a pas déjà son propre mode
+     d'affichage (grid, flex…), pour ne pas casser sa mise en page. */
+  .tap-target:not(.grid):not(.flex) {
+    display: inline-flex;
+  }
+}
+
 /* ── Lien d'évitement (accessibilité clavier) ──────────────────────────────
    Hors écran par défaut, il apparaît en haut à gauche dès qu'il reçoit le
    focus, permettant de sauter la navigation pour atteindre le contenu. */
@@ -81,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 1rem;
   left: -9999px;
   z-index: 60;
-  padding: 0.65rem 1rem;
+  padding: 0.75rem 1rem;
   background: var(--color-signal-500);
   color: #fff;
   font-size: 0.85rem;

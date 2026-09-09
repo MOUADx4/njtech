@@ -61,7 +61,7 @@ export default function HomeAbout() {
 
             <Link
               href="/a-propos"
-              className="mt-10 inline-flex items-center gap-2 text-[0.85rem] font-semibold text-navy-900 transition-colors hover:text-signal-600"
+              className="tap-target mt-10 inline-flex items-center gap-2 text-[0.85rem] font-semibold text-navy-900 transition-colors hover:text-signal-600"
             >
               En savoir plus sur NJTECH <ArrowRight className="size-4" />
             </Link>

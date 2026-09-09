@@ -240,7 +240,7 @@ export default function ContactPage() {
                 href={mapsLinkHref}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-[0.75rem] text-white/55 transition-colors hover:text-white/60"
+                className="tap-target inline-flex items-center gap-1.5 text-[0.75rem] text-white/55 transition-colors hover:text-white/60"
               >
                 Voir sur Google Maps
                 <ExternalLink className="size-3" />

@@ -98,7 +98,7 @@ export default function Navbar() {
           <button
             onClick={() => setOpen((v) => !v)}
             className={cn(
-              "grid size-9 cursor-pointer place-items-center rounded-lg transition-all duration-200 lg:hidden",
+              "grid size-11 cursor-pointer place-items-center rounded-lg transition-all duration-200 lg:hidden",
               isDark
                 ? "border border-white/[0.18] text-white hover:bg-white/[0.09]"
                 : "border border-navy-200 bg-white text-navy-900 hover:bg-navy-50",

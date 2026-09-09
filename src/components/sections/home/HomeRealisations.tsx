@@ -80,7 +80,7 @@ export default function Realisations() {
           />
           <Link
             href="/realisations"
-            className="group shrink-0 inline-flex items-center gap-2 text-[0.82rem] font-semibold text-navy-500 hover:text-navy-900 transition-colors"
+            className="tap-target group shrink-0 inline-flex items-center gap-2 text-[0.82rem] font-semibold text-navy-500 hover:text-navy-900 transition-colors"
           >
             Voir toutes les réalisations
             <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />

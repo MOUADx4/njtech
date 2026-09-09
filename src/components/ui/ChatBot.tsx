@@ -225,7 +225,7 @@ export default function ChatBot() {
           <div className="flex items-center gap-1">
             <button
               onClick={reset}
-              className="grid size-7 place-items-center text-white/50 hover:text-white/70 transition-colors"
+              className="grid size-9 place-items-center text-white/50 hover:text-white/70 transition-colors tap-target"
               aria-label="Réinitialiser"
               title="Nouvelle conversation"
             >
@@ -233,7 +233,7 @@ export default function ChatBot() {
             </button>
             <button
               onClick={() => setOpen(false)}
-              className="grid size-7 place-items-center text-white/50 hover:text-white transition-colors"
+              className="grid size-9 place-items-center text-white/50 hover:text-white transition-colors tap-target"
               aria-label="Fermer"
             >
               <X className="size-4" />
@@ -299,7 +299,7 @@ export default function ChatBot() {
               <button
                 key={s.label}
                 onClick={() => handleSuggestion(s)}
-                className="w-full cursor-pointer text-left px-3.5 py-2.5 text-[0.78rem] text-white/55 border border-white/[0.07] transition-all duration-150 hover:border-signal-500/40 hover:bg-white/[0.04] hover:text-white/90 active:scale-[0.99]"
+                className="tap-target w-full cursor-pointer text-left px-3.5 py-2.5 text-[0.78rem] text-white/55 border border-white/[0.07] transition-all duration-150 hover:border-signal-500/40 hover:bg-white/[0.04] hover:text-white/90 active:scale-[0.99]"
               >
                 {s.label}
               </button>

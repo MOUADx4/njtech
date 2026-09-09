@@ -45,7 +45,7 @@ export default function Services() {
           />
           <Link
             href="/services"
-            className="group shrink-0 inline-flex items-center gap-2 text-[0.78rem] font-semibold text-white/55 hover:text-signal-400 transition-colors"
+            className="tap-target group shrink-0 inline-flex items-center gap-2 text-[0.78rem] font-semibold text-white/55 hover:text-signal-400 transition-colors"
           >
             Voir toutes les prestations
             <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -91,7 +91,7 @@ export default function Services() {
                   {/* Bouton d'action */}
                   <Link
                     href={`/services/${s.slug}`}
-                    className="mt-7 inline-flex items-center gap-2 text-[0.75rem] font-semibold text-signal-400/70 transition-all duration-300 group-hover:gap-3 group-hover:text-signal-400"
+                    className="tap-target mt-7 inline-flex items-center gap-2 text-[0.75rem] font-semibold text-signal-400/70 transition-all duration-300 group-hover:gap-3 group-hover:text-signal-400"
                   >
                     En savoir plus <ArrowUpRight className="size-3.5" />
                   </Link>
