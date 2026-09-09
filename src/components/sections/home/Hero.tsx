@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, PhoneCall } from "lucide-react";
@@ -23,48 +23,18 @@ const stats = [
 ];
 
 
-const SCRAMBLE_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789·/%+";
-
+/**
+ * Statistique révélée au défilement.
+ *
+ * La valeur affichée est toujours la valeur réelle : l'animation ne porte que
+ * sur l'opacité et le flou. Les compteurs incrémentaux ont été retirés car ils
+ * affichaient des états faux et lisibles — « 1/7 » en route vers « 24/7 »,
+ * « 4 % » vers « 100 % » — le temps de converger.
+ */
 function AnimatedStat({ value, label }: { value: string; label: string }) {
-  const ref        = useRef<HTMLDivElement>(null);
-  const [display, setDisplay] = useState<string>(value);
-  const [fired,   setFired]   = useState(false);
-  const raf        = useRef<number>(0);
-  const reduced    = useReducedMotion();
-
-  const runNumeric = useCallback((target: number, suffix: string) => {
-    const duration = 1600;
-    const start    = performance.now();
-    const tick = (now: number) => {
-      const p = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - p, 3);
-      setDisplay(Math.round(eased * target) + suffix);
-      if (p < 1) raf.current = requestAnimationFrame(tick);
-    };
-    raf.current = requestAnimationFrame(tick);
-  }, []);
-
-  const runScramble = useCallback((target: string) => {
-    const totalFrames = 28;
-    let frame = 0;
-    const tick = () => {
-      frame++;
-      const progress = frame / totalFrames;
-      const revealed = Math.floor(progress * target.length);
-      const scrambled = target
-        .split("")
-        .map((ch, i) => {
-          if (i < revealed) return ch;
-          if (ch === " " || ch === "/" || ch === "·") return ch;
-          return SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)];
-        })
-        .join("");
-      setDisplay(scrambled);
-      if (frame < totalFrames) raf.current = requestAnimationFrame(tick);
-      else setDisplay(target);
-    };
-    raf.current = requestAnimationFrame(tick);
-  }, []);
+  const ref     = useRef<HTMLDivElement>(null);
+  const [fired, setFired] = useState(false);
+  const reduced = useReducedMotion();
 
   useEffect(() => {
     const el = ref.current;
@@ -77,24 +47,22 @@ function AnimatedStat({ value, label }: { value: string; label: string }) {
     return () => obs.disconnect();
   }, []);
 
-  useEffect(() => {
-    if (!fired) return;
-    if (reduced) { setDisplay(value); return; }
-    cancelAnimationFrame(raf.current);
-    const numMatch = value.match(/^(\d+)(.*)$/);
-    if (numMatch) {
-      runNumeric(parseInt(numMatch[1]), numMatch[2]);
-    } else {
-      runScramble(value);
-    }
-    return () => cancelAnimationFrame(raf.current);
-  }, [fired, value, reduced, runNumeric, runScramble]);
+  const visible = fired || reduced;
 
   return (
     <div ref={ref} className="px-6 py-7 md:px-10">
-      <div className="text-[2rem] font-black tabular-nums leading-none tracking-tight text-white">
-        {display}
-      </div>
+      <motion.div
+        className="text-[2rem] font-black tabular-nums leading-none tracking-tight text-white"
+        initial={false}
+        animate={
+          visible
+            ? { opacity: 1, filter: "blur(0px)",  y: 0 }
+            : { opacity: 0, filter: "blur(10px)", y: 8 }
+        }
+        transition={{ duration: reduced ? 0 : 0.55, ease: [0.16, 1, 0.3, 1] }}
+      >
+        {value}
+      </motion.div>
       <div className="mt-2 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-white/60">
         {label}
       </div>
@@ -151,9 +119,10 @@ export default function Hero() {
             <h1 className="text-[clamp(2.8rem,5.6vw,5.6rem)] font-bold leading-[1.06] tracking-[-0.032em]">
               <span className="block text-white/95">Nous bâtissons</span>
 
-              {/* Animated ticker — Cormorant Garamond italic */}
-              <span className="block overflow-hidden">
-                <AnimatePresence mode="wait" initial={false}>
+              {/* popLayout : la phrase sortante est retirée du flux, entrée et
+                  sortie se chevauchent donc — sans le vide que laissait "wait". */}
+              <span className="relative block overflow-hidden">
+                <AnimatePresence mode="popLayout" initial={false}>
                   <motion.span
                     key={idx}
                     className="block italic text-signal-400"
