@@ -6,7 +6,15 @@ import FormFeedback from "@/components/ui/FormFeedback";
 import { useContactForm } from "@/hooks/useContactForm";
 import Container from "@/components/ui/Container";
 import HeroBackground from "@/components/effects/HeroBackground";
-import { contact, formattedAddress, mailtoHref, mapsEmbedSrc, mapsLinkHref, siteConfig } from "@/config/site";
+import {
+  contact,
+  formattedAddress,
+  mailtoHref,
+  mapsEmbedSrc,
+  mapsLinkHref,
+  siteConfig,
+  whatsappHref,
+} from "@/config/site";
 
 const contactInfo = [
   { label: "Siège social", value: formattedAddress, href: mapsLinkHref, external: true },
@@ -115,9 +123,8 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* TODO: remplacer XXXXXXXXX par le vrai numéro WhatsApp (format international sans +) */}
               <a
-                href="https://wa.me/33XXXXXXXXX"
+                href={whatsappHref}
                 target="_blank"
                 rel="noreferrer"
                 className="group mt-10 flex items-center gap-4 border border-[#25D366]/20 bg-[#25D366]/[0.05] p-5 transition-all duration-200 hover:border-[#25D366]/40 hover:bg-[#25D366]/[0.09]"
@@ -203,9 +210,8 @@ export default function ContactPage() {
                       )}
                     </button>
 
-                    {/* TODO: remplacer XXXXXXXXX par le vrai numéro WhatsApp */}
                     <a
-                      href="https://wa.me/33XXXXXXXXX"
+                      href={whatsappHref}
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center gap-2 text-[0.8rem] font-medium text-[#25D366]/60 transition-colors hover:text-[#25D366]"

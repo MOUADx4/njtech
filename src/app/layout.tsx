@@ -17,7 +17,7 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
-import { contact, siteConfig } from "@/config/site";
+import { contact, siteConfig, social } from "@/config/site";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -90,8 +90,7 @@ const jsonLd = {
         "contactType":      "customer service",
         "availableLanguage": "French",
       },
-      // TODO: remplacer par l'URL LinkedIn réelle avant mise en prod
-      "sameAs": ["https://www.linkedin.com/company/njtech-solution"],
+      "sameAs": [social.linkedin],
     },
     {
       "@type":            ["LocalBusiness", "ProfessionalService"],

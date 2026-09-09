@@ -53,6 +53,23 @@ export const mapsQuery = encodeURIComponent(`${formattedAddress} France`);
 export const mapsLinkHref = `https://maps.google.com/?q=${mapsQuery}`;
 export const mapsEmbedSrc = `https://maps.google.com/maps?q=${mapsQuery}&output=embed&z=17&hl=fr`;
 
+/**
+ * Liens externes de l'entreprise.
+ *
+ * TODO: ces deux valeurs sont encore des repères à remplacer avant la mise en
+ * production. Les modifier ici les met à jour partout : pied de page, page
+ * contact et données structurées lues par Google.
+ */
+export const social = {
+  /** URL de la page entreprise LinkedIn. */
+  linkedin: "https://www.linkedin.com/company/njtech-solution",
+  /** Numéro WhatsApp au format international, sans « + » ni espaces. */
+  whatsapp: "33XXXXXXXXX",
+} as const;
+
+/** Lien de conversation WhatsApp, dérivé du numéro ci-dessus. */
+export const whatsappHref = `https://wa.me/${social.whatsapp}`;
+
 /** Navigation principale (Navbar). */
 export const mainNav = [
   { href: "/a-propos", label: "À propos" },

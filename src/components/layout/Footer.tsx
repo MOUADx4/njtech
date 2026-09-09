@@ -4,7 +4,7 @@ import { MapPin, PhoneCall, Smartphone, Mail, ArrowRight, ArrowUpRight, Shield, 
 import Container from "@/components/ui/Container";
 import Logo from "@/components/ui/Logo";
 import ManageCookiesButton from "@/components/legal/ManageCookiesButton";
-import { contact, footerNav, mailtoHref } from "@/config/site";
+import { contact, footerNav, mailtoHref, social } from "@/config/site";
 
 const { company, services, legal } = footerNav;
 
@@ -52,7 +52,7 @@ export default function Footer() {
 
         <div className="grid grid-cols-1 gap-12 py-16 sm:grid-cols-2 lg:grid-cols-12">
 
-          {/* Brand */}
+          {/* Identité */}
           <div className="lg:col-span-3">
             <Logo dark />
             <p className="mt-5 max-w-xs text-[0.82rem] leading-[1.85] text-white/38">
@@ -70,9 +70,8 @@ export default function Footer() {
               ))}
             </div>
 
-            {/* TODO: remplacer href par l'URL LinkedIn réelle */}
             <a
-              href="https://www.linkedin.com/company/njtech-solution"
+              href={social.linkedin}
               target="_blank"
               rel="noreferrer"
               aria-label="NJTECH Solution sur LinkedIn"
