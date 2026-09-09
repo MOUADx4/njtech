@@ -10,9 +10,9 @@ import type { Metadata } from "next";
 import LegalLayout, { type LegalSection } from "@/components/legal/LegalLayout";
 
 export const metadata: Metadata = {
-  title: "Conditions Générales d'Utilisation — NJTECH Solution",
+  title: "Conditions Générales d'Utilisation",
   description:
-    "Conditions Générales d'Utilisation du site njtech.fr. Règles d'accès, propriété intellectuelle, responsabilité et droit applicable.",
+    "Conditions Générales d'Utilisation du site njtech-solution.fr. Règles d'accès, propriété intellectuelle, responsabilité et droit applicable.",
   robots: { index: true, follow: true },
 };
 

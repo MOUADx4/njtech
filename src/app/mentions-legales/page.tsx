@@ -15,7 +15,7 @@ import LegalLayout, { type LegalSection } from "@/components/legal/LegalLayout";
 import { contact, formattedAddress, mailtoHref } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Mentions légales — NJTECH Solution",
+  title: "Mentions légales",
   description:
     "Mentions légales du site NJTECH Solution, spécialiste des infrastructures télécom 4G/5G en France.",
   robots: { index: true, follow: true },

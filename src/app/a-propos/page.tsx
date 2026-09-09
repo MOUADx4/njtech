@@ -8,7 +8,7 @@ import Coverage from "@/components/sections/about/Coverage";
 import HomeCta from "@/components/sections/home/HomeCta";
 
 export const metadata: Metadata = {
-  title: "À propos — NJTECH Solution",
+  title: "À propos",
   description: "Découvrez NJTECH Solution : 7 ans d'expertise terrain, 2 équipes mobiles, un bureau d'étude dédié. Partenaire de Bouygues Telecom, Free Mobile et Sogetrel.",
 };
 

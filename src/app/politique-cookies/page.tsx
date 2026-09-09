@@ -11,7 +11,7 @@ import LegalLayout, { type LegalSection } from "@/components/legal/LegalLayout";
 import { contact, mailtoHref } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Politique de cookies — NJTECH Solution",
+  title: "Politique de cookies",
   description:
     "Politique d'utilisation des cookies sur le site NJTECH Solution, conformément aux recommandations de la CNIL.",
   robots: { index: true, follow: true },

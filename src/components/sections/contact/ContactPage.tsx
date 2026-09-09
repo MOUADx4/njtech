@@ -157,10 +157,10 @@ export default function ContactPage() {
                   <input type="checkbox" name="botcheck" className="hidden" aria-hidden="true" tabIndex={-1} />
 
                   <div className="grid gap-x-8 gap-y-8 md:grid-cols-2">
-                    <Field label="Nom complet" name="name"    type="text"  placeholder="Jean Dupont"             required />
-                    <Field label="Entreprise"  name="company" type="text"  placeholder="Opérateur / Intégrateur"         />
-                    <Field label="Email"       name="email"   type="email" placeholder="jean@entreprise.fr"      required />
-                    <Field label="Téléphone"   name="phone"   type="tel"   placeholder="06 00 00 00 00"                  />
+                    <Field label="Nom complet" name="name"    type="text"  placeholder="Jean Dupont"        required autoComplete="name" />
+                    <Field label="Entreprise"  name="company" type="text"  placeholder="Opérateur / Intégrateur" autoComplete="organization" />
+                    <Field label="Email"       name="email"   type="email" placeholder="jean@entreprise.fr" required autoComplete="email" />
+                    <Field label="Téléphone"   name="phone"   type="tel"   placeholder="06 00 00 00 00"     autoComplete="tel" />
                   </div>
 
                   <div className="mt-8">
@@ -170,7 +170,7 @@ export default function ContactPage() {
                     <select
                       id="contact-type"
                       name="type"
-                      className="mt-4 w-full appearance-none border-b border-white/[0.14] bg-transparent py-3 text-[0.9rem] text-white/60 transition-colors focus:border-signal-400"
+                      className="mt-4 w-full appearance-none border-b border-white/[0.14] bg-transparent py-3 text-base md:text-[0.9rem] text-white/60 transition-colors focus:border-signal-400"
                     >
                       <option className="bg-[#070d18]">Déploiement antennes 4G/5G</option>
                       <option className="bg-[#070d18]">Faisceaux hertziens</option>
@@ -193,7 +193,7 @@ export default function ContactPage() {
                       required
                       aria-required="true"
                       placeholder="Décrivez votre besoin — localisation, technologie, délais…"
-                      className="mt-4 w-full resize-none border-b border-white/[0.14] bg-transparent py-3 text-[0.9rem] text-white/60 placeholder:text-white/50 transition-colors focus:border-signal-400"
+                      className="mt-4 w-full resize-none border-b border-white/[0.14] bg-transparent py-3 text-base md:text-[0.9rem] text-white/60 placeholder:text-white/50 transition-colors focus:border-signal-400"
                     />
                   </div>
 
@@ -268,9 +268,10 @@ export default function ContactPage() {
 }
 
 function Field({
-  label, name, type, placeholder, required,
+  label, name, type, placeholder, required, autoComplete,
 }: {
-  label: string; name: string; type: string; placeholder: string; required?: boolean;
+  label: string; name: string; type: string; placeholder: string;
+  required?: boolean; autoComplete?: string;
 }) {
   return (
     <div>
@@ -286,7 +287,8 @@ function Field({
         placeholder={placeholder}
         required={required}
         aria-required={required}
-        className="mt-4 w-full border-b border-white/[0.14] bg-transparent py-3 text-[0.9rem] text-white/60 placeholder:text-white/50 transition-colors focus:border-signal-400"
+        autoComplete={autoComplete}
+        className="mt-4 w-full border-b border-white/[0.14] bg-transparent py-3 text-base md:text-[0.9rem] text-white/60 placeholder:text-white/50 transition-colors focus:border-signal-400"
       />
     </div>
   );

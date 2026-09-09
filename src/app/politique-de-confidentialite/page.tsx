@@ -13,7 +13,7 @@ import LegalLayout, { type LegalSection } from "@/components/legal/LegalLayout";
 import { contact, formattedAddress, mailtoHref } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Politique de confidentialité — NJTECH Solution",
+  title: "Politique de confidentialité",
   description:
     "Politique de confidentialité et de protection des données personnelles de NJTECH Solution, conformément au RGPD.",
   robots: { index: true, follow: true },

@@ -5,7 +5,7 @@ import Methodology from "@/components/sections/about/Methodology";
 import HomeCta from "@/components/sections/home/HomeCta";
 
 export const metadata: Metadata = {
-  title: "Prestations — NJTECH Solution",
+  title: "Prestations",
   description: "Aménagement de sites radio, déploiement antennes 4G/5G, bureau d'étude, maintenance. NJTECH couvre toute la chaîne de valeur télécom.",
 };
 

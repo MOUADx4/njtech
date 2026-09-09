@@ -5,7 +5,7 @@ import RealisationsGrid from "@/components/sections/shared/RealisationsGrid";
 import HomeCta from "@/components/sections/home/HomeCta";
 
 export const metadata: Metadata = {
-  title: "Réalisations — NJTECH Solution",
+  title: "Réalisations",
   description: "Découvrez les réalisations NJTECH : pylônes 5G, interventions en hauteur, armoires BTS, déploiements en zones rurales.",
 };
 
