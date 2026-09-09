@@ -138,6 +138,14 @@ NEXT_PUBLIC_WEB3FORMS_KEY=votre-cle-ici
 | `npm run dev` | Démarre le serveur de développement (Turbopack) |
 | `npm run build` | Génère la version de production optimisée |
 | `npm start` | Sert la version de production (après `build`) |
+| `npm run lint` | Analyse le code avec ESLint |
+| `npm run lint:fix` | Corrige automatiquement ce qui peut l'être |
+| `npm run typecheck` | Vérifie les types TypeScript sans générer de fichiers |
+| `npm run format` | Formate le code avec Prettier |
+| `npm run format:check` | Vérifie le formatage sans modifier les fichiers |
+
+Ces trois commandes sont rejouées automatiquement à chaque push via GitHub Actions
+(`.github/workflows/ci.yml`) : `lint`, `typecheck`, puis `build`.
 
 ---
 
@@ -145,6 +153,10 @@ NEXT_PUBLIC_WEB3FORMS_KEY=votre-cle-ici
 
 ```
 njtech/
+├── .github/workflows/       Intégration continue (lint, types, build)
+├── docs/
+│   ├── design-system.md     Règles de design (couleurs, typo, espacements)
+│   └── screenshots/         Captures utilisées dans ce README
 ├── public/
 │   ├── images/              Photos & logos (issus du dossier d'entreprise)
 │   └── videos/              Vidéo d'arrière-plan du hero
@@ -165,12 +177,19 @@ njtech/
 │   │   └── icon.tsx         Favicon
 │   ├── components/
 │   │   ├── layout/          Navbar, Footer, transitions de page
-│   │   ├── sections/        Blocs de contenu (Hero, About, Services…)
+│   │   ├── sections/        Blocs de contenu, groupés par page
+│   │   │   ├── home/        Hero, HomeAbout, HomeServices, WhyNJTECH…
+│   │   │   ├── services/    ServicesDetail, ServiceSingleDetail
+│   │   │   ├── about/       About, Methodology, Coverage, Safety
+│   │   │   ├── contact/     ContactPage, FranceCoverageMap
+│   │   │   └── shared/      Blocs réutilisés sur plusieurs pages
 │   │   ├── ui/              Composants réutilisables (boutons, compteurs…)
 │   │   ├── effects/         Smooth scroll, arrière-plans animés
 │   │   └── legal/           Consentement cookies, analytics
+│   ├── config/
+│   │   └── site.ts          ⭐ Coordonnées, navigation et SEO — source unique
 │   ├── hooks/               Hooks personnalisés (formulaire, consentement…)
-│   └── lib/                 Utilitaires (fusion de classes)
+│   └── lib/                 Données des prestations, utilitaires
 ├── next.config.ts
 ├── tsconfig.json
 └── package.json
@@ -217,9 +236,17 @@ Tout hébergeur compatible Node.js fonctionne également via `npm run build` pui
 
 ## Personnalisation
 
+- **Coordonnées, navigation, SEO** : `src/config/site.ts` — **un seul fichier**.
+  Adresse, téléphones, e-mail, liens du menu et du pied de page y sont définis une
+  fois et réutilisés partout (en-tête, pied de page, pages légales, chatbot,
+  données structurées Google, carte). Modifier l'e-mail ici le met à jour sur
+  l'ensemble du site.
 - **Couleurs & animations** : `src/app/globals.css` (variables `--color-*`).
-- **Contenu** : chaque bloc est un composant isolé dans `src/components/sections/`.
-- **Coordonnées** : `Navbar.tsx`, `Footer.tsx` et la page `contact/`.
+- **Contenu des blocs** : chaque bloc est un composant isolé dans
+  `src/components/sections/<page>/`.
+- **Prestations** : `src/lib/services-data.ts` (titres, descriptions, SEO des
+  4 pages de services). Les slugs sont typés : une faute de frappe est bloquée
+  par `npm run typecheck`.
 - **Images** : remplacer les fichiers dans `public/images/`.
 
 ---

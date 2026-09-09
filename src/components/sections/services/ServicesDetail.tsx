@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { Building2, Antenna, Cable, Wrench, ArrowRight } from "lucide-react";
 import Container from "@/components/ui/Container";
+import type { ServiceSlug } from "@/lib/services-data";
 
 const services = [
   {
@@ -64,7 +65,7 @@ const services = [
     ],
     image: "/images/install-5g.png",
   },
-];
+] satisfies readonly { slug: ServiceSlug; [key: string]: unknown }[];
 
 export default function ServicesDetail() {
   return (

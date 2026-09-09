@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Building2, Antenna, Cable, Wrench, ArrowUpRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeader from "@/components/ui/SectionHeader";
+import type { ServiceSlug } from "@/lib/services-data";
 
 const services = [
   {
@@ -40,7 +41,7 @@ const services = [
     text: "Préparation matériel, interventions correctives, vérification avant remise en service. Réactivité garantie sous 48h sur l'ensemble du territoire.",
     image: "/images/install-5g.png",
   },
-];
+] satisfies readonly { slug: ServiceSlug; [key: string]: unknown }[];
 
 export default function Services() {
   return (
