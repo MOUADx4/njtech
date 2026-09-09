@@ -1,11 +1,11 @@
-import Hero from "@/components/sections/Hero";
-import LogoMarquee from "@/components/sections/LogoMarquee";
-import HomeAbout from "@/components/sections/HomeAbout";
-import WhyNJTECH from "@/components/sections/WhyNJTECH";
-import HomeServices from "@/components/sections/HomeServices";
-import HomeRealisations from "@/components/sections/HomeRealisations";
-import Clients from "@/components/sections/Clients";
-import HomeCta from "@/components/sections/HomeCta";
+import Hero from "@/components/sections/home/Hero";
+import LogoMarquee from "@/components/sections/shared/LogoMarquee";
+import HomeAbout from "@/components/sections/home/HomeAbout";
+import WhyNJTECH from "@/components/sections/home/WhyNJTECH";
+import HomeServices from "@/components/sections/home/HomeServices";
+import HomeRealisations from "@/components/sections/home/HomeRealisations";
+import Clients from "@/components/sections/shared/Clients";
+import HomeCta from "@/components/sections/home/HomeCta";
 
 export default function Home() {
   return (

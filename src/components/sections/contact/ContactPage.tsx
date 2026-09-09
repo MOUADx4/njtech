@@ -6,12 +6,13 @@ import FormFeedback from "@/components/ui/FormFeedback";
 import { useContactForm } from "@/hooks/useContactForm";
 import Container from "@/components/ui/Container";
 import HeroBackground from "@/components/effects/HeroBackground";
+import { contact, formattedAddress, mailtoHref, mapsEmbedSrc, mapsLinkHref, siteConfig } from "@/config/site";
 
 const contactInfo = [
-  { label: "Siège social", value: "9 rue de l'Église, 93800 Épinay-sur-Seine", href: "https://maps.google.com/?q=9+rue+de+l'Église+93800+Épinay-sur-Seine", external: true },
-  { label: "Standard",     value: "09 88 50 40 15",  href: "tel:+33988504015" },
-  { label: "Direction",    value: "06 59 31 37 51",  href: "tel:+33659313751" },
-  { label: "Email",        value: "contact@njtech-solution.fr", href: "mailto:contact@njtech-solution.fr" },
+  { label: "Siège social", value: formattedAddress, href: mapsLinkHref, external: true },
+  { label: "Standard",     value: contact.phone.switchboard, href: `tel:${contact.phone.switchboardE164}` },
+  { label: "Direction",    value: contact.phone.direction,   href: `tel:${contact.phone.directionE164}` },
+  { label: "Email",        value: contact.email,             href: mailtoHref },
 ];
 
 const domains = [
@@ -226,11 +227,11 @@ export default function ContactPage() {
                   Localisation
                 </div>
                 <p className="text-[0.875rem] text-white/55">
-                  9 rue de l&apos;Église — 93800 Épinay-sur-Seine
+                  {contact.address.street} — {contact.address.postalCode} {contact.address.city}
                 </p>
               </div>
               <a
-                href="https://maps.google.com/?q=9+rue+de+l%27Eglise+93800+Epinay-sur-Seine"
+                href={mapsLinkHref}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 text-[0.75rem] text-white/30 transition-colors hover:text-white/60"
@@ -241,10 +242,9 @@ export default function ContactPage() {
             </div>
 
             <div className="overflow-hidden border border-white/[0.07]">
-              {/* Remplacer src par l'URL "Intégrer une carte" copiée depuis Google Maps si nécessaire */}
               <iframe
-                title="NJTECH Solution — Siège social Épinay-sur-Seine"
-                src="https://maps.google.com/maps?q=9+rue+de+l%27Eglise+93800+Epinay-sur-Seine+France&output=embed&z=17&hl=fr"
+                title={`${siteConfig.name} — Siège social ${contact.address.city}`}
+                src={mapsEmbedSrc}
                 width="100%"
                 height="420"
                 loading="lazy"

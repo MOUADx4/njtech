@@ -173,7 +173,7 @@ export default function PolitiqueCookiesPage() {
       <p>
         Pour toute question relative à notre utilisation des cookies ou pour exercer vos droits,
         contactez-nous à :{" "}
-        <a href="mailto:contact@njtech.fr">contact@njtech.fr</a>.
+        <a href="mailto:contact@njtech-solution.fr">contact@njtech-solution.fr</a>.
       </p>
       <p>
         Pour en savoir plus sur vos droits, consultez notre{" "}

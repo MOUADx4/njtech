@@ -17,22 +17,22 @@
 
 ## Aperçu
 
-![Page d'accueil](./Captures/home.png)
+![Page d'accueil](./docs/screenshots/home.png)
 
 Site vitrine responsive et animé, pensé pour valoriser le savoir-faire terrain de NJTECH Solution auprès des opérateurs et intégrateurs télécom. L'accent est mis sur la lisibilité, la performance et une identité visuelle sobre (navy + bleu signal).
 
 <table>
   <tr>
-    <td width="50%"><img src="./Captures/services.png" alt="Prestations" /><p align="center"><sub>Prestations techniques</sub></p></td>
-    <td width="50%"><img src="./Captures/realisations.png" alt="Réalisations" /><p align="center"><sub>Réalisations</sub></p></td>
+    <td width="50%"><img src="./docs/screenshots/services.png" alt="Prestations" /><p align="center"><sub>Prestations techniques</sub></p></td>
+    <td width="50%"><img src="./docs/screenshots/realisations.png" alt="Réalisations" /><p align="center"><sub>Réalisations</sub></p></td>
   </tr>
   <tr>
-    <td width="50%"><img src="./Captures/a-propos.png" alt="À propos" /><p align="center"><sub>À propos</sub></p></td>
-    <td width="50%"><img src="./Captures/contact.png" alt="Contact" /><p align="center"><sub>Contact</sub></p></td>
+    <td width="50%"><img src="./docs/screenshots/a-propos.png" alt="À propos" /><p align="center"><sub>À propos</sub></p></td>
+    <td width="50%"><img src="./docs/screenshots/contact.png" alt="Contact" /><p align="center"><sub>Contact</sub></p></td>
   </tr>
   <tr>
-    <td width="50%"><img src="./Captures/chatbot.png" alt="Assistant" /><p align="center"><sub>Assistant intégré</sub></p></td>
-    <td width="50%"><img src="./Captures/cookies.png" alt="Consentement cookies" /><p align="center"><sub>Bandeau de consentement (RGPD)</sub></p></td>
+    <td width="50%"><img src="./docs/screenshots/chatbot.png" alt="Assistant" /><p align="center"><sub>Assistant intégré</sub></p></td>
+    <td width="50%"><img src="./docs/screenshots/cookies.png" alt="Consentement cookies" /><p align="center"><sub>Bandeau de consentement (RGPD)</sub></p></td>
   </tr>
 </table>
 

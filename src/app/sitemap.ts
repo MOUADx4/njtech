@@ -1,7 +1,9 @@
 import type { MetadataRoute } from "next";
 import { SERVICES } from "@/lib/services-data";
 
-const BASE_URL = "https://njtech-solution.fr";
+import { siteConfig } from "@/config/site";
+
+const BASE_URL = siteConfig.url;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

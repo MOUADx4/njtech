@@ -4,27 +4,9 @@ import { MapPin, PhoneCall, Smartphone, Mail, ArrowRight, ArrowUpRight, Shield, 
 import Container from "@/components/ui/Container";
 import Logo from "@/components/ui/Logo";
 import ManageCookiesButton from "@/components/legal/ManageCookiesButton";
+import { contact, footerNav, mailtoHref } from "@/config/site";
 
-const company = [
-  { label: "À propos",            href: "/a-propos"     },
-  { label: "Méthodologie",        href: "/a-propos#methodology" },
-  { label: "Nos réalisations",    href: "/realisations"          },
-  { label: "Zone d'intervention", href: "/a-propos#coverage"     },
-];
-
-const services = [
-  { label: "Sites radio 4G / 5G",  href: "/services/amenagement-sites-radio" },
-  { label: "Antennes & faisceaux", href: "/services/deploiement-antennes"    },
-  { label: "Bureau d'étude",       href: "/services/bureau-etude"            },
-  { label: "Maintenance & SAV",    href: "/services/maintenance-sav"         },
-];
-
-const legal = [
-  { label: "Mentions légales",            href: "/mentions-legales"              },
-  { label: "Politique de confidentialité", href: "/politique-de-confidentialite" },
-  { label: "Politique de cookies",        href: "/politique-cookies"             },
-  { label: "CGU",                         href: "/cgu"                           },
-];
+const { company, services, legal } = footerNav;
 
 const partnerLogos = [
   { name: "Bouygues Telecom", logo: "/images/BouyguesTelecom.png", w: 120, h: 36 },
@@ -111,19 +93,19 @@ export default function Footer() {
             <div className="space-y-3.5">
               <div className="flex items-start gap-3 text-[0.8rem] leading-snug text-white/38">
                 <MapPin className="mt-0.5 size-3.5 shrink-0 text-signal-500/60" />
-                9 rue de l'Église<br />93800 Épinay-sur-Seine
+                {contact.address.street}<br />{contact.address.postalCode} {contact.address.city}
               </div>
-              <Link href="tel:+33988504015" className="flex items-center gap-3 text-[0.8rem] text-white/38 transition-colors hover:text-white">
+              <Link href={`tel:${contact.phone.switchboardE164}`} className="flex items-center gap-3 text-[0.8rem] text-white/38 transition-colors hover:text-white">
                 <PhoneCall className="size-3.5 shrink-0 text-signal-500/60" />
-                09 88 50 40 15
+                {contact.phone.switchboard}
               </Link>
-              <Link href="tel:+33659313751" className="flex items-center gap-3 text-[0.8rem] text-white/38 transition-colors hover:text-white">
+              <Link href={`tel:${contact.phone.directionE164}`} className="flex items-center gap-3 text-[0.8rem] text-white/38 transition-colors hover:text-white">
                 <Smartphone className="size-3.5 shrink-0 text-signal-500/60" />
-                06 59 31 37 51
+                {contact.phone.direction}
               </Link>
-              <Link href="mailto:contact@njtech-solution.fr" className="flex items-center gap-3 text-[0.8rem] text-white/38 transition-colors hover:text-white">
+              <Link href={mailtoHref} className="flex items-center gap-3 text-[0.8rem] text-white/38 transition-colors hover:text-white">
                 <Mail className="size-3.5 shrink-0 text-signal-500/60" />
-                contact@njtech-solution.fr
+                {contact.email}
               </Link>
             </div>
           </div>

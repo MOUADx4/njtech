@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { MapPin, Radio, Zap, Users } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeader from "@/components/ui/SectionHeader";
-import FranceCoverageMap from "@/components/sections/FranceCoverageMap";
+import FranceCoverageMap from "@/components/sections/contact/FranceCoverageMap";
 
 const features = [
   { icon: MapPin,  title: "Couverture nationale",  text: "Mobilité totale de nos équipes terrain sur toute la métropole." },

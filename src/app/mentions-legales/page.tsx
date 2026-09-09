@@ -49,7 +49,7 @@ export default function MentionsLegalesPage() {
         <li><strong>RCS :</strong> [À COMPLÉTER — ex. RCS Bobigny XXX XXX XXX]</li>
         <li><strong>Numéro de TVA intracommunautaire :</strong> [À COMPLÉTER]</li>
         <li><strong>Téléphone :</strong> 09 88 50 40 15</li>
-        <li><strong>Email :</strong> contact@njtech.fr</li>
+        <li><strong>Email :</strong> contact@njtech-solution.fr</li>
       </ul>
 
       <h2 id="directeur">Directeur de la publication</h2>
@@ -59,7 +59,7 @@ export default function MentionsLegalesPage() {
       </p>
       <p>
         Pour toute question relative au contenu du site, vous pouvez nous contacter à
-        l'adresse suivante : <a href="mailto:contact@njtech.fr">contact@njtech.fr</a>.
+        l'adresse suivante : <a href="mailto:contact@njtech-solution.fr">contact@njtech-solution.fr</a>.
       </p>
 
       <h2 id="hebergeur">Hébergeur</h2>

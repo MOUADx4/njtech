@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { preload } from "react-dom";
 import PageHero from "@/components/layout/PageHero";
-import RealisationsGrid from "@/components/sections/RealisationsGrid";
-import HomeCta from "@/components/sections/HomeCta";
+import RealisationsGrid from "@/components/sections/shared/RealisationsGrid";
+import HomeCta from "@/components/sections/home/HomeCta";
 
 export const metadata: Metadata = {
   title: "Réalisations — NJTECH Solution",

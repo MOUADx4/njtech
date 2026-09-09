@@ -67,7 +67,7 @@ const nodes: Record<string, Node> = {
   },
 
   contact: {
-    message: "Voici nos coordonnées :\n\n9 rue de l'Église, 93800 Épinay-sur-Seine\n\nStandard — 09 88 50 40 15\nDirection — 06 59 31 37 51\nEmail — contact@njtech.fr\n\nNous répondons sous 24h ouvrées.",
+    message: "Voici nos coordonnées :\n\n9 rue de l'Église, 93800 Épinay-sur-Seine\n\nStandard — 09 88 50 40 15\nDirection — 06 59 31 37 51\nEmail — contact@njtech-solution.fr\n\nNous répondons sous 24h ouvrées.",
     suggestions: [
       { label: "Délais de réponse",       nextId: "contact_delais" },
       { label: "Envoyer un message",      nextId: "contact_form"   },

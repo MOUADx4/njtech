@@ -8,13 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Container from "@/components/ui/Container";
 import Logo from "@/components/ui/Logo";
 import { cn } from "@/lib/cn";
-
-const links = [
-  { href: "/a-propos",     label: "À propos"     },
-  { href: "/services",     label: "Prestations"  },
-  { href: "/realisations", label: "Réalisations" },
-  { href: "/contact",      label: "Contact"      },
-];
+import { contact, mailtoHref, mainNav as links } from "@/config/site";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -211,11 +205,11 @@ export default function Navbar() {
                 transition={{ delay: 0.42 }}
                 className="mt-auto"
               >
-                <a href="tel:+33988504015" className="block text-[0.75rem] text-white/45 transition-colors hover:text-white/70">
-                  09 88 50 40 15
+                <a href={`tel:${contact.phone.switchboardE164}`} className="block text-[0.75rem] text-white/45 transition-colors hover:text-white/70">
+                  {contact.phone.switchboard}
                 </a>
-                <a href="mailto:contact@njtech-solution.fr" className="mt-1 block text-[0.75rem] text-white/45 transition-colors hover:text-white/70">
-                  contact@njtech-solution.fr
+                <a href={mailtoHref} className="mt-1 block text-[0.75rem] text-white/45 transition-colors hover:text-white/70">
+                  {contact.email}
                 </a>
               </motion.div>
             </motion.div>

@@ -83,7 +83,6 @@ export default async function OgImage() {
         }}
       >
         {/* Logo */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={logo}
           alt="NJTECH Solution"

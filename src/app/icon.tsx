@@ -21,7 +21,6 @@ export default async function Icon() {
         padding:        48,
       }}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={base64}
         alt=""

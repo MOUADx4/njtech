@@ -6,7 +6,7 @@ import {
   Zap, HardHat, BookOpen, Clock,
 } from "lucide-react";
 import Container from "@/components/ui/Container";
-import { AnimatedCounter, AnimatedReveal } from "@/components/ui/AnimatedCounter";
+import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 
 const hero = {
   icon:  ShieldCheck,

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import ContactPage from "@/components/sections/ContactPage";
-import Coverage from "@/components/sections/Coverage";
+import ContactPage from "@/components/sections/contact/ContactPage";
+import Coverage from "@/components/sections/about/Coverage";
 
 export const metadata: Metadata = {
   title: "Contact — NJTECH Solution",

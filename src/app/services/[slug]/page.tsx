@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SERVICES, getService } from "@/lib/services-data";
 import PageHero from "@/components/layout/PageHero";
-import ServiceSingleDetail from "@/components/sections/ServiceSingleDetail";
-import HomeCta from "@/components/sections/HomeCta";
+import ServiceSingleDetail from "@/components/sections/services/ServiceSingleDetail";
+import HomeCta from "@/components/sections/home/HomeCta";
 
 // Pre-render all 4 service pages at build time
 export function generateStaticParams() {

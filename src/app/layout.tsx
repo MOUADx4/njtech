@@ -17,6 +17,8 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
+import { contact, siteConfig } from "@/config/site";
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -25,7 +27,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://njtech-solution.fr"),
+  metadataBase: new URL(siteConfig.url),
   title: {
     default:  "NJTECH Solution",
     template: "%s — NJTECH Solution",
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
     "Bouygues Telecom",
     "Free Mobile",
     "Sogetrel",
-    "Épinay-sur-Seine",
+    contact.address.city,
   ],
   authors: [{ name: "NJTECH Solution" }],
   openGraph: {
@@ -51,11 +53,11 @@ export const metadata: Metadata = {
       "Spécialiste des réseaux mobiles. Déploiement, intégration et maintenance d'infrastructures télécom 4G/5G.",
     type: "website",
     locale: "fr_FR",
-    url: "https://njtech-solution.fr",
+    url: siteConfig.url,
     siteName: "NJTECH Solution",
     images: [
       {
-        url:    "https://njtech-solution.fr/opengraph-image",
+        url:    `${siteConfig.url}/opengraph-image`,
         width:  1200,
         height: 630,
         alt:    "NJTECH Solution — Infrastructures Télécom 4G / 5G",
@@ -66,7 +68,7 @@ export const metadata: Metadata = {
     card:        "summary_large_image",
     title:       "NJTECH Solution — Infrastructures Télécom 4G / 5G",
     description: "Spécialiste des réseaux mobiles. Déploiement, intégration et maintenance d'infrastructures télécom 4G/5G.",
-    images:      ["https://njtech-solution.fr/opengraph-image"],
+    images:      [`${siteConfig.url}/opengraph-image`],
   },
 };
 
@@ -75,16 +77,16 @@ const jsonLd = {
   "@graph": [
     {
       "@type":       "Organization",
-      "@id":         "https://njtech-solution.fr/#organization",
+      "@id":         `${siteConfig.url}/#organization`,
       "name":        "NJTECH Solution",
-      "url":         "https://njtech-solution.fr",
-      "logo":        "https://njtech-solution.fr/images/logo.png",
+      "url":         siteConfig.url,
+      "logo":        `${siteConfig.url}/images/logo.png`,
       "description": "Spécialiste du déploiement, de l'intégration et de la maintenance des infrastructures télécom 4G et 5G pour les grands opérateurs nationaux.",
       "foundingDate": "2019",
-      "areaServed":  "FR",
+      "areaServed":  contact.address.country,
       "contactPoint": {
         "@type":            "ContactPoint",
-        "telephone":        "+33-9-88-50-40-15",
+        "telephone":        contact.phone.switchboardE164,
         "contactType":      "customer service",
         "availableLanguage": "French",
       },
@@ -93,27 +95,27 @@ const jsonLd = {
     },
     {
       "@type":            ["LocalBusiness", "ProfessionalService"],
-      "@id":              "https://njtech-solution.fr/#localbusiness",
+      "@id":              `${siteConfig.url}/#localbusiness`,
       "name":             "NJTECH Solution",
-      "url":              "https://njtech-solution.fr",
-      "image":            "https://njtech-solution.fr/images/logo.png",
+      "url":              siteConfig.url,
+      "image":            `${siteConfig.url}/images/logo.png`,
       "description":      "Déploiement et maintenance d'infrastructures télécom 4G et 5G — pylônes, antennes, faisceaux hertziens, bureau d'étude.",
       "priceRange":       "Sur devis",
       "currenciesAccepted": "EUR",
       "paymentAccepted":  "Virement bancaire, Chèque",
-      "telephone":        "+33-9-88-50-40-15",
-      "email":            "contact@njtech-solution.fr",
+      "telephone":        contact.phone.switchboardE164,
+      "email":            contact.email,
       "address": {
         "@type":           "PostalAddress",
-        "streetAddress":   "9 rue de l'Église",
-        "addressLocality": "Épinay-sur-Seine",
-        "postalCode":      "93800",
-        "addressCountry":  "FR",
+        "streetAddress":   contact.address.street,
+        "addressLocality": contact.address.city,
+        "postalCode":      contact.address.postalCode,
+        "addressCountry":  contact.address.country,
       },
       "geo": {
         "@type":     "GeoCoordinates",
-        "latitude":  48.9566,
-        "longitude": 2.3097,
+        "latitude":  contact.address.geo.latitude,
+        "longitude": contact.address.geo.longitude,
       },
       "openingHoursSpecification": {
         "@type":    "OpeningHoursSpecification",
@@ -131,7 +133,7 @@ const jsonLd = {
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maintenance & SAV réseaux mobiles" } },
         ],
       },
-      "parentOrganization": { "@id": "https://njtech-solution.fr/#organization" },
+      "parentOrganization": { "@id": `${siteConfig.url}/#organization` },
     },
   ],
 };

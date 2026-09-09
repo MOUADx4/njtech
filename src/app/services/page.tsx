@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/layout/PageHero";
-import ServicesDetail from "@/components/sections/ServicesDetail";
-import Methodology from "@/components/sections/Methodology";
-import HomeCta from "@/components/sections/HomeCta";
+import ServicesDetail from "@/components/sections/services/ServicesDetail";
+import Methodology from "@/components/sections/about/Methodology";
+import HomeCta from "@/components/sections/home/HomeCta";
 
 export const metadata: Metadata = {
   title: "Prestations — NJTECH Solution",

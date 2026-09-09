@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/layout/PageHero";
-import About from "@/components/sections/About";
-import Methodology from "@/components/sections/Methodology";
-import Safety from "@/components/sections/Safety";
-import Clients from "@/components/sections/Clients";
-import Coverage from "@/components/sections/Coverage";
-import HomeCta from "@/components/sections/HomeCta";
+import About from "@/components/sections/about/About";
+import Methodology from "@/components/sections/about/Methodology";
+import Safety from "@/components/sections/about/Safety";
+import Clients from "@/components/sections/shared/Clients";
+import Coverage from "@/components/sections/about/Coverage";
+import HomeCta from "@/components/sections/home/HomeCta";
 
 export const metadata: Metadata = {
   title: "À propos — NJTECH Solution",

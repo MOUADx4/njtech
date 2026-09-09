@@ -74,7 +74,6 @@ export default function FranceCoverageMap() {
               .map(geo => {
                 const code     = geo.properties.code as string;
                 const isHq     = code === "11";
-                const isActive = hovered === code;
 
                 return (
                   <Geography
