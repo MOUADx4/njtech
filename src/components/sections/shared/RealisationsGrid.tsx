@@ -50,12 +50,12 @@ export default function RealisationsGrid() {
         <div
           key={sec.id}
           id={sec.id}
-          /* scroll-mt offsets the fixed navbar (~80px) */
+          /* scroll-mt compense la navbar fixe (~80px) */
           className="scroll-mt-28"
         >
           <Container className="py-16">
 
-            {/* Section header */}
+            {/* En-tête de section */}
             <motion.div
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ export default function RealisationsGrid() {
               </p>
             </motion.div>
 
-            {/* Cards */}
+            {/* Cartes */}
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -118,7 +118,7 @@ export default function RealisationsGrid() {
             </motion.div>
           </Container>
 
-          {/* Divider between sections */}
+          {/* Séparateur entre sections */}
           {si < sections.length - 1 && (
             <div className="mx-auto max-w-7xl px-6">
               <div className="h-px bg-navy-100/60" />

@@ -50,7 +50,7 @@ export function useConsent() {
     setConsent(DEFAULT);
   }, []);
 
-  /* Allow any component to re-open the banner */
+  /* Permet à n'importe quel composant de rouvrir le bandeau */
   const openBanner = useCallback(() => {
     window.dispatchEvent(new CustomEvent("njtech:open-cookies"));
   }, []);

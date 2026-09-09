@@ -21,7 +21,7 @@ export default function ServiceSingleDetail({ service }: { service: ServiceData 
 
   return (
     <>
-      {/* ── Main content ── */}
+      {/* ── Contenu principal ── */}
       <section className="bg-white py-20">
         <Container>
 
@@ -43,7 +43,7 @@ export default function ServiceSingleDetail({ service }: { service: ServiceData 
 
           <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
 
-            {/* Text */}
+            {/* Texte */}
             <motion.div
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}

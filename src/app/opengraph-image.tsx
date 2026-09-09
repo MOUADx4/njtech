@@ -23,7 +23,7 @@ export default async function OgImage() {
         fontFamily:     "system-ui, sans-serif",
       }}
     >
-      {/* Grid texture */}
+      {/* Texture de grille */}
       <div
         style={{
           position:        "absolute",
@@ -33,7 +33,7 @@ export default async function OgImage() {
         }}
       />
 
-      {/* Glow top-left */}
+      {/* Halo en haut à gauche */}
       <div
         style={{
           position:     "absolute",
@@ -46,7 +46,7 @@ export default async function OgImage() {
         }}
       />
 
-      {/* Glow bottom-right */}
+      {/* Halo en bas à droite */}
       <div
         style={{
           position:     "absolute",
@@ -59,7 +59,7 @@ export default async function OgImage() {
         }}
       />
 
-      {/* Top accent line */}
+      {/* Liseré supérieur */}
       <div
         style={{
           position:   "absolute",
@@ -71,7 +71,7 @@ export default async function OgImage() {
         }}
       />
 
-      {/* Main content */}
+      {/* Contenu principal */}
       <div
         style={{
           display:        "flex",
@@ -89,9 +89,9 @@ export default async function OgImage() {
           style={{ height: 72, width: "auto", objectFit: "contain" }}
         />
 
-        {/* Center text block */}
+        {/* Bloc de texte centré */}
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-          {/* Label */}
+          {/* Intitulé */}
           <div
             style={{
               display:       "flex",
@@ -141,7 +141,7 @@ export default async function OgImage() {
           </div>
         </div>
 
-        {/* Bottom row */}
+        {/* Ligne inférieure */}
         <div
           style={{
             display:        "flex",

@@ -171,7 +171,7 @@ export default function Hero() {
               <span className="block text-white/95">français.</span>
             </h1>
 
-            {/* Divider */}
+            {/* Séparateur */}
             <div className="my-9 h-px w-14 bg-white/[0.14]" />
 
             {/* Description */}
@@ -181,7 +181,7 @@ export default function Hero() {
               Bouygues Telecom, Free Mobile, Orange, SFR — partout en France.
             </p>
 
-            {/* CTAs */}
+            {/* Boutons d'action */}
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <Link
                 href="/services"

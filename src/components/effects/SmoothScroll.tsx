@@ -5,7 +5,7 @@ import Lenis from "lenis";
 import { usePathname } from "next/navigation";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
-// Offset to clear the fixed navbar (~80px)
+// Décalage pour dégager la navbar fixe (~80px)
 const NAV_OFFSET = -88;
 
 function scrollToHash(hash: string, lenis: Lenis | null, delay = 0) {
@@ -55,16 +55,16 @@ export default function SmoothScroll() {
     };
   }, [reduced]);
 
-  // ── Cross-page navigation: reset top OR scroll to anchor ──────────────────
-  // Delay > PageTransition duration (220ms) so elements are laid out
+  // ── Navigation entre pages : retour en haut ou défilement vers l'ancre ────
+  // Délai > durée de PageTransition (220 ms) pour que la mise en page soit faite
   useEffect(() => {
     const hash = window.location.hash;
 
     if (hash) {
-      // 450ms: 220ms page transition exit + ~230ms render/layout settle
+      // 450 ms : 220 ms de sortie de transition + ~230 ms de stabilisation du rendu
       scrollToHash(hash, lenisRef.current, 450);
     } else {
-      // Immediate reset — the page just changed
+      // Réinitialisation immédiate — la page vient de changer
       if (lenisRef.current) {
         lenisRef.current.scrollTo(0, { immediate: true });
       } else {
@@ -73,7 +73,7 @@ export default function SmoothScroll() {
     }
   }, [pathname]);
 
-  // ── Same-page hash navigation (pathname unchanged) ────────────────────────
+  // ── Ancre sur la même page (chemin inchangé) ──────────────────────────────
   useEffect(() => {
     const onHashChange = () => {
       const hash = window.location.hash;

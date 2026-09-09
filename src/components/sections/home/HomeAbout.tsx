@@ -27,7 +27,7 @@ export default function HomeAbout() {
       <Container className="relative">
         <div className="grid gap-20 lg:grid-cols-2 lg:gap-28">
 
-          {/* ── Left: text ── */}
+          {/* ── Colonne gauche : texte ── */}
           <motion.div
             initial={{ opacity: 0, y: 48 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export default function HomeAbout() {
             </Link>
           </motion.div>
 
-          {/* ── Right: timeline ── */}
+          {/* ── Colonne droite : frise chronologique ── */}
           <div className="flex flex-col justify-center">
             {milestones.map((m, i) => (
               <motion.div
@@ -78,7 +78,7 @@ export default function HomeAbout() {
                 transition={{ duration: 0.65, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="group relative flex gap-5 pb-7 last:pb-0"
               >
-                {/* Rail: dot + line */}
+                {/* Rail : point + trait */}
                 <div className="flex shrink-0 flex-col items-center pt-2.5 w-4">
                   <div className="size-2.5 shrink-0 rounded-full bg-signal-500 ring-[3px] ring-white shadow-sm transition-all duration-300 group-hover:ring-signal-100 group-hover:shadow-signal-500/20 group-hover:shadow-md" />
                   {i < milestones.length - 1 && (
@@ -86,9 +86,9 @@ export default function HomeAbout() {
                   )}
                 </div>
 
-                {/* Content */}
+                {/* Contenu */}
                 <div className="flex-1 overflow-hidden pb-2">
-                  {/* Year as prominent watermark anchor */}
+                  {/* Année en filigrane, repère visuel */}
                   <div className="select-none text-[2.6rem] font-black leading-[0.85] tracking-[-0.05em] text-navy-100 transition-colors duration-400 group-hover:text-signal-100">
                     {m.year}
                   </div>

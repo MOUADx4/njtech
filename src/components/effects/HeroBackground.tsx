@@ -24,7 +24,7 @@ export default function HeroBackground({ interactive = true }: { interactive?: b
       {/* Base dark layer */}
       <div className="absolute inset-0 bg-[#020816]" />
 
-      {/* Video — desktop only, preload deferred */}
+      {/* Vidéo — desktop uniquement, préchargement différé */}
       {isDesktop && !videoError && (
         <video
           autoPlay
@@ -40,7 +40,7 @@ export default function HeroBackground({ interactive = true }: { interactive?: b
         </video>
       )}
 
-      {/* Ken Burns static image — Next.js Image with priority for LCP */}
+      {/* Image fixe façon Ken Burns — priorité Next/Image pour le LCP */}
       <div
         className="absolute inset-0 opacity-25 overflow-hidden"
         style={{ animation: isDesktop ? "kenBurns 22s ease-in-out infinite alternate" : "none" }}
@@ -55,13 +55,13 @@ export default function HeroBackground({ interactive = true }: { interactive?: b
         />
       </div>
 
-      {/* Gradient blobs — reduced on mobile */}
+      {/* Halos dégradés — allégés sur mobile */}
       <div className="absolute -top-60 left-1/3 h-[600px] w-[600px] sm:h-[900px] sm:w-[900px] rounded-full opacity-100"
         style={{ background: "radial-gradient(circle, rgba(14,165,233,0.14) 0%, transparent 65%)", animation: "blobA 18s ease-in-out infinite" }} />
       <div className="absolute -bottom-40 right-1/4 h-[450px] w-[450px] sm:h-[700px] sm:w-[700px] rounded-full"
         style={{ background: "radial-gradient(circle, rgba(56,189,248,0.09) 0%, transparent 65%)", animation: "blobB 22s ease-in-out infinite" }} />
 
-      {/* Extra blobs — desktop only */}
+      {/* Halos supplémentaires — desktop uniquement */}
       {isDesktop && (
         <>
           <div className="absolute top-1/2 -left-60 h-[600px] w-[600px] rounded-full"
@@ -91,7 +91,7 @@ export default function HeroBackground({ interactive = true }: { interactive?: b
               style={{ animation: "streakPass 9s ease-in-out infinite 5s", opacity: 0 }} />
           </svg>
 
-          {/* Particle canvas — desktop only */}
+          {/* Canvas de particules — desktop uniquement */}
           <ParticleNetwork interactive={interactive} />
         </>
       )}

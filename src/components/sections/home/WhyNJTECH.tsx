@@ -126,7 +126,7 @@ export default function WhyNJTECH() {
           <div className="pointer-events-none absolute right-0 top-0 h-px w-1/2 bg-gradient-to-l from-transparent via-signal-500/30 to-transparent" />
 
           <div className="relative grid gap-10 md:grid-cols-[auto_1fr] md:items-center md:gap-16">
-            {/* Left — big stat */}
+            {/* Gauche — chiffre clé */}
             <div className="flex items-center gap-6 md:flex-col md:items-start md:gap-4">
               <div className="inline-flex size-14 items-center justify-center rounded-2xl border border-signal-500/30 bg-signal-500/[0.12]">
                 <hero.icon className="size-7 text-signal-400" />
@@ -141,7 +141,7 @@ export default function WhyNJTECH() {
               </div>
             </div>
 
-            {/* Right — description + kpis */}
+            {/* Droite — description + indicateurs */}
             <div>
               <p className="text-[0.95rem] leading-[1.82] text-white/60 max-w-2xl">
                 {hero.desc}

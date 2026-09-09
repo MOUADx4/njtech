@@ -22,16 +22,16 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close on navigation
+  // Ferme le menu à la navigation
   useEffect(() => setOpen(false), [pathname]);
 
-  // Lock body scroll when menu is open
+  // Bloque le défilement du body quand le menu est ouvert
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
-  // Close menu on Escape key
+  // Ferme le menu avec la touche Échap
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape" && open) setOpen(false);
@@ -56,7 +56,7 @@ export default function Navbar() {
 
           <Logo dark={isDark} priority />
 
-          {/* Desktop nav */}
+          {/* Navigation desktop */}
           <nav className="hidden items-center gap-0 lg:flex">
             {links.map((l) => (
               <Link
@@ -79,7 +79,7 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
+          {/* Bouton d'action desktop */}
           <div className="hidden items-center lg:flex">
             <Link
               href="/contact"
@@ -94,7 +94,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile hamburger */}
+          {/* Bouton hamburger mobile */}
           <button
             onClick={() => setOpen((v) => !v)}
             className={cn(
@@ -123,11 +123,11 @@ export default function Navbar() {
         </Container>
       </header>
 
-      {/* ── Mobile menu — full-height slide-in from right ── */}
+      {/* ── Menu mobile — panneau pleine hauteur, entrée par la droite ── */}
       <AnimatePresence>
         {open && (
           <>
-            {/* Backdrop */}
+            {/* Fond assombri */}
             <motion.div
               key="backdrop"
               initial={{ opacity: 0 }}
@@ -138,7 +138,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
             />
 
-            {/* Panel */}
+            {/* Panneau */}
             <motion.div
               key="panel"
               id="mobile-menu"
@@ -151,7 +151,7 @@ export default function Navbar() {
               aria-modal="true"
               aria-label="Menu de navigation"
             >
-              {/* Links */}
+              {/* Liens */}
               <nav className="flex flex-col gap-1">
                 {links.map((l, i) => (
                   <motion.div
@@ -179,10 +179,10 @@ export default function Navbar() {
                 ))}
               </nav>
 
-              {/* Divider */}
+              {/* Séparateur */}
               <div className="my-6 h-px bg-white/[0.07]" />
 
-              {/* CTA */}
+              {/* Bouton d'action */}
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -198,7 +198,7 @@ export default function Navbar() {
                 </Link>
               </motion.div>
 
-              {/* Bottom contact info */}
+              {/* Coordonnées en pied de panneau */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

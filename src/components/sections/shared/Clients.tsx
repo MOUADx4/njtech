@@ -68,7 +68,7 @@ export default function Clients() {
           description="NJTECH Solution intervient sur des projets stratégiques auprès d'opérateurs et d'intégrateurs de premier plan."
         />
 
-        {/* Main partner cards */}
+        {/* Cartes des partenaires principaux */}
         <div className="mt-16 grid gap-4 md:grid-cols-3">
           {partners.map((p, i) => (
             <motion.div
@@ -82,7 +82,7 @@ export default function Clients() {
               <div className="pointer-events-none absolute -bottom-16 -right-16 size-44 rounded-full bg-signal-500/0 blur-3xl transition-all duration-700 group-hover:bg-signal-500/[0.11]" />
 
               <div className="relative">
-                {/* Logo + tag row */}
+                {/* Ligne logo + étiquette */}
                 <div className="flex items-start justify-between gap-3 mb-6">
                   <Image
                     src={p.logo}

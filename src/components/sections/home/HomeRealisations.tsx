@@ -87,7 +87,7 @@ export default function Realisations() {
           </Link>
         </div>
 
-        {/* Bento grid — spotlight effect via group/peer CSS */}
+        {/* Grille bento — effet projecteur en CSS via group/peer */}
         <div className="bento-grid mt-14 grid auto-rows-[260px] gap-3 sm:grid-cols-3">
           {items.map((it, i) => (
             <motion.figure
@@ -111,7 +111,7 @@ export default function Realisations() {
                 className="object-cover opacity-75 transition-all duration-700 group-hover:scale-[1.06] group-hover:opacity-95"
               />
 
-              {/* Gradient overlay */}
+              {/* Voile dégradé */}
               <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent" />
 
               {/* Tag */}
@@ -121,7 +121,7 @@ export default function Realisations() {
                 </span>
               </div>
 
-              {/* Caption — specs slide up on hover */}
+              {/* Légende — les caractéristiques remontent au survol */}
               <figcaption className="absolute inset-x-0 bottom-0 p-5">
                 <div className="text-[1.05rem] font-semibold text-white leading-tight">
                   {it.title}
@@ -137,8 +137,8 @@ export default function Realisations() {
       </Container>
 
       {/*
-        Spotlight: when ANY bento-card is hovered, dim its siblings.
-        Pure CSS via :has() — no JS needed, graceful fallback.
+        Projecteur : au survol d'une carte bento, les autres sont assombries.
+        Pur CSS via :has() — no JS needed, graceful fallback.
       */}
       <style>{`
         @media (hover: hover) {

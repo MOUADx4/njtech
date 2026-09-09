@@ -161,10 +161,6 @@ export default function CguPage() {
         <strong>[À COMPLÉTER — ex. Bobigny]</strong>, nonobstant pluralité de défendeurs
         ou appel en garantie.
       </p>
-      <div className="warn">
-        ⚠️ Ce document est un modèle. Il doit être relu et adapté par un professionnel
-        juridique avant toute mise en production.
-      </div>
     </LegalLayout>
   );
 }

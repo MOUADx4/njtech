@@ -64,7 +64,7 @@ export default function Methodology() {
                 transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="group relative pt-10"
               >
-                {/* Step number badge */}
+                {/* Pastille du numéro d'étape */}
                 <div className="absolute -top-1 left-0 lg:left-1/2 lg:-translate-x-1/2">
                   <div className="grid size-16 place-items-center rounded-2xl bg-navy-950 text-signal-400 shadow-xl shadow-navy-900/20 ring-4 ring-white transition-transform duration-300 group-hover:-translate-y-1">
                     <s.icon className="size-6" />

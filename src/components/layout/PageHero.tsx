@@ -45,7 +45,7 @@ export default function PageHero({
         }}
       />
 
-      {/* Bottom separator */}
+      {/* Séparateur inférieur */}
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/12 to-transparent" />
 
       <Container className="relative z-10">

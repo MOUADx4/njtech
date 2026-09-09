@@ -30,7 +30,7 @@ export default function Services() {
 
       <Container className="relative">
 
-        {/* Header row */}
+        {/* Ligne d'en-tête */}
         <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:items-end">
           <SectionHeader
             dark
@@ -52,7 +52,7 @@ export default function Services() {
           </Link>
         </div>
 
-        {/* Cards grid */}
+        {/* Grille de cartes */}
         <div className="mt-16 grid gap-4 md:grid-cols-2">
           {services.map((s, i) => (
             <motion.div
@@ -68,17 +68,17 @@ export default function Services() {
                 {s.num}
               </div>
 
-              {/* Hover glow */}
+              {/* Halo au survol */}
               <div className="pointer-events-none absolute -right-20 -top-20 size-56 rounded-full bg-signal-500/0 blur-3xl transition-all duration-700 group-hover:bg-signal-500/[0.09]" />
 
               <div className="relative grid gap-8 md:grid-cols-[1fr_auto] md:items-start">
                 <div>
-                  {/* Icon */}
+                  {/* Icône */}
                   <div className="mb-6 inline-flex size-11 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.05] text-signal-400">
                     <s.icon className="size-4.5" />
                   </div>
 
-                  {/* Title */}
+                  {/* Titre */}
                   <h3 className="text-[1.2rem] font-semibold leading-tight tracking-tight text-white">
                     {s.title}
                   </h3>
@@ -88,7 +88,7 @@ export default function Services() {
                     {s.text}
                   </p>
 
-                  {/* CTA */}
+                  {/* Bouton d'action */}
                   <Link
                     href={`/services/${s.slug}`}
                     className="mt-7 inline-flex items-center gap-2 text-[0.75rem] font-semibold text-signal-400/70 transition-all duration-300 group-hover:gap-3 group-hover:text-signal-400"

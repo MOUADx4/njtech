@@ -57,7 +57,7 @@ export default function LegalLayout({ title, lastUpdated, sections, children }: 
         <Container>
           <div className="grid gap-12 lg:grid-cols-[200px_1fr] xl:grid-cols-[220px_1fr]">
 
-            {/* Sticky TOC sidebar */}
+            {/* Sommaire latéral collant */}
             <aside className="hidden lg:block">
               <div className="sticky top-28">
                 <p className="mb-4 text-[0.58rem] font-bold uppercase tracking-[0.24em] text-navy-400/70">

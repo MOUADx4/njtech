@@ -48,7 +48,7 @@ function ServiceBlock({
             isEven ? "" : "lg:[&>:first-child]:order-2"
           }`}
         >
-          {/* Text */}
+          {/* Texte */}
           <motion.div
             initial={{ opacity: 0, x: isEven ? -40 : 40 }}
             whileInView={{ opacity: 1, x: 0 }}

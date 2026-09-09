@@ -19,7 +19,7 @@ export default function NotFound() {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-[#020816] text-white">
 
-      {/* Grid texture */}
+      {/* Texture de grille */}
 
       {/* Ambient glows */}
       <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[40rem] w-[60rem] rounded-full bg-signal-600/[0.09] blur-[130px]" />
@@ -36,10 +36,10 @@ export default function NotFound() {
           404
         </div>
 
-        {/* Content — overlaid on the 404 number */}
+        {/* Contenu — superposé au chiffre 404 */}
         <div className="-mt-[clamp(5rem,12vw,10rem)] flex flex-col items-center">
 
-          {/* Label */}
+          {/* Intitulé */}
           <div className="section-label justify-center text-signal-400 mb-6">
             Page introuvable
           </div>
@@ -57,7 +57,7 @@ export default function NotFound() {
             Utilisez la navigation ci-dessous pour retrouver votre chemin.
           </p>
 
-          {/* Back button */}
+          {/* Bouton de retour */}
           <Link
             href="/"
             className="group relative mt-10 inline-flex items-center gap-2.5 overflow-hidden rounded-lg bg-signal-500 px-7 py-3.5 text-[0.88rem] font-semibold text-white shadow-[0_4px_24px_rgba(3,151,231,0.4)] transition-shadow duration-300 hover:shadow-[0_6px_32px_rgba(3,151,231,0.55)] active:scale-[0.97]"
@@ -69,7 +69,7 @@ export default function NotFound() {
             </span>
           </Link>
 
-          {/* Quick nav */}
+          {/* Accès rapides */}
           <div className="mt-12 border-t border-white/[0.07] pt-10 w-full max-w-lg">
             <p className="mb-6 text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/22">
               Pages principales

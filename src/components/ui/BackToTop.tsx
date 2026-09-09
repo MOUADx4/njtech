@@ -46,7 +46,7 @@ export default function BackToTop() {
         fill="none"
         aria-hidden="true"
       >
-        {/* Static track */}
+        {/* Piste fixe */}
         <path
           d="M 40.5 1.5 H 9.5 Q 1.5 1.5 1.5 9.5 V 40.5 Q 1.5 48.5 9.5 48.5 H 40.5 Q 48.5 48.5 48.5 40.5 V 9.5 Q 48.5 1.5 40.5 1.5 Z"
           stroke="currentColor"

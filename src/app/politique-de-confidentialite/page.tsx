@@ -39,10 +39,6 @@ export default function PolitiqueConfidentialitePage() {
       lastUpdated="31 mai 2026"
       sections={SECTIONS}
     >
-      <div className="note">
-        Ce document constitue un modèle de conformité. Il doit être relu et validé par un
-        professionnel juridique avant toute mise en ligne définitive.
-      </div>
 
       <h2 id="responsable">Responsable de traitement</h2>
       <p>

@@ -204,7 +204,7 @@ export default function ChatBot() {
         )}
         style={{ maxHeight: "520px", transformOrigin: "bottom right" }}
       >
-        {/* Header */}
+        {/* En-tête */}
         <div className="flex shrink-0 items-center justify-between border-b border-white/[0.07] px-4 py-3.5">
           <div className="flex items-center gap-3">
             <Image

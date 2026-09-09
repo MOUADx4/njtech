@@ -71,7 +71,7 @@ export default function ContactPage() {
 
       <section className="bg-[#070d18] pb-32 pt-4 text-white">
         <Container>
-          {/* Top border */}
+          {/* Bordure supérieure */}
           <div className="mb-20 h-px bg-white/[0.07]" />
 
           <div className="grid gap-20 lg:grid-cols-12">

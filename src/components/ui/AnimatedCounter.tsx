@@ -16,7 +16,7 @@ function parseValue(value: string): {
   // "100%" → prefix:"", num:100, suffix:"%"
   // "5+"   → prefix:"", num:5,   suffix:"+"
   // "24/7" → prefix:"", num:24,  suffix:"/7"
-  // "4G·5G" → treat as non-numeric text
+  // « 4G·5G » → traité comme du texte non numérique
 
   const m = value.match(/^([A-Za-z]*)(\d+)([^0-9]*)$/);
   if (!m) return { prefix: "", num: null, suffix: value };
@@ -71,7 +71,7 @@ export function AnimatedCounter({
   return <span ref={ref} className={className}>{display}</span>;
 }
 
-/** For non-numeric values like "4G·5G" — character reveal */
+/** Valeurs non numériques comme « 4G·5G » — révélation caractère par caractère */
 export function AnimatedReveal({
   value,
   className,

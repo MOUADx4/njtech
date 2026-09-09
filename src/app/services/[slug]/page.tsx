@@ -6,7 +6,7 @@ import ServiceSingleDetail from "@/components/sections/services/ServiceSingleDet
 import HomeCta from "@/components/sections/home/HomeCta";
 import { siteConfig } from "@/config/site";
 
-// Pre-render all 4 service pages at build time
+// Prérend les pages de prestations au build
 export function generateStaticParams() {
   return SERVICES.map(s => ({ slug: s.slug }));
 }

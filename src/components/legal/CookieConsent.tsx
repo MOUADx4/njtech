@@ -16,7 +16,7 @@ export default function CookieConsent() {
   const [analytics, setAnalytics] = useState(false);
   const [leaving,   setLeaving]   = useState(false);
 
-  /* Show banner when no choice has been made yet */
+  /* Affiche le bandeau tant qu'aucun choix n'a été fait */
   useEffect(() => {
     if (mounted && consent.status === null) {
       const timer = setTimeout(() => setVisible(true), 800);
@@ -24,7 +24,7 @@ export default function CookieConsent() {
     }
   }, [mounted, consent.status]);
 
-  /* Re-open banner from footer "Gérer mes cookies", syncing analytics toggle */
+  /* Réouverture depuis « Gérer mes cookies » : resynchronise l'interrupteur analytics */
   useEffect(() => {
     const handler = () => {
       setAnalytics(consent.analytics);
@@ -66,7 +66,7 @@ export default function CookieConsent() {
     >
       <div className="overflow-hidden rounded-xl border border-white/[0.08] bg-[#0d1526] shadow-[0_8px_40px_rgba(0,0,0,0.55)] backdrop-blur-xl">
 
-        {/* Header */}
+        {/* En-tête */}
         <div className="flex items-start justify-between gap-3 p-5 pb-4">
           <div className="flex items-center gap-2.5">
             <Image
@@ -89,7 +89,7 @@ export default function CookieConsent() {
           </button>
         </div>
 
-        {/* Body */}
+        {/* Corps */}
         <div className="px-5 pb-4">
           <p className="text-[0.78rem] leading-[1.7] text-white/52">
             Nous utilisons des cookies pour améliorer votre expérience. Les cookies
@@ -100,7 +100,7 @@ export default function CookieConsent() {
             </Link>
           </p>
 
-          {/* Expandable preference panel */}
+          {/* Panneau de préférences dépliable */}
           <button
             onClick={() => setExpanded((v) => !v)}
             className="mt-3 flex items-center gap-1.5 text-[0.72rem] font-medium text-white/38 transition-colors hover:text-white/65"
@@ -111,7 +111,7 @@ export default function CookieConsent() {
 
           {expanded && (
             <div className="mt-3 space-y-2.5 rounded-lg border border-white/[0.07] bg-white/[0.04] p-4">
-              {/* Necessary — always on */}
+              {/* Cookies nécessaires — toujours actifs */}
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-[0.75rem] font-semibold text-white/80">Nécessaires</p>
