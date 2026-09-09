@@ -259,7 +259,7 @@ export default function ChatBot() {
             >
               <div
                 className={cn(
-                  "max-w-[86%] px-3.5 py-2.5 text-[0.8rem] leading-[1.68]",
+                  "max-w-[86%] px-3.5 py-2.5 text-base md:text-[0.8rem] leading-[1.68]",
                   msg.role === "bot"
                     ? "border border-white/[0.07] bg-white/[0.04] text-white/72"
                     : "bg-signal-500 text-white",

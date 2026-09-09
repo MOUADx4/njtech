@@ -109,7 +109,7 @@ export default function Clients() {
                 <div className="mt-5 h-px bg-white/[0.08]" />
 
                 {/* Description */}
-                <p className="mt-5 text-[0.8rem] leading-[1.75] text-white/48">{p.desc}</p>
+                <p className="mt-5 text-base md:text-[0.8rem] leading-[1.75] text-white/48">{p.desc}</p>
 
                 {/* Geography */}
                 <div className="mt-5 flex items-center gap-2">

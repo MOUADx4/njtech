@@ -39,7 +39,7 @@ export const SERVICES: ServiceData[] = [
       description: "Sites neufs ou existants — pylônes, toits terrasses, milieu urbain et rural. NJTECH coordonne l'ensemble du chantier jusqu'à la réception.",
     },
     seo: {
-      title:       "Aménagement de sites radio 4G / 5G — NJTECH Solution",
+      title:       "Aménagement de sites radio 4G / 5G",
       description: "NJTECH aménage vos sites radio 4G et 5G en France — pylônes, toits terrasses, génie civil télécom. Coordination complète, mise en conformité. Partenaire Bouygues Telecom, Free Mobile, Orange, SFR.",
       keywords:    ["aménagement sites radio", "génie civil télécom", "pylône 5G", "toit terrasse antenne", "déploiement 4G France"],
     },
@@ -64,7 +64,7 @@ export const SERVICES: ServiceData[] = [
       description: "Antennes sectorielles 4G / 5G, faisceaux hertziens, équipements RAN. Nos techniciens certifiés interviennent en hauteur avec tous les EPI.",
     },
     seo: {
-      title:       "Déploiement antennes & faisceaux hertziens 4G / 5G — NJTECH Solution",
+      title:       "Déploiement antennes & faisceaux hertziens 4G / 5G",
       description: "Installation et calage d'antennes sectorielles 4G/5G, faisceaux hertziens PDH/SDH, équipements RAN Nokia, Ericsson, Huawei. Techniciens certifiés travaux en hauteur. Intervention sur toute la France.",
       keywords:    ["déploiement antennes 5G", "faisceaux hertziens", "RAN Nokia Ericsson Huawei", "calage azimutal", "travaux en hauteur télécom"],
     },
@@ -89,7 +89,7 @@ export const SERVICES: ServiceData[] = [
       description: "Plans DP, DTB, DIM, APS, APD, DOE — photomontages et suivi de conformité réglementaire. Notre bureau d'étude interne couvre l'intégralité des livrables.",
     },
     seo: {
-      title:       "Bureau d'étude télécom — Plans DP, DIM, DOE — NJTECH Solution",
+      title:       "Bureau d'étude télécom — Plans DP, DIM, DOE",
       description: "Bureau d'étude télécom NJTECH : plans DP, DTB, DIM, APS, APD, DOE, photomontages, études de propagation. Dossiers complets pour déploiements 4G et 5G. Conformité réglementaire garantie.",
       keywords:    ["bureau d'étude télécom", "plans DP DIM DOE", "photomontages télécom", "dossier technique antenne", "conformité réglementaire 5G"],
     },
@@ -114,7 +114,7 @@ export const SERVICES: ServiceData[] = [
       description: "Maintenance préventive et corrective des infrastructures télécom. Diagnostic, remise en service — nos équipes interviennent rapidement sur tout le territoire.",
     },
     seo: {
-      title:       "Maintenance & SAV infrastructures télécom 4G / 5G — NJTECH Solution",
+      title:       "Maintenance & SAV infrastructures télécom 4G / 5G",
       description: "Maintenance préventive et corrective des infrastructures télécom. Réactivité 48h sur tout le territoire français. Diagnostic, remise en service, gestion matériel. Partenaire des opérateurs nationaux.",
       keywords:    ["maintenance télécom", "SAV antennes 4G 5G", "maintenance préventive corrective", "intervention télécom 48h", "remise en service réseau mobile"],
     },

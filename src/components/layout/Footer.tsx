@@ -55,7 +55,7 @@ export default function Footer() {
           {/* Identité */}
           <div className="lg:col-span-3">
             <Logo dark />
-            <p className="mt-5 max-w-xs text-[0.82rem] leading-[1.85] text-white/55">
+            <p className="mt-5 max-w-xs text-base md:text-[0.82rem] leading-[1.85] text-white/55">
               Spécialiste du déploiement, de l'intégration et de la maintenance
               des réseaux mobiles 4G et 5G pour les grands opérateurs nationaux.
             </p>

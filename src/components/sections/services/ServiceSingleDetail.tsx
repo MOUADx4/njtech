@@ -145,7 +145,7 @@ export default function ServiceSingleDetail({ service }: { service: ServiceData 
                       <RelIcon className="size-4.5" />
                     </div>
                     <h4 className="mt-4 text-[0.95rem] font-semibold text-navy-900">{r.title}</h4>
-                    <p className="mt-2 flex-1 text-[0.8rem] leading-relaxed text-navy-600/65">
+                    <p className="mt-2 flex-1 text-base md:text-[0.8rem] leading-relaxed text-navy-600/65">
                       {r.points[0]} · {r.points[1]}
                     </p>
                     <div className="mt-5 flex items-center gap-1.5 text-[0.75rem] font-semibold text-signal-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100">

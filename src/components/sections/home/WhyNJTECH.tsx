@@ -107,7 +107,7 @@ export default function WhyNJTECH() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-            className="max-w-sm text-[0.92rem] leading-[1.75] text-white/60"
+            className="max-w-sm text-base md:text-[0.92rem] leading-[1.75] text-white/60"
           >
             NJTECH combine expertise technique, rigueur opérationnelle et réactivité
             pour devenir le partenaire de référence des opérateurs français.
@@ -143,7 +143,7 @@ export default function WhyNJTECH() {
 
             {/* Droite — description + indicateurs */}
             <div>
-              <p className="text-[0.95rem] leading-[1.82] text-white/60 max-w-2xl">
+              <p className="text-base md:text-[0.95rem] leading-[1.82] text-white/60 max-w-2xl">
                 {hero.desc}
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
@@ -180,7 +180,7 @@ export default function WhyNJTECH() {
                   {f.unit && <span className="text-[2rem]">{f.unit}</span>}
                 </div>
                 <div className="mt-3 text-[0.82rem] font-semibold text-white/85">{f.label}</div>
-                <p className="mt-2 text-[0.76rem] leading-[1.65] text-white/60">{f.desc}</p>
+                <p className="mt-2 text-base md:text-[0.76rem] leading-[1.65] text-white/60">{f.desc}</p>
                 <div className="mt-5 h-px w-0 rounded-full bg-gradient-to-r from-signal-500 to-signal-400/60 transition-all duration-500 group-hover:w-10" />
               </div>
             </motion.div>

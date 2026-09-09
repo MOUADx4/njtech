@@ -84,7 +84,7 @@ export default function Services() {
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-3.5 text-[0.83rem] leading-[1.75] text-white/50">
+                  <p className="mt-3.5 text-base md:text-[0.83rem] leading-[1.75] text-white/50">
                     {s.text}
                   </p>
 

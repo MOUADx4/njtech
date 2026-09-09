@@ -64,7 +64,7 @@ export default function SectionHeader({
           transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.17 }}
           className={cn(
             "mt-6 text-pretty leading-[1.8]",
-            "text-[0.98rem] md:text-[1.07rem]",
+            "text-base md:text-[1.07rem]",
             dark ? "text-white/52" : "text-navy-700/65",
           )}
         >

@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, Home, Phone } from "lucide-react";
 import Container from "@/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Page introuvable — NJTECH Solution",
+  title: "Page introuvable",
   robots: { index: false },
 };
 
@@ -52,7 +52,7 @@ export default function NotFound() {
           </h1>
 
           {/* Sub */}
-          <p className="mt-5 max-w-md text-[0.95rem] leading-[1.75] text-white/60">
+          <p className="mt-5 max-w-md text-base md:text-[0.95rem] leading-[1.75] text-white/60">
             Le lien que vous avez suivi est incorrect ou la page a été supprimée.
             Utilisez la navigation ci-dessous pour retrouver votre chemin.
           </p>
