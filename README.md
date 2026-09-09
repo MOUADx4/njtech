@@ -138,14 +138,32 @@ NEXT_PUBLIC_WEB3FORMS_KEY=votre-cle-ici
 | `npm run dev` | Démarre le serveur de développement (Turbopack) |
 | `npm run build` | Génère la version de production optimisée |
 | `npm start` | Sert la version de production (après `build`) |
+| `npm test` | Lance la suite de tests (Vitest) |
+| `npm run test:watch` | Rejoue les tests à chaque modification |
 | `npm run lint` | Analyse le code avec ESLint |
 | `npm run lint:fix` | Corrige automatiquement ce qui peut l'être |
 | `npm run typecheck` | Vérifie les types TypeScript sans générer de fichiers |
 | `npm run format` | Formate le code avec Prettier |
 | `npm run format:check` | Vérifie le formatage sans modifier les fichiers |
 
-Ces trois commandes sont rejouées automatiquement à chaque push via GitHub Actions
-(`.github/workflows/ci.yml`) : `lint`, `typecheck`, puis `build`.
+Ces commandes sont rejouées automatiquement à chaque push via GitHub Actions
+(`.github/workflows/ci.yml`) : `lint`, `typecheck`, `test`, puis `build`.
+
+### Que vérifient les tests ?
+
+La suite (`tests/`) protège les **données et les liens** — la catégorie d'erreurs
+qu'un site vitrine subit réellement, et que le compilateur ne voit pas :
+
+- **Coordonnées** : format de l'e-mail, cohérence avec le domaine du site,
+  numéros au format E.164 correspondant aux numéros affichés, code postal,
+  coordonnées GPS situées en France.
+- **Navigation** : chaque lien du menu et du pied de page pointe vers une route
+  qui existe réellement dans `src/app/` ; pas de doublon ; les quatre pages
+  légales obligatoires sont présentes.
+- **Prestations** : slugs uniques et compatibles URL, champs textuels remplis,
+  images présentes dans `public/`, accroche courte distincte de la description
+  longue, titres SEO uniques, cohérence entre le catalogue et le pied de page.
+- **Icônes** : chaque prestation a son icône, aucune icône orpheline.
 
 ---
 
@@ -153,7 +171,8 @@ Ces trois commandes sont rejouées automatiquement à chaque push via GitHub Act
 
 ```
 njtech/
-├── .github/workflows/       Intégration continue (lint, types, build)
+├── .github/workflows/       Intégration continue (lint, types, tests, build)
+├── tests/                   Tests Vitest (données, liens, cohérence)
 ├── docs/
 │   ├── design-system.md     Règles de design (couleurs, typo, espacements)
 │   └── screenshots/         Captures utilisées dans ce README
