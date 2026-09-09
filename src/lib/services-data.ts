@@ -19,7 +19,10 @@ export type ServiceData = {
     description: string;
     keywords:    string[];
   };
+  /** Description longue — page de prestation dédiée. */
   text:   string;
+  /** Accroche courte — carte de la page d'accueil. */
+  teaser: string;
   points: string[];
   image:  string;
 };
@@ -41,6 +44,7 @@ export const SERVICES: ServiceData[] = [
       keywords:    ["aménagement sites radio", "génie civil télécom", "pylône 5G", "toit terrasse antenne", "déploiement 4G France"],
     },
     text:   "Nous prenons en charge l'aménagement complet de sites neufs ou existants — toits terrasses, pylônes et infrastructures en milieu urbain et rural. De la préparation du génie civil à l'installation des équipements actifs, nos équipes garantissent un site opérationnel dans les délais.",
+    teaser: "Sites neufs ou existants — toits terrasses, pylônes, infrastructures en milieu urbain et rural. Coordination complète des travaux de génie civil et d'installation.",
     points: [
       "Génie civil et fondations",
       "Toits terrasses & sites monopole",
@@ -65,6 +69,7 @@ export const SERVICES: ServiceData[] = [
       keywords:    ["déploiement antennes 5G", "faisceaux hertziens", "RAN Nokia Ericsson Huawei", "calage azimutal", "travaux en hauteur télécom"],
     },
     text:   "Installation et calage précis d'antennes sectorielles, faisceaux hertziens et équipements RAN. Nos techniciens certifiés interviennent en hauteur avec tous les équipements de sécurité pour une mise en service parfaite.",
+    teaser: "Installation et calage d'antennes sectorielles, faisceaux hertziens, équipements RAN. Mise en service et optimisation des paramètres RF.",
     points: [
       "Antennes sectorielles 4G / 5G",
       "Faisceaux hertziens PDH / SDH",
@@ -89,6 +94,7 @@ export const SERVICES: ServiceData[] = [
       keywords:    ["bureau d'étude télécom", "plans DP DIM DOE", "photomontages télécom", "dossier technique antenne", "conformité réglementaire 5G"],
     },
     text:   "Notre bureau d'étude interne réalise l'ensemble des dossiers techniques nécessaires à chaque projet télécom — depuis les études de faisabilité jusqu'au dossier de fin de travaux, en passant par les photomontages et les plans d'exécution.",
+    teaser: "Plans DP / DTB / DIM / APS / APD / DOE, photomontages et suivi de conformité. Expertise technique au service de vos projets les plus complexes.",
     points: [
       "Plans DP / DTB / DIM / APS / APD / DOE",
       "Photomontages et simulations visuelles",
@@ -113,6 +119,7 @@ export const SERVICES: ServiceData[] = [
       keywords:    ["maintenance télécom", "SAV antennes 4G 5G", "maintenance préventive corrective", "intervention télécom 48h", "remise en service réseau mobile"],
     },
     text:   "Nous assurons la maintenance préventive et corrective des infrastructures télécom. Nos équipes interviennent rapidement sur tout le territoire pour diagnostiquer et résoudre les pannes, garantissant une disponibilité réseau maximale.",
+    teaser: "Préparation matériel, interventions correctives, vérification avant remise en service. Réactivité garantie sous 48h sur l'ensemble du territoire.",
     points: [
       "Maintenance préventive programmée",
       "Interventions correctives 24h / 48h",

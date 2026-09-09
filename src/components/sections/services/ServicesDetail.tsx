@@ -4,68 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { Building2, Antenna, Cable, Wrench, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Container from "@/components/ui/Container";
-import type { ServiceSlug } from "@/lib/services-data";
+import { SERVICES } from "@/lib/services-data";
+import { SERVICE_ICONS } from "@/lib/service-icons";
 
-const services = [
-  {
-    n: "01",
-    slug: "amenagement-sites-radio",
-    icon: Building2,
-    title: "Aménagement de sites radio",
-    text: "Nous prenons en charge l'aménagement complet de sites neufs ou existants — toits terrasses, pylônes et infrastructures en milieu urbain et rural. De la préparation du génie civil à l'installation des équipements actifs, nos équipes garantissent un site opérationnel dans les délais.",
-    points: [
-      "Génie civil et fondations",
-      "Toits terrasses & sites monopole",
-      "Préparation des ancrages et supports",
-      "Mise en conformité des sites existants",
-    ],
-    image: "/images/rural-tower.png",
-  },
-  {
-    n: "02",
-    slug: "deploiement-antennes",
-    icon: Antenna,
-    title: "Déploiement antennes & faisceaux",
-    text: "Installation et calage précis d'antennes sectorielles, faisceaux hertziens et équipements RAN. Nos techniciens certifiés interviennent en hauteur avec tous les équipements de sécurité pour une mise en service parfaite.",
-    points: [
-      "Antennes sectorielles 4G / 5G",
-      "Faisceaux hertziens PDH / SDH",
-      "Équipements RAN (Nokia, Ericsson, Huawei)",
-      "Calage azimutal et électrique",
-    ],
-    image: "/images/technician-climbing.png",
-  },
-  {
-    n: "03",
-    slug: "bureau-etude",
-    icon: Cable,
-    title: "Bureau d'étude",
-    text: "Notre bureau d'étude interne réalise l'ensemble des dossiers techniques nécessaires à chaque projet télécom — depuis les études de faisabilité jusqu'au dossier de fin de travaux, en passant par les photomontages et les plans d'exécution.",
-    points: [
-      "Plans DP / DTB / DIM / APS / APD / DOE",
-      "Photomontages et simulations visuelles",
-      "Études de propagation et couverture",
-      "Suivi de conformité et dossiers réglementaires",
-    ],
-    image: "/images/bts-cabinet.png",
-  },
-  {
-    n: "04",
-    slug: "maintenance-sav",
-    icon: Wrench,
-    title: "Maintenance & SAV",
-    text: "Nous assurons la maintenance préventive et corrective des infrastructures télécom. Nos équipes interviennent rapidement sur tout le territoire pour diagnostiquer et résoudre les pannes, garantissant une disponibilité réseau maximale.",
-    points: [
-      "Maintenance préventive programmée",
-      "Interventions correctives 24h / 48h",
-      "Préparation et gestion du matériel",
-      "Vérification avant remise en service",
-    ],
-    image: "/images/install-5g.png",
-  },
-] satisfies readonly { slug: ServiceSlug; [key: string]: unknown }[];
+/**
+ * Dérivé de la source unique `SERVICES` : titre, texte, points et image
+ * proviennent de `services-data.ts`. Seule l'icône est résolue ici, le
+ * fichier de données ne stockant que son nom.
+ */
+const services = SERVICES.map((s) => ({ ...s, icon: SERVICE_ICONS[s.icon] }));
 
 export default function ServicesDetail() {
   return (

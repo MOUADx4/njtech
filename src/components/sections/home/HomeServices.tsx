@@ -3,45 +3,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Building2, Antenna, Cable, Wrench, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeader from "@/components/ui/SectionHeader";
-import type { ServiceSlug } from "@/lib/services-data";
+import { SERVICES } from "@/lib/services-data";
+import { SERVICE_ICONS } from "@/lib/service-icons";
 
-const services = [
-  {
-    num: "01",
-    slug: "amenagement-sites-radio",
-    icon: Building2,
-    title: "Aménagement de sites radio",
-    text: "Sites neufs ou existants — toits terrasses, pylônes, infrastructures en milieu urbain et rural. Coordination complète des travaux de génie civil et d'installation.",
-    image: "/images/rural-tower.png",
-  },
-  {
-    num: "02",
-    slug: "deploiement-antennes",
-    icon: Antenna,
-    title: "Déploiement antennes & faisceaux",
-    text: "Installation et calage d'antennes sectorielles, faisceaux hertziens, équipements RAN. Mise en service et optimisation des paramètres RF.",
-    image: "/images/technician-climbing.png",
-  },
-  {
-    num: "03",
-    slug: "bureau-etude",
-    icon: Cable,
-    title: "Bureau d'étude",
-    text: "Plans DP / DTB / DIM / APS / APD / DOE, photomontages et suivi de conformité. Expertise technique au service de vos projets les plus complexes.",
-    image: "/images/bts-cabinet.png",
-  },
-  {
-    num: "04",
-    slug: "maintenance-sav",
-    icon: Wrench,
-    title: "Maintenance & SAV",
-    text: "Préparation matériel, interventions correctives, vérification avant remise en service. Réactivité garantie sous 48h sur l'ensemble du territoire.",
-    image: "/images/install-5g.png",
-  },
-] satisfies readonly { slug: ServiceSlug; [key: string]: unknown }[];
+/**
+ * Dérivé de la source unique `SERVICES`. La carte d'accueil affiche
+ * l'accroche courte (`teaser`) plutôt que la description longue.
+ */
+const services = SERVICES.map((s) => ({
+  ...s,
+  num:  s.n,
+  text: s.teaser,
+  icon: SERVICE_ICONS[s.icon],
+}));
 
 export default function Services() {
   return (
