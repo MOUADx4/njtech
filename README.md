@@ -54,6 +54,7 @@ Site vitrine responsive et animé, pensé pour valoriser le savoir-faire terrain
 - [Déploiement](#déploiement)
 - [Conformité & SEO](#conformité--seo)
 - [Personnalisation](#personnalisation)
+- [Système de design](#système-de-design)
 - [Crédits](#crédits)
 
 ---
@@ -87,12 +88,15 @@ Site vitrine responsive et animé, pensé pour valoriser le savoir-faire terrain
 | Formulaire | [Web3Forms](https://web3forms.com/) |
 | Analytics | [Plausible](https://plausible.io/) |
 | Utilitaires | `clsx` + `tailwind-merge` |
+| Tests | [Vitest](https://vitest.dev/) |
+| Qualité | ESLint (`eslint-config-next`) + Prettier |
 
 ---
 
 ## Prérequis
 
-- **Node.js 18.18+** (ou 20+ recommandé)
+- **Node.js 20.9+** — requis par Next.js 16 (`engines: ">=20.9.0"`). Une version
+  antérieure fait échouer l'installation.
 - **npm** (fourni avec Node.js)
 
 ---
@@ -101,7 +105,7 @@ Site vitrine responsive et animé, pensé pour valoriser le savoir-faire terrain
 
 ```bash
 # 1. Cloner le dépôt
-git clone <url-du-depot>
+git clone https://github.com/MOUADx4/njtech.git
 cd njtech
 
 # 2. Installer les dépendances
@@ -205,13 +209,13 @@ njtech/
 │   │   │   ├── about/       About, Methodology, Coverage, Safety
 │   │   │   ├── contact/     ContactPage, FranceCoverageMap
 │   │   │   └── shared/      Blocs réutilisés sur plusieurs pages
-│   │   ├── ui/              Composants réutilisables (boutons, compteurs…)
+│   │   ├── ui/              Button, Container, SectionHeader, Logo…
 │   │   ├── effects/         Smooth scroll, arrière-plans animés
 │   │   └── legal/           Consentement cookies, analytics
 │   ├── config/
 │   │   └── site.ts          ⭐ Coordonnées, navigation et SEO — source unique
 │   ├── hooks/               Hooks personnalisés (formulaire, consentement…)
-│   └── lib/                 Données des prestations, utilitaires
+│   └── lib/                 Données des prestations, table d'icônes, utilitaires
 ├── next.config.ts
 ├── tsconfig.json
 └── package.json
@@ -270,6 +274,54 @@ Tout hébergeur compatible Node.js fonctionne également via `npm run build` pui
   4 pages de services). Les slugs sont typés : une faute de frappe est bloquée
   par `npm run typecheck`.
 - **Images** : remplacer les fichiers dans `public/images/`.
+
+---
+
+## Système de design
+
+Le site suit une échelle fermée : **utiliser ces tokens plutôt que des valeurs
+arbitraires**. C'est ce qui garantit la cohérence d'un écran à l'autre.
+
+### Typographie — `src/app/globals.css`, bloc `@theme`
+
+| Token | Taille | Usage |
+|---|---|---|
+| `text-eyebrow` | 10 px | Majuscules espacées, sur-titres de section |
+| `text-caption` | 11,5 px | Mentions, légendes, métadonnées |
+| `text-body` | 13 px | Texte courant compact |
+| `text-body-lg` | 14,4 px | Texte courant confortable |
+| `text-lead` | 16 px | Chapô, introductions |
+| `text-h4` … `text-h1` | 19,2 → 48 px | Titres |
+
+Le héros et les grands titres de page utilisent une typographie fluide en
+`clamp()`, définie au cas par cas.
+
+### Boutons — `src/components/ui/Button.tsx`
+
+Composant unique, **ne pas réécrire de bouton à la main**.
+
+```tsx
+<Button href="/contact">Nous contacter</Button>
+<Button variant="secondary" size="lg">En savoir plus</Button>
+<Button type="submit" disabled={loading}>Envoyer</Button>
+```
+
+Deux variants (`primary`, `secondary`), trois tailles (`sm`, `md`, `lg`).
+`href` produit un lien, son absence un `<button>`. Coins carrés sans exception :
+c'est le parti pris graphique du site.
+
+### Autres échelles
+
+- **Opacité du texte** : `/55` `/70` `/85` `/95` — jamais en dessous de `/55`,
+  qui correspond au seuil de contraste WCAG AA.
+- **Opacité des surfaces** : `[0.04]` fonds subtils · `[0.07]` bordures
+  courantes · `[0.11]` bordures marquées · `[0.18]` survol.
+- **Rayons** : `rounded-lg` petits éléments · `rounded-2xl` cartes et panneaux ·
+  `rounded-full` pastilles et éléments circulaires.
+- **Durées** : `duration-200` micro-interactions · `duration-300` transitions
+  courantes · `duration-500` mouvements amples.
+- **Cibles tactiles** : la classe `.tap-target` garantit 44 px de hauteur utile
+  sur écran tactile, sans affecter la mise en page au pointeur précis.
 
 ---
 
