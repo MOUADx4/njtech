@@ -40,7 +40,7 @@ function ServiceBlock({
     <div
       id={s.slug}
       ref={ref}
-      className="relative scroll-mt-28 overflow-hidden border-b border-navy-100 last:border-none"
+      className="border-navy-100 relative scroll-mt-28 overflow-hidden border-b last:border-none"
     >
       <Container className="py-24">
         <div
@@ -56,20 +56,20 @@ function ServiceBlock({
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="flex items-baseline gap-4">
-              <span className="text-6xl font-bold text-navy-100 select-none">{s.n}</span>
-              <div className="grid size-11 place-items-center rounded-2xl bg-navy-950 text-signal-400">
+              <span className="text-navy-100 text-6xl font-bold select-none">{s.n}</span>
+              <div className="bg-navy-950 text-signal-400 grid size-11 place-items-center rounded-2xl">
                 <s.icon className="size-5" />
               </div>
             </div>
-            <h2 className="mt-6 text-h2 font-semibold leading-tight tracking-tight text-navy-950 md:text-h2">
+            <h2 className="text-h2 text-navy-950 md:text-h2 mt-6 leading-tight font-semibold tracking-tight">
               {s.title}
             </h2>
-            <p className="mt-5 text-base leading-relaxed text-navy-700/70">{s.text}</p>
+            <p className="text-navy-700/70 mt-5 text-base leading-relaxed">{s.text}</p>
 
             <ul className="mt-8 space-y-3">
               {s.points.map((p) => (
-                <li key={p} className="flex items-center gap-3 text-body-lg text-navy-800">
-                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-signal-500" />
+                <li key={p} className="text-body-lg text-navy-800 flex items-center gap-3">
+                  <span className="bg-signal-500 h-1.5 w-1.5 shrink-0 rounded-full" />
                   {p}
                 </li>
               ))}
@@ -77,7 +77,7 @@ function ServiceBlock({
 
             <Link
               href={`/services/${s.slug}`}
-              className="tap-target mt-8 inline-flex items-center gap-2 text-body font-semibold text-signal-600 transition-colors hover:text-signal-500"
+              className="tap-target text-body text-signal-600 hover:text-signal-500 mt-8 inline-flex items-center gap-2 font-semibold transition-colors"
             >
               En savoir plus <ArrowRight className="size-3.5" />
             </Link>
@@ -89,7 +89,7 @@ function ServiceBlock({
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-navy-950"
+            className="group bg-navy-950 relative aspect-[4/3] overflow-hidden rounded-2xl"
           >
             <Image
               src={s.image}
@@ -99,7 +99,7 @@ function ServiceBlock({
               className="object-cover transition-transform duration-500 group-hover:scale-105"
               priority={index === 0}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/30 to-transparent" />
+            <div className="from-navy-950/30 absolute inset-0 bg-gradient-to-t to-transparent" />
           </motion.div>
         </div>
       </Container>

@@ -9,16 +9,16 @@ import { contact } from "@/config/site";
 
 const trustedLogos = [
   { name: "Bouygues Telecom", logo: "/images/BouyguesTelecom.png", w: 120, h: 36 },
-  { name: "Free Mobile",      logo: "/images/FreeMobile.png",      w: 100, h: 36 },
-  { name: "Orange",           logo: "/images/Orange.png",          w: 84,  h: 36 },
-  { name: "SFR",              logo: "/images/SFR.png",             w: 52,  h: 36 },
-  { name: "Sogetrel",         logo: "/images/Sogetrel.png",        w: 104, h: 36 },
+  { name: "Free Mobile", logo: "/images/FreeMobile.png", w: 100, h: 36 },
+  { name: "Orange", logo: "/images/Orange.png", w: 84, h: 36 },
+  { name: "SFR", logo: "/images/SFR.png", w: 52, h: 36 },
+  { name: "Sogetrel", logo: "/images/Sogetrel.png", w: 104, h: 36 },
 ];
 
 export default function HomeCta() {
   return (
-    <section className="noise relative overflow-hidden bg-navy-950 py-36 text-white">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-signal-600/[0.11] via-transparent to-navy-800/20" />
+    <section className="noise bg-navy-950 relative overflow-hidden py-36 text-white">
+      <div className="from-signal-600/[0.11] to-navy-800/20 pointer-events-none absolute inset-0 bg-gradient-to-br via-transparent" />
       <div className="absolute top-0 left-1/2 h-px w-[36rem] -translate-x-1/2 bg-gradient-to-r from-transparent via-white/18 to-transparent" />
 
       <Container className="relative text-center">
@@ -27,7 +27,7 @@ export default function HomeCta() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="section-label justify-center text-signal-400 mb-8"
+          className="section-label text-signal-400 mb-8 justify-center"
         >
           Passons à l'action
         </motion.p>
@@ -37,7 +37,7 @@ export default function HomeCta() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.08 }}
-          className="text-[2.8rem] font-semibold leading-[1.05] tracking-[-0.042em] text-white md:text-[4.2rem] lg:text-[5.2rem]"
+          className="text-[2.8rem] leading-[1.05] font-semibold tracking-[-0.042em] text-white md:text-[4.2rem] lg:text-[5.2rem]"
         >
           Un projet télécom ?<br />
           <span className="text-gradient-signal">Parlons-en.</span>
@@ -48,10 +48,11 @@ export default function HomeCta() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.18 }}
-          className="mx-auto mt-7 max-w-md text-lead leading-[1.75] text-white/55"
+          className="text-lead mx-auto mt-7 max-w-md leading-[1.75] text-white/55"
         >
           Déploiement, intégration, bureau d'étude, maintenance.
-          <br />Notre équipe répond sous 24h.
+          <br />
+          Notre équipe répond sous 24h.
         </motion.p>
 
         <motion.div
@@ -79,7 +80,7 @@ export default function HomeCta() {
           transition={{ duration: 0.9, delay: 0.45 }}
           className="mt-16 flex flex-col items-center gap-6"
         >
-          <p className="text-eyebrow font-bold uppercase tracking-[0.3em] text-white/55">
+          <p className="text-eyebrow font-bold tracking-[0.3em] text-white/55 uppercase">
             Ils nous font confiance
           </p>
 

@@ -9,14 +9,14 @@ export function useContactForm() {
 
   async function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form  = e.currentTarget;
-    const data  = new FormData(form);
+    const form = e.currentTarget;
+    const data = new FormData(form);
 
     setStatus("loading");
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
-        method:  "POST",
+        method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           /* Clé API Web3Forms — à définir dans .env.local
@@ -25,7 +25,7 @@ export function useContactForm() {
           access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "",
 
           /* Objet de l'email reçu */
-          subject:   `Nouveau contact NJTECH — ${data.get("name")} · ${data.get("company")}`,
+          subject: `Nouveau contact NJTECH — ${data.get("name")} · ${data.get("company")}`,
           from_name: "Site NJTECH Solution",
 
           /* Honeypot anti-spam — Web3Forms rejette si rempli */
@@ -39,15 +39,15 @@ export function useContactForm() {
            *        web3forms.com/dashboard → votre clé → "Auto Response" → ON
            *        Personnaliser l'objet et le message de confirmation là-bas.
            */
-          email:    data.get("email"),
-          replyto:  data.get("email"),
+          email: data.get("email"),
+          replyto: data.get("email"),
 
           /* Champs affichés dans la notification reçue */
-          "Nom":                  data.get("name"),
-          "Entreprise":           data.get("company"),
-          "Téléphone":            data.get("phone"),
-          "Type d'intervention":  data.get("type"),
-          "Message":              data.get("message"),
+          Nom: data.get("name"),
+          Entreprise: data.get("company"),
+          Téléphone: data.get("phone"),
+          "Type d'intervention": data.get("type"),
+          Message: data.get("message"),
         }),
       });
 

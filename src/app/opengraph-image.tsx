@@ -2,71 +2,72 @@ import { ImageResponse } from "next/og";
 import { readFile } from "fs/promises";
 import { join } from "path";
 
-export const size        = { width: 1200, height: 630 };
+export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt         = "NJTECH Solution — Infrastructures Télécom 4G / 5G";
+export const alt = "NJTECH Solution — Infrastructures Télécom 4G / 5G";
 
 export default async function OgImage() {
-  const raw    = await readFile(join(process.cwd(), "public/images/logo.png"));
-  const logo   = `data:image/png;base64,${raw.toString("base64")}`;
+  const raw = await readFile(join(process.cwd(), "public/images/logo.png"));
+  const logo = `data:image/png;base64,${raw.toString("base64")}`;
 
   return new ImageResponse(
     <div
       style={{
-        width:          1200,
-        height:         630,
-        background:     "#020816",
-        display:        "flex",
-        flexDirection:  "column",
-        position:       "relative",
-        overflow:       "hidden",
-        fontFamily:     "system-ui, sans-serif",
+        width: 1200,
+        height: 630,
+        background: "#020816",
+        display: "flex",
+        flexDirection: "column",
+        position: "relative",
+        overflow: "hidden",
+        fontFamily: "system-ui, sans-serif",
       }}
     >
       {/* Texture de grille */}
       <div
         style={{
-          position:        "absolute",
-          inset:           0,
-          backgroundImage: "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
-          backgroundSize:  "48px 48px",
+          position: "absolute",
+          inset: 0,
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
+          backgroundSize: "48px 48px",
         }}
       />
 
       {/* Halo en haut à gauche */}
       <div
         style={{
-          position:     "absolute",
-          top:          -160,
-          left:         -80,
-          width:        700,
-          height:       700,
+          position: "absolute",
+          top: -160,
+          left: -80,
+          width: 700,
+          height: 700,
           borderRadius: "50%",
-          background:   "radial-gradient(circle, rgba(3,151,231,0.18) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(3,151,231,0.18) 0%, transparent 65%)",
         }}
       />
 
       {/* Halo en bas à droite */}
       <div
         style={{
-          position:     "absolute",
-          bottom:       -200,
-          right:        -100,
-          width:        600,
-          height:       600,
+          position: "absolute",
+          bottom: -200,
+          right: -100,
+          width: 600,
+          height: 600,
           borderRadius: "50%",
-          background:   "radial-gradient(circle, rgba(3,151,231,0.10) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(3,151,231,0.10) 0%, transparent 65%)",
         }}
       />
 
       {/* Liseré supérieur */}
       <div
         style={{
-          position:   "absolute",
-          top:        0,
-          left:       0,
-          right:      0,
-          height:     3,
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: 3,
           background: "linear-gradient(90deg, transparent, #0397e7, transparent)",
         }}
       />
@@ -74,11 +75,11 @@ export default async function OgImage() {
       {/* Contenu principal */}
       <div
         style={{
-          display:        "flex",
-          flexDirection:  "column",
-          flex:           1,
-          padding:        "64px 80px",
-          position:       "relative",
+          display: "flex",
+          flexDirection: "column",
+          flex: 1,
+          padding: "64px 80px",
+          position: "relative",
           justifyContent: "space-between",
         }}
       >
@@ -94,20 +95,20 @@ export default async function OgImage() {
           {/* Intitulé */}
           <div
             style={{
-              display:       "flex",
-              alignItems:    "center",
-              gap:           12,
-              marginBottom:  8,
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              marginBottom: 8,
             }}
           >
             <div style={{ width: 36, height: 2, background: "#0397e7", borderRadius: 2 }} />
             <span
               style={{
-                fontSize:      13,
-                fontWeight:    700,
+                fontSize: 13,
+                fontWeight: 700,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
-                color:         "#0397e7",
+                color: "#0397e7",
               }}
             >
               Infrastructures Télécom
@@ -117,24 +118,24 @@ export default async function OgImage() {
           {/* Headline */}
           <div
             style={{
-              fontSize:      68,
-              fontWeight:    800,
-              lineHeight:    1.0,
+              fontSize: 68,
+              fontWeight: 800,
+              lineHeight: 1.0,
               letterSpacing: "-0.03em",
-              color:         "#ffffff",
+              color: "#ffffff",
             }}
           >
             Déployer le réseau
           </div>
           <div
             style={{
-              fontSize:      68,
-              fontWeight:    800,
-              lineHeight:    1.0,
+              fontSize: 68,
+              fontWeight: 800,
+              lineHeight: 1.0,
               letterSpacing: "-0.03em",
-              background:    "linear-gradient(135deg, #38bdf8 0%, #0397e7 50%, #0076c2 100%)",
+              background: "linear-gradient(135deg, #38bdf8 0%, #0397e7 50%, #0076c2 100%)",
               WebkitBackgroundClip: "text",
-              color:         "transparent",
+              color: "transparent",
             }}
           >
             de demain.
@@ -144,8 +145,8 @@ export default async function OgImage() {
         {/* Ligne inférieure */}
         <div
           style={{
-            display:        "flex",
-            alignItems:     "center",
+            display: "flex",
+            alignItems: "center",
             justifyContent: "space-between",
           }}
         >
@@ -155,13 +156,13 @@ export default async function OgImage() {
               <div
                 key={b}
                 style={{
-                  border:        "1px solid rgba(255,255,255,0.1)",
-                  borderRadius:  999,
-                  padding:       "8px 18px",
-                  fontSize:      13,
-                  fontWeight:    600,
-                  color:         "rgba(255,255,255,0.55)",
-                  background:    "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                  borderRadius: 999,
+                  padding: "8px 18px",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  color: "rgba(255,255,255,0.55)",
+                  background: "rgba(255,255,255,0.04)",
                 }}
               >
                 {b}
@@ -172,9 +173,9 @@ export default async function OgImage() {
           {/* Domain */}
           <div
             style={{
-              fontSize:  16,
+              fontSize: 16,
               fontWeight: 500,
-              color:     "rgba(255,255,255,0.25)",
+              color: "rgba(255,255,255,0.25)",
               letterSpacing: "0.04em",
             }}
           >

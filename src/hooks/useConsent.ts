@@ -5,9 +5,9 @@ import { useCallback, useEffect, useState } from "react";
 export type ConsentStatus = "accepted" | "refused" | "partial" | null;
 
 export interface ConsentState {
-  status:    ConsentStatus;
+  status: ConsentStatus;
   analytics: boolean;
-  date:      string | null;
+  date: string | null;
 }
 
 const STORAGE_KEY = "njtech-cookie-consent";
@@ -26,7 +26,7 @@ function readStorage(): ConsentState {
 
 export function useConsent() {
   const [consent, setConsent] = useState<ConsentState>(DEFAULT);
-  const [mounted,  setMounted] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setConsent(readStorage());
@@ -39,8 +39,8 @@ export function useConsent() {
     setConsent(full);
   }, []);
 
-  const accept    = useCallback(() => save({ status: "accepted", analytics: true  }), [save]);
-  const refuse    = useCallback(() => save({ status: "refused",  analytics: false }), [save]);
+  const accept = useCallback(() => save({ status: "accepted", analytics: true }), [save]);
+  const refuse = useCallback(() => save({ status: "refused", analytics: false }), [save]);
   const customize = useCallback(
     (analytics: boolean) => save({ status: "partial", analytics }),
     [save],

@@ -8,130 +8,141 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { contact, formattedAddress } from "@/config/site";
 
 type Suggestion = { label: string; nextId: string };
-type Node       = { message: string; suggestions: Suggestion[] };
+type Node = { message: string; suggestions: Suggestion[] };
 
 const nodes: Record<string, Node> = {
-
   welcome: {
     message: "Bonjour, je suis l'assistant NJTECH.\nComment puis-je vous aider ?",
     suggestions: [
-      { label: "Nos services",           nextId: "services"       },
-      { label: "Nous contacter",         nextId: "contact"        },
-      { label: "Nos partenaires",        nextId: "partners"       },
-      { label: "Certifications",         nextId: "certifications" },
-      { label: "À propos de NJTECH",     nextId: "about"          },
-      { label: "Zone d'intervention",    nextId: "zone"           },
+      { label: "Nos services", nextId: "services" },
+      { label: "Nous contacter", nextId: "contact" },
+      { label: "Nos partenaires", nextId: "partners" },
+      { label: "Certifications", nextId: "certifications" },
+      { label: "À propos de NJTECH", nextId: "about" },
+      { label: "Zone d'intervention", nextId: "zone" },
     ],
   },
 
   services: {
-    message: "NJTECH couvre l'ensemble de la chaîne de valeur télécom 4G / 5G.\nQuel domaine vous intéresse ?",
+    message:
+      "NJTECH couvre l'ensemble de la chaîne de valeur télécom 4G / 5G.\nQuel domaine vous intéresse ?",
     suggestions: [
-      { label: "Aménagement de sites radio",       nextId: "s_amenagement" },
-      { label: "Déploiement antennes & faisceaux", nextId: "s_antennes"    },
-      { label: "Bureau d'étude",                   nextId: "s_bureau"      },
-      { label: "Maintenance & SAV",                nextId: "s_maintenance" },
-      { label: "← Accueil",                        nextId: "welcome"       },
+      { label: "Aménagement de sites radio", nextId: "s_amenagement" },
+      { label: "Déploiement antennes & faisceaux", nextId: "s_antennes" },
+      { label: "Bureau d'étude", nextId: "s_bureau" },
+      { label: "Maintenance & SAV", nextId: "s_maintenance" },
+      { label: "← Accueil", nextId: "welcome" },
     ],
   },
   s_amenagement: {
-    message: "**Aménagement de sites radio**\n\nSites neufs ou existants — toits terrasses, pylônes, milieu urbain et rural.\nNous assurons la coordination complète : génie civil, installation des supports, mise en conformité.",
+    message:
+      "**Aménagement de sites radio**\n\nSites neufs ou existants — toits terrasses, pylônes, milieu urbain et rural.\nNous assurons la coordination complète : génie civil, installation des supports, mise en conformité.",
     suggestions: [
-      { label: "Voir un autre service",   nextId: "services" },
-      { label: "Nous contacter",          nextId: "contact"  },
-      { label: "← Accueil",              nextId: "welcome"   },
+      { label: "Voir un autre service", nextId: "services" },
+      { label: "Nous contacter", nextId: "contact" },
+      { label: "← Accueil", nextId: "welcome" },
     ],
   },
   s_antennes: {
-    message: "**Déploiement antennes & faisceaux**\n\nInstallation et calage d'antennes sectorielles 4G / 5G, faisceaux hertziens PDH / SDH et équipements RAN (Nokia, Ericsson, Huawei).\nNos techniciens certifiés interviennent en hauteur avec tous les EPI.",
+    message:
+      "**Déploiement antennes & faisceaux**\n\nInstallation et calage d'antennes sectorielles 4G / 5G, faisceaux hertziens PDH / SDH et équipements RAN (Nokia, Ericsson, Huawei).\nNos techniciens certifiés interviennent en hauteur avec tous les EPI.",
     suggestions: [
-      { label: "Voir un autre service",   nextId: "services" },
-      { label: "Nous contacter",          nextId: "contact"  },
-      { label: "← Accueil",              nextId: "welcome"   },
+      { label: "Voir un autre service", nextId: "services" },
+      { label: "Nous contacter", nextId: "contact" },
+      { label: "← Accueil", nextId: "welcome" },
     ],
   },
   s_bureau: {
-    message: "**Bureau d'étude**\n\nProduction de l'ensemble des dossiers techniques : plans DP / DTB / DIM / APS / APD / DOE, photomontages, études de propagation et suivi de conformité réglementaire.",
+    message:
+      "**Bureau d'étude**\n\nProduction de l'ensemble des dossiers techniques : plans DP / DTB / DIM / APS / APD / DOE, photomontages, études de propagation et suivi de conformité réglementaire.",
     suggestions: [
-      { label: "Voir un autre service",   nextId: "services" },
-      { label: "Nous contacter",          nextId: "contact"  },
-      { label: "← Accueil",              nextId: "welcome"   },
+      { label: "Voir un autre service", nextId: "services" },
+      { label: "Nous contacter", nextId: "contact" },
+      { label: "← Accueil", nextId: "welcome" },
     ],
   },
   s_maintenance: {
-    message: "**Maintenance & SAV**\n\nMaintenance préventive et corrective avec réactivité garantie sous 48h sur tout le territoire.\nDiagnostic, préparation matériel, vérification avant remise en service.",
+    message:
+      "**Maintenance & SAV**\n\nMaintenance préventive et corrective avec réactivité garantie sous 48h sur tout le territoire.\nDiagnostic, préparation matériel, vérification avant remise en service.",
     suggestions: [
-      { label: "Voir un autre service",   nextId: "services" },
-      { label: "Nous contacter",          nextId: "contact"  },
-      { label: "← Accueil",              nextId: "welcome"   },
+      { label: "Voir un autre service", nextId: "services" },
+      { label: "Nous contacter", nextId: "contact" },
+      { label: "← Accueil", nextId: "welcome" },
     ],
   },
 
   contact: {
     message: `Voici nos coordonnées :\n\n${formattedAddress}\n\nStandard — ${contact.phone.switchboard}\nDirection — ${contact.phone.direction}\nEmail — ${contact.email}\n\nNous répondons sous 24h ouvrées.`,
     suggestions: [
-      { label: "Délais de réponse",       nextId: "contact_delais" },
-      { label: "Envoyer un message",      nextId: "contact_form"   },
-      { label: "← Accueil",              nextId: "welcome"         },
+      { label: "Délais de réponse", nextId: "contact_delais" },
+      { label: "Envoyer un message", nextId: "contact_form" },
+      { label: "← Accueil", nextId: "welcome" },
     ],
   },
   contact_delais: {
-    message: "Notre équipe s'engage à répondre à toute demande sous **24h ouvrées**.\nPour les urgences SAV terrain, la réactivité est garantie sous **48h** sur l'ensemble du territoire.",
+    message:
+      "Notre équipe s'engage à répondre à toute demande sous **24h ouvrées**.\nPour les urgences SAV terrain, la réactivité est garantie sous **48h** sur l'ensemble du territoire.",
     suggestions: [
-      { label: "← Retour contact",   nextId: "contact" },
-      { label: "← Accueil",         nextId: "welcome"  },
+      { label: "← Retour contact", nextId: "contact" },
+      { label: "← Accueil", nextId: "welcome" },
     ],
   },
   contact_form: {
-    message: "Pour nous soumettre votre projet en détail, utilisez notre formulaire de contact. Décrivez votre besoin — localisation, technologie, délais — et nous revenons vers vous rapidement.",
+    message:
+      "Pour nous soumettre votre projet en détail, utilisez notre formulaire de contact. Décrivez votre besoin — localisation, technologie, délais — et nous revenons vers vous rapidement.",
     suggestions: [
-      { label: "← Retour contact",   nextId: "contact" },
-      { label: "← Accueil",         nextId: "welcome"  },
+      { label: "← Retour contact", nextId: "contact" },
+      { label: "← Accueil", nextId: "welcome" },
     ],
   },
 
   partners: {
-    message: "NJTECH intervient pour les grands opérateurs et intégrateurs nationaux :\n\nBouygues Telecom\nFree Mobile\nOrange\nSFR\nSogetrel\nCellnex\nTDF",
+    message:
+      "NJTECH intervient pour les grands opérateurs et intégrateurs nationaux :\n\nBouygues Telecom\nFree Mobile\nOrange\nSFR\nSogetrel\nCellnex\nTDF",
     suggestions: [
       { label: "Nos services pour ces opérateurs", nextId: "services" },
-      { label: "Nous contacter",                   nextId: "contact"  },
-      { label: "← Accueil",                        nextId: "welcome"  },
+      { label: "Nous contacter", nextId: "contact" },
+      { label: "← Accueil", nextId: "welcome" },
     ],
   },
 
   certifications: {
-    message: "Nos équipes sont formées et certifiées pour garantir la sécurité et la qualité de chaque intervention : travaux en hauteur, habilitations électriques, conduite d'engins et dossiers techniques (DP · DIM · DOE).",
+    message:
+      "Nos équipes sont formées et certifiées pour garantir la sécurité et la qualité de chaque intervention : travaux en hauteur, habilitations électriques, conduite d'engins et dossiers techniques (DP · DIM · DOE).",
     suggestions: [
-      { label: "Nos services",     nextId: "services" },
-      { label: "Nous contacter",   nextId: "contact"  },
-      { label: "← Accueil",       nextId: "welcome"   },
+      { label: "Nos services", nextId: "services" },
+      { label: "Nous contacter", nextId: "contact" },
+      { label: "← Accueil", nextId: "welcome" },
     ],
   },
 
   about: {
-    message: "**NJTECH Solution** est spécialiste du déploiement, de l'intégration et de la maintenance des infrastructures télécom 4G et 5G en France.\n\nFondée en 2019, l'entreprise intervient pour les grands opérateurs nationaux avec plus de 7 ans d'expertise terrain.",
+    message:
+      "**NJTECH Solution** est spécialiste du déploiement, de l'intégration et de la maintenance des infrastructures télécom 4G et 5G en France.\n\nFondée en 2019, l'entreprise intervient pour les grands opérateurs nationaux avec plus de 7 ans d'expertise terrain.",
     suggestions: [
-      { label: "Nos certifications",   nextId: "certifications" },
-      { label: "Nos partenaires",      nextId: "partners"       },
-      { label: "Chiffres clés",        nextId: "stats"          },
-      { label: "← Accueil",           nextId: "welcome"         },
+      { label: "Nos certifications", nextId: "certifications" },
+      { label: "Nos partenaires", nextId: "partners" },
+      { label: "Chiffres clés", nextId: "stats" },
+      { label: "← Accueil", nextId: "welcome" },
     ],
   },
   stats: {
-    message: "NJTECH en chiffres :\n\n**7+** années d'expertise terrain\n**4G & 5G** réseaux déployés\n**24 / 7** disponibilité\n**100 %** couverture France métropolitaine",
+    message:
+      "NJTECH en chiffres :\n\n**7+** années d'expertise terrain\n**4G & 5G** réseaux déployés\n**24 / 7** disponibilité\n**100 %** couverture France métropolitaine",
     suggestions: [
-      { label: "Nos services",     nextId: "services" },
-      { label: "Nous contacter",   nextId: "contact"  },
-      { label: "← Accueil",       nextId: "welcome"   },
+      { label: "Nos services", nextId: "services" },
+      { label: "Nous contacter", nextId: "contact" },
+      { label: "← Accueil", nextId: "welcome" },
     ],
   },
 
   zone: {
-    message: "NJTECH intervient sur l'ensemble de la **France métropolitaine** — milieu urbain dense (Île-de-France, PACA, Grand Est…) comme en zones rurales et blanches nécessitant une couverture réseau.",
+    message:
+      "NJTECH intervient sur l'ensemble de la **France métropolitaine** — milieu urbain dense (Île-de-France, PACA, Grand Est…) comme en zones rurales et blanches nécessitant une couverture réseau.",
     suggestions: [
-      { label: "Nous contacter pour un projet", nextId: "contact"  },
-      { label: "Nos services",                  nextId: "services" },
-      { label: "← Accueil",                     nextId: "welcome"  },
+      { label: "Nous contacter pour un projet", nextId: "contact" },
+      { label: "Nos services", nextId: "services" },
+      { label: "← Accueil", nextId: "welcome" },
     ],
   },
 };
@@ -144,9 +155,13 @@ function MessageText({ text }: { text: string }) {
         return (
           <span key={i}>
             {parts.map((part, j) =>
-              part.startsWith("**") && part.endsWith("**")
-                ? <strong key={j} className="font-semibold text-white">{part.slice(2, -2)}</strong>
-                : part
+              part.startsWith("**") && part.endsWith("**") ? (
+                <strong key={j} className="font-semibold text-white">
+                  {part.slice(2, -2)}
+                </strong>
+              ) : (
+                part
+              ),
             )}
             {i < arr.length - 1 && <br />}
           </span>
@@ -160,30 +175,33 @@ type ChatMessage = { role: "bot" | "user"; text: string };
 
 export default function ChatBot() {
   const reduced = useReducedMotion();
-  const [open,        setOpen]        = useState(false);
-  const [history,     setHistory]     = useState<ChatMessage[]>([
+  const [open, setOpen] = useState(false);
+  const [history, setHistory] = useState<ChatMessage[]>([
     { role: "bot", text: nodes.welcome.message },
   ]);
   const [currentNode, setCurrentNode] = useState("welcome");
-  const [animating,   setAnimating]   = useState(false);
+  const [animating, setAnimating] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [history]);
 
-  const handleSuggestion = useCallback((s: Suggestion) => {
-    if (animating) return;
-    const next = nodes[s.nextId];
-    if (!next) return;
-    setAnimating(true);
-    setHistory(h => [...h, { role: "user", text: s.label }]);
-    setTimeout(() => {
-      setHistory(h => [...h, { role: "bot", text: next.message }]);
-      setCurrentNode(s.nextId);
-      setAnimating(false);
-    }, 320);
-  }, [animating]);
+  const handleSuggestion = useCallback(
+    (s: Suggestion) => {
+      if (animating) return;
+      const next = nodes[s.nextId];
+      if (!next) return;
+      setAnimating(true);
+      setHistory((h) => [...h, { role: "user", text: s.label }]);
+      setTimeout(() => {
+        setHistory((h) => [...h, { role: "bot", text: next.message }]);
+        setCurrentNode(s.nextId);
+        setAnimating(false);
+      }, 320);
+    },
+    [animating],
+  );
 
   const reset = useCallback(() => {
     setHistory([{ role: "bot", text: nodes.welcome.message }]);
@@ -193,14 +211,13 @@ export default function ChatBot() {
   const suggestions = nodes[currentNode]?.suggestions ?? [];
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end pointer-events-none">
-
+    <div className="pointer-events-none fixed right-6 bottom-6 z-50 flex flex-col items-end">
       <div
         className={cn(
           "mb-3 flex w-[340px] max-w-[calc(100vw-3rem)] flex-col border border-white/[0.11] bg-[#070d18] shadow-2xl shadow-black/60 transition-all duration-300",
           open
-            ? "scale-100 opacity-100 pointer-events-auto"
-            : "scale-95 opacity-0 pointer-events-none",
+            ? "pointer-events-auto scale-100 opacity-100"
+            : "pointer-events-none scale-95 opacity-0",
         )}
         style={{ maxHeight: "520px", transformOrigin: "bottom right" }}
       >
@@ -216,16 +233,23 @@ export default function ChatBot() {
             />
             <div>
               <div className="text-body font-semibold text-white">Assistant NJTECH</div>
-              <div className="flex items-center gap-1.5 mt-0.5">
-                <span className={cn("size-1.5 rounded-full bg-emerald-400", !reduced && "animate-pulse")} />
-                <span className="text-eyebrow text-white/55 uppercase tracking-widest">En ligne</span>
+              <div className="mt-0.5 flex items-center gap-1.5">
+                <span
+                  className={cn(
+                    "size-1.5 rounded-full bg-emerald-400",
+                    !reduced && "animate-pulse",
+                  )}
+                />
+                <span className="text-eyebrow tracking-widest text-white/55 uppercase">
+                  En ligne
+                </span>
               </div>
             </div>
           </div>
           <div className="flex items-center gap-1">
             <button
               onClick={reset}
-              className="grid size-9 place-items-center text-white/55 hover:text-white/70 transition-colors tap-target"
+              className="tap-target grid size-9 place-items-center text-white/55 transition-colors hover:text-white/70"
               aria-label="Réinitialiser"
               title="Nouvelle conversation"
             >
@@ -233,7 +257,7 @@ export default function ChatBot() {
             </button>
             <button
               onClick={() => setOpen(false)}
-              className="grid size-9 place-items-center text-white/55 hover:text-white transition-colors tap-target"
+              className="tap-target grid size-9 place-items-center text-white/55 transition-colors hover:text-white"
               aria-label="Fermer"
             >
               <X className="size-4" />
@@ -243,7 +267,7 @@ export default function ChatBot() {
 
         {/* Messages */}
         <div
-          className="flex-1 overflow-y-auto p-4 space-y-2.5"
+          className="flex-1 space-y-2.5 overflow-y-auto p-4"
           style={{ minHeight: 0 }}
           role="log"
           aria-live="polite"
@@ -252,14 +276,11 @@ export default function ChatBot() {
           {history.map((msg, i) => (
             <div
               key={i}
-              className={cn(
-                "flex",
-                msg.role === "user" ? "justify-end" : "justify-start",
-              )}
+              className={cn("flex", msg.role === "user" ? "justify-end" : "justify-start")}
             >
               <div
                 className={cn(
-                  "max-w-[86%] px-3.5 py-2.5 text-base md:text-body leading-[1.68]",
+                  "md:text-body max-w-[86%] px-3.5 py-2.5 text-base leading-[1.68]",
                   msg.role === "bot"
                     ? "border border-white/[0.07] bg-white/[0.04] text-white/70"
                     : "bg-signal-500 text-white",
@@ -275,10 +296,13 @@ export default function ChatBot() {
             <div className="flex justify-start" aria-label="L'assistant écrit…" aria-live="polite">
               <div className="border border-white/[0.07] bg-white/[0.04] px-4 py-3">
                 <div className="flex items-center gap-1">
-                  {[0, 1, 2].map(d => (
+                  {[0, 1, 2].map((d) => (
                     <span
                       key={d}
-                      className={cn("size-1.5 rounded-full bg-white/30", !reduced && "animate-bounce")}
+                      className={cn(
+                        "size-1.5 rounded-full bg-white/30",
+                        !reduced && "animate-bounce",
+                      )}
                       style={reduced ? undefined : { animationDelay: `${d * 0.15}s` }}
                     />
                   ))}
@@ -291,15 +315,18 @@ export default function ChatBot() {
 
         {/* Suggestions */}
         {!animating && suggestions.length > 0 && (
-          <div className="shrink-0 border-t border-white/[0.07] p-3 space-y-1.5 overflow-y-auto" style={{ maxHeight: "180px" }}>
-            <p className="text-eyebrow font-bold uppercase tracking-[0.22em] text-white/55 px-1 pb-0.5">
+          <div
+            className="shrink-0 space-y-1.5 overflow-y-auto border-t border-white/[0.07] p-3"
+            style={{ maxHeight: "180px" }}
+          >
+            <p className="text-eyebrow px-1 pb-0.5 font-bold tracking-[0.22em] text-white/55 uppercase">
               Choisissez une option
             </p>
             {suggestions.map((s) => (
               <button
                 key={s.label}
                 onClick={() => handleSuggestion(s)}
-                className="tap-target w-full cursor-pointer text-left px-3.5 py-2.5 text-body text-white/55 border border-white/[0.07] transition-all duration-200 hover:border-signal-500/40 hover:bg-white/[0.04] hover:text-white/95 active:scale-[0.99]"
+                className="tap-target text-body hover:border-signal-500/40 w-full cursor-pointer border border-white/[0.07] px-3.5 py-2.5 text-left text-white/55 transition-all duration-200 hover:bg-white/[0.04] hover:text-white/95 active:scale-[0.99]"
               >
                 {s.label}
               </button>
@@ -309,14 +336,11 @@ export default function ChatBot() {
       </div>
 
       <button
-        onClick={() => setOpen(v => !v)}
+        onClick={() => setOpen((v) => !v)}
         aria-label={open ? "Fermer l'assistant" : "Ouvrir l'assistant NJTECH"}
-        className="pointer-events-auto grid size-12 place-items-center bg-signal-500 text-white shadow-lg shadow-signal-500/25 transition-colors hover:bg-signal-600 active:scale-95"
+        className="bg-signal-500 shadow-signal-500/25 hover:bg-signal-600 pointer-events-auto grid size-12 place-items-center text-white shadow-lg transition-colors active:scale-95"
       >
-        {open
-          ? <X className="size-5" />
-          : <MessageSquare className="size-5" />
-        }
+        {open ? <X className="size-5" /> : <MessageSquare className="size-5" />}
       </button>
     </div>
   );

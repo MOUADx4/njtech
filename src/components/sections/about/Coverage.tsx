@@ -7,16 +7,31 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import FranceCoverageMap from "@/components/sections/contact/FranceCoverageMap";
 
 const features = [
-  { icon: MapPin,  title: "Couverture nationale",  text: "Mobilité totale de nos équipes terrain sur toute la métropole." },
-  { icon: Radio,   title: "Déploiement 4G & 5G",   text: "Réseaux mobiles intégrés bout en bout, urbain et rural." },
-  { icon: Zap,     title: "Zones blanches",         text: "Apporter le signal là où il n'est pas encore arrivé." },
-  { icon: Users,   title: "Partenaires nationaux",  text: "Travail collaboratif direct avec opérateurs et intégrateurs." },
+  {
+    icon: MapPin,
+    title: "Couverture nationale",
+    text: "Mobilité totale de nos équipes terrain sur toute la métropole.",
+  },
+  {
+    icon: Radio,
+    title: "Déploiement 4G & 5G",
+    text: "Réseaux mobiles intégrés bout en bout, urbain et rural.",
+  },
+  {
+    icon: Zap,
+    title: "Zones blanches",
+    text: "Apporter le signal là où il n'est pas encore arrivé.",
+  },
+  {
+    icon: Users,
+    title: "Partenaires nationaux",
+    text: "Travail collaboratif direct avec opérateurs et intégrateurs.",
+  },
 ];
 
 export default function Coverage() {
   return (
-    <section id="coverage" className="relative overflow-hidden bg-white py-32 scroll-mt-20">
-
+    <section id="coverage" className="relative scroll-mt-20 overflow-hidden bg-white py-32">
       <Container className="relative">
         <div className="grid items-center gap-16 lg:grid-cols-12">
           <div className="lg:col-span-6">
@@ -24,9 +39,7 @@ export default function Coverage() {
               label="Zone d'intervention"
               title={
                 <>
-                  Une présence{" "}
-                  <span className="text-gradient-signal">partout</span>{" "}
-                  en France.
+                  Une présence <span className="text-gradient-signal">partout</span> en France.
                 </>
               }
               description="Basée en Île-de-France, NJTECH intervient sur l'ensemble du territoire — métropole, zones rurales et sites stratégiques."
@@ -40,13 +53,13 @@ export default function Coverage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.7, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
-                  className="rounded-2xl border border-navy-100 bg-white p-5 transition-colors hover:border-signal-200"
+                  className="border-navy-100 hover:border-signal-200 rounded-2xl border bg-white p-5 transition-colors"
                 >
-                  <div className="grid size-10 place-items-center rounded-lg bg-signal-50 text-signal-600">
+                  <div className="bg-signal-50 text-signal-600 grid size-10 place-items-center rounded-lg">
                     <f.icon className="size-4" />
                   </div>
-                  <div className="mt-4 text-body-lg font-semibold text-navy-900">{f.title}</div>
-                  <div className="mt-1 text-caption leading-relaxed text-navy-600/70">{f.text}</div>
+                  <div className="text-body-lg text-navy-900 mt-4 font-semibold">{f.title}</div>
+                  <div className="text-caption text-navy-600/70 mt-1 leading-relaxed">{f.text}</div>
                 </motion.div>
               ))}
             </div>
@@ -59,17 +72,17 @@ export default function Coverage() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="relative lg:col-span-6"
           >
-            <div className="overflow-hidden rounded-2xl border border-navy-100 bg-navy-50/30 p-5">
+            <div className="border-navy-100 bg-navy-50/30 overflow-hidden rounded-2xl border p-5">
               <FranceCoverageMap />
             </div>
 
-            <div className="absolute -bottom-5 -left-4 hidden rounded-2xl border border-navy-100 bg-white px-5 py-4 shadow-2xl md:block">
+            <div className="border-navy-100 absolute -bottom-5 -left-4 hidden rounded-2xl border bg-white px-5 py-4 shadow-2xl md:block">
               <div className="flex items-center gap-3">
-                <div className="grid size-10 place-items-center rounded-lg bg-navy-950 text-signal-400">
+                <div className="bg-navy-950 text-signal-400 grid size-10 place-items-center rounded-lg">
                   <Radio className="size-4" />
                 </div>
                 <div>
-                  <div className="text-body-lg font-semibold text-navy-900">Métropole entière</div>
+                  <div className="text-body-lg text-navy-900 font-semibold">Métropole entière</div>
                   <div className="text-caption text-navy-600/65">Réactivité 48h sur site</div>
                 </div>
               </div>

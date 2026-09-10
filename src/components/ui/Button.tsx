@@ -20,8 +20,7 @@ const VARIANTS: Record<Variant, string> = {
   /** Action principale — aplat bleu signal, reflet au survol. */
   primary: "btn-shimmer bg-signal-500 text-white hover:bg-signal-600",
   /** Action secondaire sur fond sombre — contour seul. */
-  secondary:
-    "border border-white/[0.18] text-white/70 hover:border-white/40 hover:text-white",
+  secondary: "border border-white/[0.18] text-white/70 hover:border-white/40 hover:text-white",
 };
 
 const SIZES: Record<Size, string> = {

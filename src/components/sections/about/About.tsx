@@ -32,7 +32,6 @@ const pillars = [
 export default function About() {
   return (
     <section id="about" className="relative overflow-hidden bg-white py-32">
-
       <Container className="relative">
         <div className="grid gap-20 lg:grid-cols-12 lg:gap-24">
           <div className="lg:col-span-5">
@@ -42,8 +41,7 @@ export default function About() {
                 <>
                   Un acteur de terrain
                   <br />
-                  au service de la{" "}
-                  <span className="text-gradient-signal">connectivité</span>.
+                  au service de la <span className="text-gradient-signal">connectivité</span>.
                 </>
               }
               description="NJTECH accompagne opérateurs et intégrateurs dans le déploiement, l'intégration et la maintenance des infrastructures télécom. Notre mission : garantir un signal fiable, partout."
@@ -64,8 +62,8 @@ export default function About() {
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="h-full w-full object-cover"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950/85 to-transparent p-7">
-                <div className="text-caption font-semibold uppercase tracking-[0.22em] text-signal-400">
+              <div className="from-navy-950/85 absolute inset-x-0 bottom-0 bg-gradient-to-t to-transparent p-7">
+                <div className="text-caption text-signal-400 font-semibold tracking-[0.22em] uppercase">
                   Équipes terrain
                 </div>
                 <div className="mt-1 text-base font-semibold text-white">
@@ -84,19 +82,15 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.7, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
-                  className="group relative overflow-hidden rounded-2xl border border-navy-100 bg-white p-7 transition-all hover:-translate-y-1.5 hover:border-signal-200 hover:shadow-2xl hover:shadow-navy-900/6"
+                  className="group border-navy-100 hover:border-signal-200 hover:shadow-navy-900/6 relative overflow-hidden rounded-2xl border bg-white p-7 transition-all hover:-translate-y-1.5 hover:shadow-2xl"
                 >
-                  <div className="absolute -right-14 -top-14 size-28 rounded-full bg-signal-50 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110" />
+                  <div className="bg-signal-50 absolute -top-14 -right-14 size-28 rounded-full opacity-0 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100" />
                   <div className="relative">
-                    <div className="grid size-11 place-items-center rounded-2xl bg-navy-950 text-signal-400">
+                    <div className="bg-navy-950 text-signal-400 grid size-11 place-items-center rounded-2xl">
                       <p.icon className="size-5" />
                     </div>
-                    <h3 className="mt-5 text-base font-semibold text-navy-900">
-                      {p.title}
-                    </h3>
-                    <p className="mt-2 text-body-lg leading-relaxed text-navy-600/80">
-                      {p.text}
-                    </p>
+                    <h3 className="text-navy-900 mt-5 text-base font-semibold">{p.title}</h3>
+                    <p className="text-body-lg text-navy-600/80 mt-2 leading-relaxed">{p.text}</p>
                   </div>
                 </motion.div>
               ))}
@@ -107,13 +101,12 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-5 rounded-2xl bg-navy-950 p-8 text-white"
+              className="bg-navy-950 mt-5 rounded-2xl p-8 text-white"
             >
-              <div className="mb-4 h-px w-10 bg-signal-500" />
+              <div className="bg-signal-500 mb-4 h-px w-10" />
               <p className="text-h4 leading-relaxed text-white/85">
-                « Apporter aux opérateurs un partenaire fiable, agile et
-                technique — capable de livrer dans les délais des
-                infrastructures conformes, sécurisées et durables. »
+                « Apporter aux opérateurs un partenaire fiable, agile et technique — capable de
+                livrer dans les délais des infrastructures conformes, sécurisées et durables. »
               </p>
             </motion.blockquote>
           </div>

@@ -19,13 +19,7 @@ export default function SectionHeader({
   className?: string;
 }) {
   return (
-    <div
-      className={cn(
-        "max-w-3xl",
-        align === "center" && "mx-auto text-center",
-        className,
-      )}
-    >
+    <div className={cn("max-w-3xl", align === "center" && "mx-auto text-center", className)}>
       {label && (
         <motion.div
           initial={{ opacity: 0, x: align === "center" ? 0 : -16 }}
@@ -48,8 +42,8 @@ export default function SectionHeader({
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.95, ease: [0.16, 1, 0.3, 1], delay: label ? 0.07 : 0 }}
         className={cn(
-          "text-balance font-semibold tracking-[-0.033em]",
-          "text-h2 leading-[1.08] md:text-h1 md:leading-[1.06] lg:text-[3.6rem] lg:leading-[1.05]",
+          "font-semibold tracking-[-0.033em] text-balance",
+          "text-h2 md:text-h1 leading-[1.08] md:leading-[1.06] lg:text-[3.6rem] lg:leading-[1.05]",
           dark ? "text-white" : "text-navy-950",
         )}
       >
@@ -63,8 +57,8 @@ export default function SectionHeader({
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.17 }}
           className={cn(
-            "mt-6 text-pretty leading-[1.8]",
-            "text-base md:text-lead",
+            "mt-6 leading-[1.8] text-pretty",
+            "md:text-lead text-base",
             dark ? "text-white/55" : "text-navy-700/65",
           )}
         >

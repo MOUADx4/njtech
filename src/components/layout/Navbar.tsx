@@ -13,8 +13,8 @@ import { contact, mailtoHref, mainNav as links } from "@/config/site";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen]         = useState(false);
-  const pathname                = usePathname();
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -29,7 +29,9 @@ export default function Navbar() {
   // Bloque le défilement du body quand le menu est ouvert
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [open]);
 
   // Ferme le menu avec la touche Échap
@@ -49,12 +51,11 @@ export default function Navbar() {
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-all duration-500",
           scrolled
-            ? "bg-white/92 backdrop-blur-2xl border-b border-navy-100/45 py-3 shadow-[0_1px_12px_rgba(10,31,68,0.07)]"
+            ? "border-navy-100/45 border-b bg-white/92 py-3 shadow-[0_1px_12px_rgba(10,31,68,0.07)] backdrop-blur-2xl"
             : "bg-transparent py-5",
         )}
       >
         <Container className="flex items-center justify-between">
-
           <Logo dark={isDark} priority />
 
           {/* Navigation desktop */}
@@ -64,17 +65,15 @@ export default function Navbar() {
                 key={l.href}
                 href={l.href}
                 className={cn(
-                  "relative px-4 py-2 text-body font-medium tracking-[-0.005em] transition-colors duration-200",
-                  isDark
-                    ? "text-white/55 hover:text-white"
-                    : "text-navy-600 hover:text-navy-900",
+                  "text-body relative px-4 py-2 font-medium tracking-[-0.005em] transition-colors duration-200",
+                  isDark ? "text-white/55 hover:text-white" : "text-navy-600 hover:text-navy-900",
                   pathname === l.href && !isDark && "text-navy-900",
-                  pathname === l.href && isDark  && "text-white",
+                  pathname === l.href && isDark && "text-white",
                 )}
               >
                 {l.label}
                 {pathname === l.href && (
-                  <span className="absolute inset-x-4 bottom-0 h-px rounded-full bg-signal-500" />
+                  <span className="bg-signal-500 absolute inset-x-4 bottom-0 h-px rounded-full" />
                 )}
               </Link>
             ))}
@@ -85,9 +84,9 @@ export default function Navbar() {
             <Link
               href="/contact"
               className={cn(
-                "btn-shimmer inline-flex items-center gap-2 px-5 py-2.5 text-body font-semibold transition-all duration-200 active:scale-[0.98]",
+                "btn-shimmer text-body inline-flex items-center gap-2 px-5 py-2.5 font-semibold transition-all duration-200 active:scale-[0.98]",
                 scrolled
-                  ? "bg-navy-950 text-white hover:bg-navy-800"
+                  ? "bg-navy-950 hover:bg-navy-800 text-white"
                   : "border border-white/[0.18] text-white/85 hover:border-white/40 hover:text-white",
               )}
             >
@@ -102,7 +101,7 @@ export default function Navbar() {
               "grid size-11 cursor-pointer place-items-center rounded-lg transition-all duration-200 lg:hidden",
               isDark
                 ? "border border-white/[0.18] text-white hover:bg-white/[0.11]"
-                : "border border-navy-200 bg-white text-navy-900 hover:bg-navy-50",
+                : "border-navy-200 text-navy-900 hover:bg-navy-50 border bg-white",
             )}
             aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={open}
@@ -112,8 +111,8 @@ export default function Navbar() {
               <motion.span
                 key={open ? "close" : "open"}
                 initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0,   opacity: 1 }}
-                exit={{   rotate:  90,  opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: 90, opacity: 0 }}
                 transition={{ duration: 0.18 }}
                 className="flex"
               >
@@ -135,7 +134,7 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="fixed inset-0 z-40 bg-navy-950/60 backdrop-blur-sm lg:hidden"
+              className="bg-navy-950/60 fixed inset-0 z-40 backdrop-blur-sm lg:hidden"
               onClick={() => setOpen(false)}
             />
 
@@ -147,7 +146,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.32, ease: [0.32, 0, 0.15, 1] }}
-              className="noise fixed inset-y-0 right-0 z-50 flex w-full max-w-[18rem] flex-col bg-navy-950 px-6 pt-24 pb-10 lg:hidden"
+              className="noise bg-navy-950 fixed inset-y-0 right-0 z-50 flex w-full max-w-[18rem] flex-col px-6 pt-24 pb-10 lg:hidden"
               role="dialog"
               aria-modal="true"
               aria-label="Menu de navigation"
@@ -165,7 +164,7 @@ export default function Navbar() {
                       href={l.href}
                       onClick={() => setOpen(false)}
                       className={cn(
-                        "flex items-center justify-between rounded-2xl px-4 py-3.5 text-lead font-medium transition-colors",
+                        "text-lead flex items-center justify-between rounded-2xl px-4 py-3.5 font-medium transition-colors",
                         pathname === l.href
                           ? "bg-white/[0.07] text-white"
                           : "text-white/55 hover:bg-white/[0.04] hover:text-white",
@@ -173,7 +172,7 @@ export default function Navbar() {
                     >
                       {l.label}
                       {pathname === l.href && (
-                        <span className="h-1.5 w-1.5 rounded-full bg-signal-400" />
+                        <span className="bg-signal-400 h-1.5 w-1.5 rounded-full" />
                       )}
                     </Link>
                   </motion.div>
@@ -207,10 +206,16 @@ export default function Navbar() {
                 transition={{ delay: 0.42 }}
                 className="mt-auto"
               >
-                <a href={`tel:${contact.phone.switchboardE164}`} className="block text-body text-white/55 transition-colors hover:text-white/70">
+                <a
+                  href={`tel:${contact.phone.switchboardE164}`}
+                  className="text-body block text-white/55 transition-colors hover:text-white/70"
+                >
                   {contact.phone.switchboard}
                 </a>
-                <a href={mailtoHref} className="mt-1 block text-body text-white/55 transition-colors hover:text-white/70">
+                <a
+                  href={mailtoHref}
+                  className="text-body mt-1 block text-white/55 transition-colors hover:text-white/70"
+                >
                   {contact.email}
                 </a>
               </motion.div>

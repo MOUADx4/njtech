@@ -15,21 +15,17 @@ import { SERVICE_ICONS } from "@/lib/service-icons";
  */
 const services = SERVICES.map((s) => ({
   ...s,
-  num:  s.n,
+  num: s.n,
   text: s.teaser,
   icon: SERVICE_ICONS[s.icon],
 }));
 
 export default function Services() {
   return (
-    <section
-      id="services"
-      className="noise relative overflow-hidden bg-navy-950 py-36 text-white"
-    >
-      <div className="pointer-events-none absolute top-0 left-1/2 -z-0 h-[52rem] w-[72rem] -translate-x-1/2 rounded-full bg-signal-600/[0.065] blur-[130px]" />
+    <section id="services" className="noise bg-navy-950 relative overflow-hidden py-36 text-white">
+      <div className="bg-signal-600/[0.065] pointer-events-none absolute top-0 left-1/2 -z-0 h-[52rem] w-[72rem] -translate-x-1/2 rounded-full blur-[130px]" />
 
       <Container className="relative">
-
         {/* Ligne d'en-tête */}
         <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:items-end">
           <SectionHeader
@@ -37,7 +33,8 @@ export default function Services() {
             label="Nos prestations"
             title={
               <>
-                Une expertise complète,<br />
+                Une expertise complète,
+                <br />
                 du <span className="text-gradient-signal">design</span> à la mise en service.
               </>
             }
@@ -45,10 +42,10 @@ export default function Services() {
           />
           <Link
             href="/services"
-            className="tap-target group shrink-0 inline-flex items-center gap-2 text-body font-semibold text-white/55 hover:text-signal-400 transition-colors"
+            className="tap-target group text-body hover:text-signal-400 inline-flex shrink-0 items-center gap-2 font-semibold text-white/55 transition-colors"
           >
             Voir toutes les prestations
-            <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
         </div>
 
@@ -61,37 +58,37 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.9, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.04] p-9 transition-all duration-500 hover:border-signal-500/22 hover:bg-white/[0.04]"
+              className="group hover:border-signal-500/22 relative overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.04] p-9 transition-all duration-500 hover:bg-white/[0.04]"
             >
               {/* Number watermark */}
-              <div className="pointer-events-none absolute -right-2 -top-5 select-none font-black text-[6rem] leading-none tracking-tight text-white/[0.035] transition-colors duration-500 group-hover:text-white/[0.055]">
+              <div className="pointer-events-none absolute -top-5 -right-2 text-[6rem] leading-none font-black tracking-tight text-white/[0.035] transition-colors duration-500 select-none group-hover:text-white/[0.055]">
                 {s.num}
               </div>
 
               {/* Halo au survol */}
-              <div className="pointer-events-none absolute -right-20 -top-20 size-56 rounded-full bg-signal-500/0 blur-3xl transition-all duration-500 group-hover:bg-signal-500/[0.09]" />
+              <div className="bg-signal-500/0 group-hover:bg-signal-500/[0.09] pointer-events-none absolute -top-20 -right-20 size-56 rounded-full blur-3xl transition-all duration-500" />
 
               <div className="relative grid gap-8 md:grid-cols-[1fr_auto] md:items-start">
                 <div>
                   {/* Icône */}
-                  <div className="mb-6 inline-flex size-11 items-center justify-center rounded-2xl border border-white/[0.07] bg-white/[0.04] text-signal-400">
+                  <div className="text-signal-400 mb-6 inline-flex size-11 items-center justify-center rounded-2xl border border-white/[0.07] bg-white/[0.04]">
                     <s.icon className="size-4.5" />
                   </div>
 
                   {/* Titre */}
-                  <h3 className="text-h4 font-semibold leading-tight tracking-tight text-white">
+                  <h3 className="text-h4 leading-tight font-semibold tracking-tight text-white">
                     {s.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-3.5 text-base md:text-body leading-[1.75] text-white/55">
+                  <p className="md:text-body mt-3.5 text-base leading-[1.75] text-white/55">
                     {s.text}
                   </p>
 
                   {/* Bouton d'action */}
                   <Link
                     href={`/services/${s.slug}`}
-                    className="tap-target mt-7 inline-flex items-center gap-2 text-body font-semibold text-signal-400/70 transition-all duration-300 group-hover:gap-3 group-hover:text-signal-400"
+                    className="tap-target text-body text-signal-400/70 group-hover:text-signal-400 mt-7 inline-flex items-center gap-2 font-semibold transition-all duration-300 group-hover:gap-3"
                   >
                     En savoir plus <ArrowUpRight className="size-3.5" />
                   </Link>

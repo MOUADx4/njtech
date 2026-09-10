@@ -6,7 +6,8 @@ import HomeCta from "@/components/sections/home/HomeCta";
 
 export const metadata: Metadata = {
   title: "Réalisations",
-  description: "Découvrez les réalisations NJTECH : pylônes 5G, interventions en hauteur, armoires BTS, déploiements en zones rurales.",
+  description:
+    "Découvrez les réalisations NJTECH : pylônes 5G, interventions en hauteur, armoires BTS, déploiements en zones rurales.",
 };
 
 export default function RealisationsPage() {

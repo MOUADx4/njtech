@@ -30,7 +30,9 @@ export default function ParticleNetwork({ interactive = true }: { interactive?: 
     let mouseY = -9999;
     let isHovering = false;
 
-    const ACCENT_R = 56, ACCENT_G = 189, ACCENT_B = 248;
+    const ACCENT_R = 56,
+      ACCENT_G = 189,
+      ACCENT_B = 248;
     const MAX_DIST = 155;
     const NODE_COUNT = window.innerWidth < 640 ? 30 : 95;
     const MOUSE_RADIUS = 160;
@@ -46,7 +48,10 @@ export default function ParticleNetwork({ interactive = true }: { interactive?: 
         const x = Math.random() * width;
         const y = Math.random() * height;
         return {
-          x, y, ox: x, oy: y,
+          x,
+          y,
+          ox: x,
+          oy: y,
           vx: (Math.random() - 0.5) * 0.32,
           vy: (Math.random() - 0.5) * 0.32,
           radius: Math.random() * 1.8 + 0.7,
@@ -87,12 +92,15 @@ export default function ParticleNetwork({ interactive = true }: { interactive?: 
       // Connections
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
-          const a = nodes[i], b = nodes[j];
-          const dx = a.x - b.x, dy = a.y - b.y;
+          const a = nodes[i],
+            b = nodes[j];
+          const dx = a.x - b.x,
+            dy = a.y - b.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < MAX_DIST) {
             // Boost opacity if near mouse
-            const midX = (a.x + b.x) / 2, midY = (a.y + b.y) / 2;
+            const midX = (a.x + b.x) / 2,
+              midY = (a.y + b.y) / 2;
             const mDist = Math.sqrt((midX - mouseX) ** 2 + (midY - mouseY) ** 2);
             const mouseFactor = isHovering ? Math.max(0, 1 - mDist / 220) : 0;
 
@@ -121,7 +129,10 @@ export default function ParticleNetwork({ interactive = true }: { interactive?: 
         const gSize = r * (6 + near * 5);
 
         const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, gSize);
-        grad.addColorStop(0, `rgba(${ACCENT_R},${ACCENT_G},${ACCENT_B},${(alpha * 0.25 + near * 0.15).toFixed(3)})`);
+        grad.addColorStop(
+          0,
+          `rgba(${ACCENT_R},${ACCENT_G},${ACCENT_B},${(alpha * 0.25 + near * 0.15).toFixed(3)})`,
+        );
         grad.addColorStop(1, `rgba(${ACCENT_R},${ACCENT_G},${ACCENT_B},0)`);
         ctx.beginPath();
         ctx.arc(n.x, n.y, gSize, 0, Math.PI * 2);
@@ -143,7 +154,11 @@ export default function ParticleNetwork({ interactive = true }: { interactive?: 
       mouseY = e.clientY - rect.top;
       isHovering = true;
     };
-    const onMouseLeave = () => { isHovering = false; mouseX = -9999; mouseY = -9999; };
+    const onMouseLeave = () => {
+      isHovering = false;
+      mouseX = -9999;
+      mouseY = -9999;
+    };
 
     if (interactive) {
       canvas.addEventListener("mousemove", onMouseMove);

@@ -5,15 +5,15 @@ import { Calendar, ChevronRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 
 export interface LegalSection {
-  id:    string;
+  id: string;
   title: string;
 }
 
 interface Props {
-  title:       string;
+  title: string;
   lastUpdated: string;
-  sections:    LegalSection[];
-  children:    React.ReactNode;
+  sections: LegalSection[];
+  children: React.ReactNode;
 }
 
 export default function LegalLayout({ title, lastUpdated, sections, children }: Props) {
@@ -38,29 +38,29 @@ export default function LegalLayout({ title, lastUpdated, sections, children }: 
 
   return (
     <>
-      <section className="relative overflow-hidden bg-navy-950 pb-14 pt-40 text-white">
-        <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[28rem] w-[56rem] rounded-full bg-signal-600/[0.07] blur-[120px]" />
+      <section className="bg-navy-950 relative overflow-hidden pt-40 pb-14 text-white">
+        <div className="bg-signal-600/[0.07] pointer-events-none absolute -top-40 left-1/2 h-[28rem] w-[56rem] -translate-x-1/2 rounded-full blur-[120px]" />
         <Container className="relative">
           <div className="section-label text-signal-400 mb-6">Informations légales</div>
-          <h1 className="text-h2 font-semibold tracking-[-0.033em] text-white md:text-h1">
+          <h1 className="text-h2 md:text-h1 font-semibold tracking-[-0.033em] text-white">
             {title}
           </h1>
-          <div className="mt-4 flex items-center gap-2 text-body text-white/55">
+          <div className="text-body mt-4 flex items-center gap-2 text-white/55">
             <Calendar className="size-3.5" />
-            Dernière mise à jour : <strong className="font-semibold text-white/55">{lastUpdated}</strong>
+            Dernière mise à jour :{" "}
+            <strong className="font-semibold text-white/55">{lastUpdated}</strong>
           </div>
-          <div className="mt-10 h-px bg-gradient-to-r from-signal-500/40 via-signal-500/10 to-transparent" />
+          <div className="from-signal-500/40 via-signal-500/10 mt-10 h-px bg-gradient-to-r to-transparent" />
         </Container>
       </section>
 
       <section className="bg-white py-16">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[200px_1fr] xl:grid-cols-[220px_1fr]">
-
             {/* Sommaire latéral collant */}
             <aside className="hidden lg:block">
               <div className="sticky top-28">
-                <p className="mb-4 text-eyebrow font-bold uppercase tracking-[0.24em] text-navy-400/70">
+                <p className="text-eyebrow text-navy-400/70 mb-4 font-bold tracking-[0.24em] uppercase">
                   Sommaire
                 </p>
                 <nav className="space-y-0.5">
@@ -69,14 +69,14 @@ export default function LegalLayout({ title, lastUpdated, sections, children }: 
                       key={s.id}
                       href={`#${s.id}`}
                       className={[
-                        "flex items-center gap-2 rounded-lg px-3 py-2 text-body font-medium leading-snug transition-all duration-200",
+                        "text-body flex items-center gap-2 rounded-lg px-3 py-2 leading-snug font-medium transition-all duration-200",
                         active === s.id
                           ? "bg-signal-50 text-signal-600"
                           : "text-navy-400 hover:bg-navy-50 hover:text-navy-800",
                       ].join(" ")}
                     >
                       {active === s.id && (
-                        <ChevronRight className="size-3 shrink-0 text-signal-500" />
+                        <ChevronRight className="text-signal-500 size-3 shrink-0" />
                       )}
                       {s.title}
                     </a>
@@ -86,9 +86,7 @@ export default function LegalLayout({ title, lastUpdated, sections, children }: 
             </aside>
 
             {/* Prose */}
-            <div className="legal-prose min-w-0 max-w-3xl">
-              {children}
-            </div>
+            <div className="legal-prose max-w-3xl min-w-0">{children}</div>
           </div>
         </Container>
       </section>

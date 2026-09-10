@@ -9,6 +9,7 @@ import PlausibleAnalytics from "@/components/legal/PlausibleAnalytics";
 import PageTransition from "@/components/layout/PageTransition";
 import BackToTop from "@/components/ui/BackToTop";
 import ChatBot from "@/components/ui/ChatBot";
+import { contact, siteConfig, social } from "@/config/site";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -16,8 +17,6 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["400", "500", "600", "700"],
   display: "swap",
 });
-
-import { contact, siteConfig, social } from "@/config/site";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,7 +28,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default:  "NJTECH Solution",
+    default: "NJTECH Solution",
     template: "%s — NJTECH Solution",
   },
   description:
@@ -57,18 +56,19 @@ export const metadata: Metadata = {
     siteName: "NJTECH Solution",
     images: [
       {
-        url:    `${siteConfig.url}/opengraph-image`,
-        width:  1200,
+        url: `${siteConfig.url}/opengraph-image`,
+        width: 1200,
         height: 630,
-        alt:    "NJTECH Solution — Infrastructures Télécom 4G / 5G",
+        alt: "NJTECH Solution — Infrastructures Télécom 4G / 5G",
       },
     ],
   },
   twitter: {
-    card:        "summary_large_image",
-    title:       "NJTECH Solution — Infrastructures Télécom 4G / 5G",
-    description: "Spécialiste des réseaux mobiles. Déploiement, intégration et maintenance d'infrastructures télécom 4G/5G.",
-    images:      [`${siteConfig.url}/opengraph-image`],
+    card: "summary_large_image",
+    title: "NJTECH Solution — Infrastructures Télécom 4G / 5G",
+    description:
+      "Spécialiste des réseaux mobiles. Déploiement, intégration et maintenance d'infrastructures télécom 4G/5G.",
+    images: [`${siteConfig.url}/opengraph-image`],
   },
 };
 
@@ -76,63 +76,77 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type":       "Organization",
-      "@id":         `${siteConfig.url}/#organization`,
-      "name":        "NJTECH Solution",
-      "url":         siteConfig.url,
-      "logo":        `${siteConfig.url}/images/logo.png`,
-      "description": "Spécialiste du déploiement, de l'intégration et de la maintenance des infrastructures télécom 4G et 5G pour les grands opérateurs nationaux.",
-      "foundingDate": "2019",
-      "areaServed":  contact.address.country,
-      "contactPoint": {
-        "@type":            "ContactPoint",
-        "telephone":        contact.phone.switchboardE164,
-        "contactType":      "customer service",
-        "availableLanguage": "French",
+      "@type": "Organization",
+      "@id": `${siteConfig.url}/#organization`,
+      name: "NJTECH Solution",
+      url: siteConfig.url,
+      logo: `${siteConfig.url}/images/logo.png`,
+      description:
+        "Spécialiste du déploiement, de l'intégration et de la maintenance des infrastructures télécom 4G et 5G pour les grands opérateurs nationaux.",
+      foundingDate: "2019",
+      areaServed: contact.address.country,
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: contact.phone.switchboardE164,
+        contactType: "customer service",
+        availableLanguage: "French",
       },
-      "sameAs": [social.linkedin],
+      sameAs: [social.linkedin],
     },
     {
-      "@type":            ["LocalBusiness", "ProfessionalService"],
-      "@id":              `${siteConfig.url}/#localbusiness`,
-      "name":             "NJTECH Solution",
-      "url":              siteConfig.url,
-      "image":            `${siteConfig.url}/images/logo.png`,
-      "description":      "Déploiement et maintenance d'infrastructures télécom 4G et 5G — pylônes, antennes, faisceaux hertziens, bureau d'étude.",
-      "priceRange":       "Sur devis",
-      "currenciesAccepted": "EUR",
-      "paymentAccepted":  "Virement bancaire, Chèque",
-      "telephone":        contact.phone.switchboardE164,
-      "email":            contact.email,
-      "address": {
-        "@type":           "PostalAddress",
-        "streetAddress":   contact.address.street,
-        "addressLocality": contact.address.city,
-        "postalCode":      contact.address.postalCode,
-        "addressCountry":  contact.address.country,
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": `${siteConfig.url}/#localbusiness`,
+      name: "NJTECH Solution",
+      url: siteConfig.url,
+      image: `${siteConfig.url}/images/logo.png`,
+      description:
+        "Déploiement et maintenance d'infrastructures télécom 4G et 5G — pylônes, antennes, faisceaux hertziens, bureau d'étude.",
+      priceRange: "Sur devis",
+      currenciesAccepted: "EUR",
+      paymentAccepted: "Virement bancaire, Chèque",
+      telephone: contact.phone.switchboardE164,
+      email: contact.email,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: contact.address.street,
+        addressLocality: contact.address.city,
+        postalCode: contact.address.postalCode,
+        addressCountry: contact.address.country,
       },
-      "geo": {
-        "@type":     "GeoCoordinates",
-        "latitude":  contact.address.geo.latitude,
-        "longitude": contact.address.geo.longitude,
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: contact.address.geo.latitude,
+        longitude: contact.address.geo.longitude,
       },
-      "openingHoursSpecification": {
-        "@type":    "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens":    "08:00",
-        "closes":   "18:00",
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "18:00",
       },
-      "hasOfferCatalog": {
+      hasOfferCatalog: {
         "@type": "OfferCatalog",
-        "name":  "Prestations télécom",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Aménagement de sites radio 4G / 5G" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Déploiement antennes & faisceaux hertziens" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bureau d'étude — plans DP / DIM / DOE" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maintenance & SAV réseaux mobiles" } },
+        name: "Prestations télécom",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Aménagement de sites radio 4G / 5G" },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Déploiement antennes & faisceaux hertziens" },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Bureau d'étude — plans DP / DIM / DOE" },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Maintenance & SAV réseaux mobiles" },
+          },
         ],
       },
-      "parentOrganization": { "@id": `${siteConfig.url}/#organization` },
+      parentOrganization: { "@id": `${siteConfig.url}/#organization` },
     },
   ],
 };
@@ -149,7 +163,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body
-        className="min-h-full flex flex-col bg-background text-foreground overflow-x-hidden"
+        className="bg-background text-foreground flex min-h-full flex-col overflow-x-hidden"
         suppressHydrationWarning
       >
         {/* Structured data JSON-LD */}
@@ -164,7 +178,9 @@ export default function RootLayout({
         </a>
         <Navbar />
         <PageTransition>
-          <main id="contenu" className="flex-1">{children}</main>
+          <main id="contenu" className="flex-1">
+            {children}
+          </main>
         </PageTransition>
         <Footer />
         <CookieConsent />

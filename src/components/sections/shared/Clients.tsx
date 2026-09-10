@@ -7,50 +7,50 @@ import SectionHeader from "@/components/ui/SectionHeader";
 
 const partners = [
   {
-    name:  "Sogetrel",
-    logo:  "/images/Sogetrel.png",
+    name: "Sogetrel",
+    logo: "/images/Sogetrel.png",
     logoW: 110,
     logoH: 36,
-    role:  "Intégrateur national",
-    desc:  "Déploiement et intégration d'infrastructures télécom sur tout le territoire pour le compte des grands opérateurs mobiles.",
-    geo:   "Île-de-France · Grand Est · Normandie",
-    tag:   "Partenaire stratégique",
+    role: "Intégrateur national",
+    desc: "Déploiement et intégration d'infrastructures télécom sur tout le territoire pour le compte des grands opérateurs mobiles.",
+    geo: "Île-de-France · Grand Est · Normandie",
+    tag: "Partenaire stratégique",
   },
   {
-    name:  "Bouygues Telecom",
-    logo:  "/images/BouyguesTelecom.png",
+    name: "Bouygues Telecom",
+    logo: "/images/BouyguesTelecom.png",
     logoW: 130,
     logoH: 36,
-    role:  "Opérateur mobile",
-    desc:  "Installation, calage et mise en service d'antennes 4G / 5G sur sites neufs et existants, en zones urbaines et péri-urbaines.",
-    geo:   "Paris · IDF · Hauts-de-France",
-    tag:   "Sites 4G / 5G",
+    role: "Opérateur mobile",
+    desc: "Installation, calage et mise en service d'antennes 4G / 5G sur sites neufs et existants, en zones urbaines et péri-urbaines.",
+    geo: "Paris · IDF · Hauts-de-France",
+    tag: "Sites 4G / 5G",
   },
   {
-    name:  "Free Mobile",
-    logo:  "/images/FreeMobile.png",
+    name: "Free Mobile",
+    logo: "/images/FreeMobile.png",
     logoW: 110,
     logoH: 36,
-    role:  "Opérateur mobile",
-    desc:  "Aménagement de sites radio, maintenance préventive et corrective sur pylônes et toits terrasses en région Sud et Ouest.",
-    geo:   "PACA · Occitanie · Auvergne-Rhône-Alpes",
-    tag:   "Maintenance & déploiement",
+    role: "Opérateur mobile",
+    desc: "Aménagement de sites radio, maintenance préventive et corrective sur pylônes et toits terrasses en région Sud et Ouest.",
+    geo: "PACA · Occitanie · Auvergne-Rhône-Alpes",
+    tag: "Maintenance & déploiement",
   },
 ];
 
 const secondary = [
-  { name: "Orange",  logo: "/images/Orange.png",  w: 90,  h: 32 },
-  { name: "SFR",     logo: "/images/SFR.png",     w: 58,  h: 32 },
+  { name: "Orange", logo: "/images/Orange.png", w: 90, h: 32 },
+  { name: "SFR", logo: "/images/SFR.png", w: 58, h: 32 },
   { name: "Cellnex", logo: "/images/Cellnex.png", w: 100, h: 32 },
-  { name: "TDF",     logo: "/images/TDF.png",     w: 62,  h: 32 },
+  { name: "TDF", logo: "/images/TDF.png", w: 62, h: 32 },
 ];
 
 export default function Clients() {
   return (
-    <section id="clients" className="relative overflow-hidden bg-navy-950 py-36 text-white">
+    <section id="clients" className="bg-navy-950 relative overflow-hidden py-36 text-white">
       {/* Ligne d'accent en haut */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-signal-500/22 to-transparent" />
-      <div className="pointer-events-none absolute -top-40 right-0 size-[50rem] rounded-full bg-signal-600/[0.07] blur-[140px]" />
+      <div className="via-signal-500/22 absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent to-transparent" />
+      <div className="bg-signal-600/[0.07] pointer-events-none absolute -top-40 right-0 size-[50rem] rounded-full blur-[140px]" />
 
       <Container className="relative">
         <SectionHeader
@@ -59,10 +59,8 @@ export default function Clients() {
           label="Références clients"
           title={
             <>
-              La confiance des{" "}
-              <span className="text-gradient-signal">grands acteurs</span>
-              <br className="hidden md:block" />
-              {" "}du secteur télécom.
+              La confiance des <span className="text-gradient-signal">grands acteurs</span>
+              <br className="hidden md:block" /> du secteur télécom.
             </>
           }
           description="NJTECH Solution intervient sur des projets stratégiques auprès d'opérateurs et d'intégrateurs de premier plan."
@@ -77,13 +75,13 @@ export default function Clients() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.9, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.04] p-8 transition-all duration-500 hover:border-signal-500/20 hover:bg-white/[0.04]"
+              className="group hover:border-signal-500/20 relative overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.04] p-8 transition-all duration-500 hover:bg-white/[0.04]"
             >
-              <div className="pointer-events-none absolute -bottom-16 -right-16 size-44 rounded-full bg-signal-500/0 blur-3xl transition-all duration-500 group-hover:bg-signal-500/[0.11]" />
+              <div className="bg-signal-500/0 group-hover:bg-signal-500/[0.11] pointer-events-none absolute -right-16 -bottom-16 size-44 rounded-full blur-3xl transition-all duration-500" />
 
               <div className="relative">
                 {/* Ligne logo + étiquette */}
-                <div className="flex items-start justify-between gap-3 mb-6">
+                <div className="mb-6 flex items-start justify-between gap-3">
                   <Image
                     src={p.logo}
                     alt={p.name}
@@ -91,29 +89,29 @@ export default function Clients() {
                     height={p.logoH}
                     className="h-8 w-auto object-contain opacity-85 transition-all duration-300 group-hover:opacity-100"
                   />
-                  <div className="shrink-0 rounded-lg border border-white/[0.07] px-2.5 py-1 text-eyebrow font-semibold text-white/55">
+                  <div className="text-eyebrow shrink-0 rounded-lg border border-white/[0.07] px-2.5 py-1 font-semibold text-white/55">
                     {p.tag}
                   </div>
                 </div>
 
                 {/* Role */}
-                <div className="text-eyebrow font-bold uppercase tracking-[0.24em] text-signal-400 mb-2">
+                <div className="text-eyebrow text-signal-400 mb-2 font-bold tracking-[0.24em] uppercase">
                   {p.role}
                 </div>
 
                 {/* Name */}
-                <div className="text-h4 font-semibold leading-tight tracking-tight text-white">
+                <div className="text-h4 leading-tight font-semibold tracking-tight text-white">
                   {p.name}
                 </div>
 
                 <div className="mt-5 h-px bg-white/[0.07]" />
 
                 {/* Description */}
-                <p className="mt-5 text-base md:text-body leading-[1.75] text-white/55">{p.desc}</p>
+                <p className="md:text-body mt-5 text-base leading-[1.75] text-white/55">{p.desc}</p>
 
                 {/* Geography */}
                 <div className="mt-5 flex items-center gap-2">
-                  <div className="size-1.5 rounded-full bg-signal-500/55" />
+                  <div className="bg-signal-500/55 size-1.5 rounded-full" />
                   <span className="text-eyebrow font-medium text-white/55">{p.geo}</span>
                 </div>
               </div>
@@ -129,7 +127,7 @@ export default function Clients() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mt-14 border-t border-white/[0.07] pt-10"
         >
-          <div className="mb-8 text-center text-eyebrow font-bold uppercase tracking-[0.3em] text-white/55">
+          <div className="text-eyebrow mb-8 text-center font-bold tracking-[0.3em] text-white/55 uppercase">
             Également partenaires de
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5">

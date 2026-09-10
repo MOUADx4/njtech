@@ -16,12 +16,11 @@ const cyclingPhrases = [
 ];
 
 const stats = [
-  { value: "7+",    label: "Années d'expertise"  },
-  { value: "4G·5G", label: "Réseaux déployés"    },
-  { value: "24/7",  label: "Disponibilité"        },
-  { value: "100%",  label: "Couverture nationale" },
+  { value: "7+", label: "Années d'expertise" },
+  { value: "4G·5G", label: "Réseaux déployés" },
+  { value: "24/7", label: "Disponibilité" },
+  { value: "100%", label: "Couverture nationale" },
 ];
-
 
 /**
  * Statistique révélée au défilement.
@@ -32,7 +31,7 @@ const stats = [
  * « 4 % » vers « 100 % » — le temps de converger.
  */
 function AnimatedStat({ value, label }: { value: string; label: string }) {
-  const ref     = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const [fired, setFired] = useState(false);
   const reduced = useReducedMotion();
 
@@ -40,7 +39,12 @@ function AnimatedStat({ value, label }: { value: string; label: string }) {
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setFired(true); obs.disconnect(); } },
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setFired(true);
+          obs.disconnect();
+        }
+      },
       { threshold: 0.6 },
     );
     obs.observe(el);
@@ -52,18 +56,18 @@ function AnimatedStat({ value, label }: { value: string; label: string }) {
   return (
     <div ref={ref} className="px-6 py-7 md:px-10">
       <motion.div
-        className="text-[2rem] font-black tabular-nums leading-none tracking-tight text-white"
+        className="text-[2rem] leading-none font-black tracking-tight text-white tabular-nums"
         initial={false}
         animate={
           visible
-            ? { opacity: 1, filter: "blur(0px)",  y: 0 }
+            ? { opacity: 1, filter: "blur(0px)", y: 0 }
             : { opacity: 0, filter: "blur(10px)", y: 8 }
         }
         transition={{ duration: reduced ? 0 : 0.55, ease: [0.16, 1, 0.3, 1] }}
       >
         {value}
       </motion.div>
-      <div className="mt-2 text-eyebrow font-semibold uppercase tracking-[0.22em] text-white/55">
+      <div className="text-eyebrow mt-2 font-semibold tracking-[0.22em] text-white/55 uppercase">
         {label}
       </div>
     </div>
@@ -71,11 +75,11 @@ function AnimatedStat({ value, label }: { value: string; label: string }) {
 }
 
 export default function Hero() {
-  const [idx,       setIdx]       = useState(0);
+  const [idx, setIdx] = useState(0);
   const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
-    const t = setInterval(() => setIdx(i => (i + 1) % cyclingPhrases.length), 2800);
+    const t = setInterval(() => setIdx((i) => (i + 1) % cyclingPhrases.length), 2800);
     return () => clearInterval(t);
   }, []);
 
@@ -85,7 +89,6 @@ export default function Hero() {
 
   return (
     <section className="relative flex min-h-screen flex-col overflow-hidden bg-[#070d18] text-white">
-
       {showVideo && (
         <video
           autoPlay
@@ -104,19 +107,18 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#070d18]/80 via-transparent to-transparent" />
 
       <div className="relative z-10 flex flex-1 items-center">
-        <Container className="pb-16 pt-40">
+        <Container className="pt-40 pb-16">
           <div className="max-w-[52rem]">
-
             {/* Overline */}
             <div className="mb-10 flex items-center gap-3">
-              <span className="h-px w-8 shrink-0 bg-signal-500" />
-              <span className="text-caption font-semibold uppercase tracking-[0.32em] text-white/55">
+              <span className="bg-signal-500 h-px w-8 shrink-0" />
+              <span className="text-caption font-semibold tracking-[0.32em] text-white/55 uppercase">
                 Infrastructures Télécom &middot; France Métropolitaine
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-[clamp(2.8rem,5.6vw,5.6rem)] font-bold leading-[1.06] tracking-[-0.032em]">
+            <h1 className="text-[clamp(2.8rem,5.6vw,5.6rem)] leading-[1.06] font-bold tracking-[-0.032em]">
               <span className="block text-white/95">Nous bâtissons</span>
 
               {/* popLayout : la phrase sortante est retirée du flux, entrée et
@@ -125,11 +127,11 @@ export default function Hero() {
                 <AnimatePresence mode="popLayout" initial={false}>
                   <motion.span
                     key={idx}
-                    className="block italic text-signal-400"
+                    className="text-signal-400 block italic"
                     style={{ fontFamily: "var(--font-space-grotesk)" }}
-                    initial={{ y: "105%",  opacity: 0 }}
-                    animate={{ y: "0%",    opacity: 1 }}
-                    exit={{    y: "-105%", opacity: 0 }}
+                    initial={{ y: "105%", opacity: 0 }}
+                    animate={{ y: "0%", opacity: 1 }}
+                    exit={{ y: "-105%", opacity: 0 }}
                     transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
                   >
                     {cyclingPhrases[idx]}
@@ -144,10 +146,10 @@ export default function Hero() {
             <div className="my-9 h-px w-14 bg-white/[0.18]" />
 
             {/* Description */}
-            <p className="max-w-[50ch] text-lead leading-[1.78] text-white/55">
-              Déploiement, intégration et maintenance d'infrastructures
-              télécom 4G et 5G pour les grands opérateurs nationaux —
-              Bouygues Telecom, Free Mobile, Orange, SFR — partout en France.
+            <p className="text-lead max-w-[50ch] leading-[1.78] text-white/55">
+              Déploiement, intégration et maintenance d'infrastructures télécom 4G et 5G pour les
+              grands opérateurs nationaux — Bouygues Telecom, Free Mobile, Orange, SFR — partout en
+              France.
             </p>
 
             {/* Boutons d'action */}
@@ -161,13 +163,12 @@ export default function Hero() {
               </Button>
               <a
                 href={`tel:${contact.phone.switchboardE164}`}
-                className="hidden items-center gap-2 text-body font-medium text-white/55 transition-colors hover:text-white/70 md:flex"
+                className="text-body hidden items-center gap-2 font-medium text-white/55 transition-colors hover:text-white/70 md:flex"
               >
                 <PhoneCall className="size-3.5" />
                 {contact.phone.switchboard}
               </a>
             </div>
-
           </div>
         </Container>
       </div>

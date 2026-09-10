@@ -76,20 +76,20 @@ Site vitrine responsive et animé, pensé pour valoriser le savoir-faire terrain
 
 ## Stack technique
 
-| Domaine | Technologie |
-|---|---|
-| Framework | [Next.js 16](https://nextjs.org/) (App Router, Turbopack) |
-| Langage | [TypeScript 5](https://www.typescriptlang.org/) |
-| UI | [React 19](https://react.dev/) |
-| Styles | [Tailwind CSS v4](https://tailwindcss.com/) |
-| Animations | [Framer Motion](https://www.framer.com/motion/) |
-| Smooth scroll | [Lenis](https://lenis.darkroom.engineering/) |
-| Icônes | [Lucide React](https://lucide.dev/) |
-| Formulaire | [Web3Forms](https://web3forms.com/) |
-| Analytics | [Plausible](https://plausible.io/) |
-| Utilitaires | `clsx` + `tailwind-merge` |
-| Tests | [Vitest](https://vitest.dev/) |
-| Qualité | ESLint (`eslint-config-next`) + Prettier |
+| Domaine       | Technologie                                               |
+| ------------- | --------------------------------------------------------- |
+| Framework     | [Next.js 16](https://nextjs.org/) (App Router, Turbopack) |
+| Langage       | [TypeScript 5](https://www.typescriptlang.org/)           |
+| UI            | [React 19](https://react.dev/)                            |
+| Styles        | [Tailwind CSS v4](https://tailwindcss.com/)               |
+| Animations    | [Framer Motion](https://www.framer.com/motion/)           |
+| Smooth scroll | [Lenis](https://lenis.darkroom.engineering/)              |
+| Icônes        | [Lucide React](https://lucide.dev/)                       |
+| Formulaire    | [Web3Forms](https://web3forms.com/)                       |
+| Analytics     | [Plausible](https://plausible.io/)                        |
+| Utilitaires   | `clsx` + `tailwind-merge`                                 |
+| Tests         | [Vitest](https://vitest.dev/)                             |
+| Qualité       | ESLint (`eslint-config-next`) + Prettier                  |
 
 ---
 
@@ -140,18 +140,18 @@ NEXT_PUBLIC_WEB3FORMS_KEY=votre-cle-ici
 
 ## Scripts disponibles
 
-| Commande | Description |
-|---|---|
-| `npm run dev` | Démarre le serveur de développement (Turbopack) |
-| `npm run build` | Génère la version de production optimisée |
-| `npm start` | Sert la version de production (après `build`) |
-| `npm test` | Lance la suite de tests (Vitest) |
-| `npm run test:watch` | Rejoue les tests à chaque modification |
-| `npm run lint` | Analyse le code avec ESLint |
-| `npm run lint:fix` | Corrige automatiquement ce qui peut l'être |
-| `npm run typecheck` | Vérifie les types TypeScript sans générer de fichiers |
-| `npm run format` | Formate le code avec Prettier |
-| `npm run format:check` | Vérifie le formatage sans modifier les fichiers |
+| Commande               | Description                                           |
+| ---------------------- | ----------------------------------------------------- |
+| `npm run dev`          | Démarre le serveur de développement (Turbopack)       |
+| `npm run build`        | Génère la version de production optimisée             |
+| `npm start`            | Sert la version de production (après `build`)         |
+| `npm test`             | Lance la suite de tests (Vitest)                      |
+| `npm run test:watch`   | Rejoue les tests à chaque modification                |
+| `npm run lint`         | Analyse le code avec ESLint                           |
+| `npm run lint:fix`     | Corrige automatiquement ce qui peut l'être            |
+| `npm run typecheck`    | Vérifie les types TypeScript sans générer de fichiers |
+| `npm run format`       | Formate le code avec Prettier                         |
+| `npm run format:check` | Vérifie le formatage sans modifier les fichiers       |
 
 Ces commandes sont rejouées automatiquement à chaque push via GitHub Actions
 (`.github/workflows/ci.yml`) : `lint`, `typecheck`, `test`, puis `build`.
@@ -225,17 +225,17 @@ njtech/
 
 ## Pages du site
 
-| Route | Description |
-|---|---|
-| `/` | Accueil — présentation, prestations clés, réalisations, partenaires |
-| `/a-propos` | L'entreprise, son organisation, sa démarche sécurité, sa couverture |
-| `/services` | Détail des prestations techniques et de la méthodologie |
-| `/realisations` | Galerie de chantiers télécom par typologie |
-| `/contact` | Coordonnées + formulaire + zone d'intervention |
-| `/mentions-legales` | Mentions légales |
-| `/cgu` | Conditions générales d'utilisation |
-| `/politique-de-confidentialite` | Politique de confidentialité (RGPD) |
-| `/politique-cookies` | Politique de gestion des cookies |
+| Route                           | Description                                                         |
+| ------------------------------- | ------------------------------------------------------------------- |
+| `/`                             | Accueil — présentation, prestations clés, réalisations, partenaires |
+| `/a-propos`                     | L'entreprise, son organisation, sa démarche sécurité, sa couverture |
+| `/services`                     | Détail des prestations techniques et de la méthodologie             |
+| `/realisations`                 | Galerie de chantiers télécom par typologie                          |
+| `/contact`                      | Coordonnées + formulaire + zone d'intervention                      |
+| `/mentions-legales`             | Mentions légales                                                    |
+| `/cgu`                          | Conditions générales d'utilisation                                  |
+| `/politique-de-confidentialite` | Politique de confidentialité (RGPD)                                 |
+| `/politique-cookies`            | Politique de gestion des cookies                                    |
 
 ---
 
@@ -284,14 +284,14 @@ arbitraires**. C'est ce qui garantit la cohérence d'un écran à l'autre.
 
 ### Typographie — `src/app/globals.css`, bloc `@theme`
 
-| Token | Taille | Usage |
-|---|---|---|
-| `text-eyebrow` | 10 px | Majuscules espacées, sur-titres de section |
-| `text-caption` | 11,5 px | Mentions, légendes, métadonnées |
-| `text-body` | 13 px | Texte courant compact |
-| `text-body-lg` | 14,4 px | Texte courant confortable |
-| `text-lead` | 16 px | Chapô, introductions |
-| `text-h4` … `text-h1` | 19,2 → 48 px | Titres |
+| Token                 | Taille       | Usage                                      |
+| --------------------- | ------------ | ------------------------------------------ |
+| `text-eyebrow`        | 10 px        | Majuscules espacées, sur-titres de section |
+| `text-caption`        | 11,5 px      | Mentions, légendes, métadonnées            |
+| `text-body`           | 13 px        | Texte courant compact                      |
+| `text-body-lg`        | 14,4 px      | Texte courant confortable                  |
+| `text-lead`           | 16 px        | Chapô, introductions                       |
+| `text-h4` … `text-h1` | 19,2 → 48 px | Titres                                     |
 
 Le héros et les grands titres de page utilisent une typographie fluide en
 `clamp()`, définie au cas par cas.

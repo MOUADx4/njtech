@@ -5,14 +5,14 @@ import { ArrowUp } from "lucide-react";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export default function BackToTop() {
-  const [visible, setVisible]   = useState(false);
+  const [visible, setVisible] = useState(false);
   const [progress, setProgress] = useState(0);
   const reduced = useReducedMotion();
 
   useEffect(() => {
     const onScroll = () => {
       const scrolled = window.scrollY;
-      const total    = document.documentElement.scrollHeight - window.innerHeight;
+      const total = document.documentElement.scrollHeight - window.innerHeight;
       setVisible(scrolled > 400);
       setProgress(total > 0 ? scrolled / total : 0);
     };
@@ -32,9 +32,11 @@ export default function BackToTop() {
         "fixed bottom-6 left-6 z-50",
         "grid size-11 cursor-pointer place-items-center rounded-lg",
         "bg-navy-950/90 text-white/55 shadow-lg shadow-black/30 backdrop-blur-md",
-        "transition-all duration-300 hover:bg-navy-900 hover:text-white hover:-translate-y-0.5",
+        "hover:bg-navy-900 transition-all duration-300 hover:-translate-y-0.5 hover:text-white",
         "active:scale-95",
-        visible ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-4 pointer-events-none",
+        visible
+          ? "pointer-events-auto translate-y-0 opacity-100"
+          : "pointer-events-none translate-y-4 opacity-0",
       ].join(" ")}
     >
       {/* Arc de progression — contour arrondi ; pathLength="1" normalise le calcul des tirets */}

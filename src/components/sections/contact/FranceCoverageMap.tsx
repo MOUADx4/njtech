@@ -1,19 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import {
-  ComposableMap,
-  Geographies,
-  Geography,
-  Marker,
-} from "react-simple-maps";
+import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
 
 const GEO_URL = "/france-regions.geojson";
 
 // Projection centrée sur la France métropolitaine (sans Corse par défaut)
 const PROJECTION_CONFIG = {
-  center:  [2.5, 46.5] as [number, number],
-  scale:   2600,
+  center: [2.5, 46.5] as [number, number],
+  scale: 2600,
 };
 
 // Régions à afficher (codes INSEE 2016 — on exclut la Corse 94)
@@ -36,9 +31,24 @@ const REGION_LABELS: Record<string, string> = {
 
 // Marqueurs clés [longitude, latitude]
 const MARKERS = [
-  { coords: [2.308,  48.960] as [number, number], label: "Épinay-sur-Seine", sub: "Siège social",        isHq: true  },
-  { coords: [4.835,  45.764] as [number, number], label: "Lyon",              sub: "Zone d'intervention", isHq: false },
-  { coords: [5.369,  43.297] as [number, number], label: "Marseille",         sub: "Zone d'intervention", isHq: false },
+  {
+    coords: [2.308, 48.96] as [number, number],
+    label: "Épinay-sur-Seine",
+    sub: "Siège social",
+    isHq: true,
+  },
+  {
+    coords: [4.835, 45.764] as [number, number],
+    label: "Lyon",
+    sub: "Zone d'intervention",
+    isHq: false,
+  },
+  {
+    coords: [5.369, 43.297] as [number, number],
+    label: "Marseille",
+    sub: "Zone d'intervention",
+    isHq: false,
+  },
 ];
 
 export default function FranceCoverageMap() {
@@ -46,17 +56,18 @@ export default function FranceCoverageMap() {
 
   return (
     <div className="relative w-full select-none">
-
       {/* Tooltip */}
       <div
-        className={`pointer-events-none absolute left-3 top-3 z-10 rounded-2xl border bg-white px-3.5 py-2.5 shadow-lg transition-all duration-200 ${
-          hovered ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1"
+        className={`pointer-events-none absolute top-3 left-3 z-10 rounded-2xl border bg-white px-3.5 py-2.5 shadow-lg transition-all duration-200 ${
+          hovered ? "translate-y-0 opacity-100" : "-translate-y-1 opacity-0"
         } ${hovered === "11" ? "border-orange-200" : "border-navy-100"}`}
       >
-        <p className="text-body font-semibold leading-none text-navy-900">
+        <p className="text-body text-navy-900 leading-none font-semibold">
           {hovered ? (REGION_LABELS[hovered] ?? "Région") : ""}
         </p>
-        <p className={`mt-1 text-eyebrow font-medium ${hovered === "11" ? "text-orange-500" : "text-signal-500"}`}>
+        <p
+          className={`text-eyebrow mt-1 font-medium ${hovered === "11" ? "text-orange-500" : "text-signal-500"}`}
+        >
           {hovered === "11" ? "Siège social NJTECH" : "Zone d'intervention NJTECH"}
         </p>
       </div>
@@ -70,10 +81,10 @@ export default function FranceCoverageMap() {
         <Geographies geography={GEO_URL}>
           {({ geographies }) =>
             geographies
-              .filter(geo => !EXCLUDED.includes(geo.properties.code))
-              .map(geo => {
-                const code     = geo.properties.code as string;
-                const isHq     = code === "11";
+              .filter((geo) => !EXCLUDED.includes(geo.properties.code))
+              .map((geo) => {
+                const code = geo.properties.code as string;
+                const isHq = code === "11";
 
                 return (
                   <Geography
@@ -83,22 +94,22 @@ export default function FranceCoverageMap() {
                     onMouseLeave={() => setHovered(null)}
                     style={{
                       default: {
-                        fill:         isHq ? "#FFF7ED" : "#EFF6FF",
-                        stroke:       isHq ? "#FB923C" : "#BFDBFE",
-                        strokeWidth:  isHq ? 1.2 : 0.6,
-                        outline:      "none",
-                        cursor:       "pointer",
-                        transition:   "fill 0.15s, stroke 0.15s",
+                        fill: isHq ? "#FFF7ED" : "#EFF6FF",
+                        stroke: isHq ? "#FB923C" : "#BFDBFE",
+                        strokeWidth: isHq ? 1.2 : 0.6,
+                        outline: "none",
+                        cursor: "pointer",
+                        transition: "fill 0.15s, stroke 0.15s",
                       },
                       hover: {
-                        fill:        isHq ? "#FDBA74" : "#BAE6FD",
-                        stroke:      isHq ? "#F97316" : "#0EA5E9",
+                        fill: isHq ? "#FDBA74" : "#BAE6FD",
+                        stroke: isHq ? "#F97316" : "#0EA5E9",
                         strokeWidth: 1.5,
-                        outline:     "none",
-                        cursor:      "pointer",
+                        outline: "none",
+                        cursor: "pointer",
                       },
                       pressed: {
-                        fill:    isHq ? "#FED7AA" : "#7DD3FC",
+                        fill: isHq ? "#FED7AA" : "#7DD3FC",
                         outline: "none",
                       },
                     }}
@@ -109,7 +120,7 @@ export default function FranceCoverageMap() {
         </Geographies>
 
         {/* Marqueurs animés */}
-        {MARKERS.map(m => (
+        {MARKERS.map((m) => (
           <Marker key={m.label} coordinates={m.coords}>
             <circle r={10} fill={m.isHq ? "#F97316" : "#0EA5E9"} opacity={0.18}>
               <animate
@@ -125,18 +136,13 @@ export default function FranceCoverageMap() {
                 repeatCount="indefinite"
               />
             </circle>
-            <circle
-              r={5}
-              fill={m.isHq ? "#F97316" : "#0EA5E9"}
-              stroke="white"
-              strokeWidth={1.5}
-            />
+            <circle r={5} fill={m.isHq ? "#F97316" : "#0EA5E9"} stroke="white" strokeWidth={1.5} />
           </Marker>
         ))}
       </ComposableMap>
 
       {/* Légende */}
-      <div className="mt-3 flex flex-wrap items-center gap-5 text-caption text-navy-500/65">
+      <div className="text-caption text-navy-500/65 mt-3 flex flex-wrap items-center gap-5">
         <span className="flex items-center gap-2">
           <span className="inline-block h-3 w-4 rounded-lg border border-orange-300 bg-[#FFF7ED]" />
           Île-de-France — Siège social

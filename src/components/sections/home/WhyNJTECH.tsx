@@ -1,83 +1,80 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  ShieldCheck, Radio, MapPin, Users,
-  Zap, HardHat, BookOpen, Clock,
-} from "lucide-react";
+import { ShieldCheck, Radio, MapPin, Users, Zap, HardHat, BookOpen, Clock } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 
 const hero = {
-  icon:  ShieldCheck,
+  icon: ShieldCheck,
   value: "0",
   label: "Accident grave",
-  desc:  "Culture sécurité intégrée à chaque intervention — EPI obligatoires, plans de prévention, consignation des installations et formations continues. Aucun compromis sur la sécurité terrain.",
-  kpis:  ["EPI certifiés", "Plans de prévention", "Habilitations électriques", "Conduite d'engins"],
+  desc: "Culture sécurité intégrée à chaque intervention — EPI obligatoires, plans de prévention, consignation des installations et formations continues. Aucun compromis sur la sécurité terrain.",
+  kpis: ["EPI certifiés", "Plans de prévention", "Habilitations électriques", "Conduite d'engins"],
 };
 
 const featured = [
   {
-    icon:  Zap,
+    icon: Zap,
     value: "48",
-    unit:  "h",
+    unit: "h",
     label: "Réactivité garantie",
-    desc:  "Mobilisation sur tout type de site télécom — intervention confirmée sous 48h sur l'ensemble du territoire.",
+    desc: "Mobilisation sur tout type de site télécom — intervention confirmée sous 48h sur l'ensemble du territoire.",
   },
   {
-    icon:  Users,
+    icon: Users,
     value: "7",
-    unit:  "",
+    unit: "",
     label: "Partenaires référencés",
-    desc:  "Bouygues Telecom, Free Mobile, Orange, SFR, Sogetrel, Cellnex, TDF — les acteurs majeurs du réseau français.",
+    desc: "Bouygues Telecom, Free Mobile, Orange, SFR, Sogetrel, Cellnex, TDF — les acteurs majeurs du réseau français.",
   },
   {
-    icon:  MapPin,
+    icon: MapPin,
     value: "13",
-    unit:  "",
+    unit: "",
     label: "Régions d'intervention",
-    desc:  "Présence active dans toutes les régions métropolitaines — zones urbaines, rurales et blanches.",
+    desc: "Présence active dans toutes les régions métropolitaines — zones urbaines, rurales et blanches.",
   },
 ];
 
 const secondary = [
   {
-    icon:  Clock,
+    icon: Clock,
     value: "7",
-    unit:  "+",
+    unit: "+",
     label: "Années d'expérience",
-    desc:  "Expertise terrain reconnue par les grands opérateurs depuis 2019.",
+    desc: "Expertise terrain reconnue par les grands opérateurs depuis 2019.",
   },
   {
-    icon:  Radio,
+    icon: Radio,
     value: "4G·5G·FH",
-    unit:  "",
+    unit: "",
     label: "Technologies déployées",
-    desc:  "Antennes sectorielles, faisceaux hertziens PDH/SDH, équipements RAN.",
+    desc: "Antennes sectorielles, faisceaux hertziens PDH/SDH, équipements RAN.",
   },
   {
-    icon:  BookOpen,
+    icon: BookOpen,
     value: "2",
-    unit:  "",
+    unit: "",
     label: "Équipes mobiles",
-    desc:  "Deux équipes terrain capables d'opérer en simultané.",
+    desc: "Deux équipes terrain capables d'opérer en simultané.",
   },
   {
-    icon:  HardHat,
+    icon: HardHat,
     value: "100",
-    unit:  "%",
+    unit: "%",
     label: "Travaux certifiés",
-    desc:  "Habilitations électriques, travaux en hauteur, conduite d'engins.",
+    desc: "Habilitations électriques, travaux en hauteur, conduite d'engins.",
   },
 ];
 
 export default function WhyNJTECH() {
   return (
-    <section className="noise relative overflow-hidden bg-navy-950 py-36 text-white">
+    <section className="noise bg-navy-950 relative overflow-hidden py-36 text-white">
       {/* Ligne d'accent en haut */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-signal-500/25 to-transparent" />
-      <div className="pointer-events-none absolute -left-40 top-1/2 -translate-y-1/2 size-[40rem] rounded-full bg-signal-600/[0.06] blur-[120px]" />
-      <div className="pointer-events-none absolute -right-40 bottom-0 size-[32rem] rounded-full bg-signal-600/[0.05] blur-[120px]" />
+      <div className="via-signal-500/25 absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent to-transparent" />
+      <div className="bg-signal-600/[0.06] pointer-events-none absolute top-1/2 -left-40 size-[40rem] -translate-y-1/2 rounded-full blur-[120px]" />
+      <div className="bg-signal-600/[0.05] pointer-events-none absolute -right-40 bottom-0 size-[32rem] rounded-full blur-[120px]" />
 
       <Container className="relative">
         <div className="mb-14 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
@@ -96,9 +93,10 @@ export default function WhyNJTECH() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.07 }}
-              className="text-h2 font-semibold leading-[1.08] tracking-[-0.033em] text-white md:text-h1"
+              className="text-h2 md:text-h1 leading-[1.08] font-semibold tracking-[-0.033em] text-white"
             >
-              Ce qui nous distingue<br />
+              Ce qui nous distingue
+              <br />
               <span className="text-gradient-signal">sur le terrain.</span>
             </motion.h2>
           </div>
@@ -107,10 +105,10 @@ export default function WhyNJTECH() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-            className="max-w-sm text-base md:text-body-lg leading-[1.75] text-white/55"
+            className="md:text-body-lg max-w-sm text-base leading-[1.75] text-white/55"
           >
-            NJTECH combine expertise technique, rigueur opérationnelle et réactivité
-            pour devenir le partenaire de référence des opérateurs français.
+            NJTECH combine expertise technique, rigueur opérationnelle et réactivité pour devenir le
+            partenaire de référence des opérateurs français.
           </motion.p>
         </div>
 
@@ -119,38 +117,36 @@ export default function WhyNJTECH() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="group relative overflow-hidden rounded-2xl border border-signal-500/25 bg-signal-500/[0.06] p-8 md:p-10"
+          className="group border-signal-500/25 bg-signal-500/[0.06] relative overflow-hidden rounded-2xl border p-8 md:p-10"
         >
           {/* Emerald glow */}
-          <div className="pointer-events-none absolute -left-20 -top-20 size-72 rounded-full bg-signal-500/[0.12] blur-[80px] transition-all duration-500 group-hover:bg-signal-500/[0.18]" />
-          <div className="pointer-events-none absolute right-0 top-0 h-px w-1/2 bg-gradient-to-l from-transparent via-signal-500/30 to-transparent" />
+          <div className="bg-signal-500/[0.12] group-hover:bg-signal-500/[0.18] pointer-events-none absolute -top-20 -left-20 size-72 rounded-full blur-[80px] transition-all duration-500" />
+          <div className="via-signal-500/30 pointer-events-none absolute top-0 right-0 h-px w-1/2 bg-gradient-to-l from-transparent to-transparent" />
 
           <div className="relative grid gap-10 md:grid-cols-[auto_1fr] md:items-center md:gap-16">
             {/* Gauche — chiffre clé */}
             <div className="flex items-center gap-6 md:flex-col md:items-start md:gap-4">
-              <div className="inline-flex size-14 items-center justify-center rounded-2xl border border-signal-500/30 bg-signal-500/[0.12]">
-                <hero.icon className="size-7 text-signal-400" />
+              <div className="border-signal-500/30 bg-signal-500/[0.12] inline-flex size-14 items-center justify-center rounded-2xl border">
+                <hero.icon className="text-signal-400 size-7" />
               </div>
               <div>
-                <div className="text-[5rem] font-black leading-none tracking-[-0.05em] text-signal-400 md:text-[7rem]">
+                <div className="text-signal-400 text-[5rem] leading-none font-black tracking-[-0.05em] md:text-[7rem]">
                   <AnimatedCounter value={hero.value} duration={1200} />
                 </div>
-                <div className="mt-1 text-lead font-bold text-signal-300/80">
-                  {hero.label}
-                </div>
+                <div className="text-lead text-signal-300/80 mt-1 font-bold">{hero.label}</div>
               </div>
             </div>
 
             {/* Droite — description + indicateurs */}
             <div>
-              <p className="text-base md:text-lead leading-[1.82] text-white/55 max-w-2xl">
+              <p className="md:text-lead max-w-2xl text-base leading-[1.82] text-white/55">
                 {hero.desc}
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {hero.kpis.map((k) => (
                   <span
                     key={k}
-                    className="rounded-full border border-signal-500/20 bg-signal-500/[0.08] px-3.5 py-1.5 text-caption font-semibold text-signal-300/80"
+                    className="border-signal-500/20 bg-signal-500/[0.08] text-caption text-signal-300/80 rounded-full border px-3.5 py-1.5 font-semibold"
                   >
                     {k}
                   </span>
@@ -168,20 +164,20 @@ export default function WhyNJTECH() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.8, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-2xl border border-white/[0.11] bg-white/[0.04] p-7 transition-all duration-500 hover:border-signal-500/30 hover:bg-white/[0.07]"
+              className="group hover:border-signal-500/30 relative overflow-hidden rounded-2xl border border-white/[0.11] bg-white/[0.04] p-7 transition-all duration-500 hover:bg-white/[0.07]"
             >
-              <div className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-signal-500/0 blur-3xl transition-all duration-500 group-hover:bg-signal-500/[0.1]" />
+              <div className="bg-signal-500/0 group-hover:bg-signal-500/[0.1] pointer-events-none absolute -top-10 -right-10 size-40 rounded-full blur-3xl transition-all duration-500" />
               <div className="relative">
-                <div className="mb-5 inline-flex size-10 items-center justify-center rounded-2xl border border-signal-500/20 bg-signal-500/[0.1] text-signal-400">
+                <div className="border-signal-500/20 bg-signal-500/[0.1] text-signal-400 mb-5 inline-flex size-10 items-center justify-center rounded-2xl border">
                   <f.icon className="size-4.5" />
                 </div>
-                <div className="text-h1 font-black leading-none tracking-[-0.04em] text-white">
+                <div className="text-h1 leading-none font-black tracking-[-0.04em] text-white">
                   <AnimatedCounter value={f.value} duration={1600} />
                   {f.unit && <span className="text-[2rem]">{f.unit}</span>}
                 </div>
-                <div className="mt-3 text-body font-semibold text-white/85">{f.label}</div>
-                <p className="mt-2 text-base md:text-body leading-[1.65] text-white/55">{f.desc}</p>
-                <div className="mt-5 h-px w-0 rounded-full bg-gradient-to-r from-signal-500 to-signal-400/60 transition-all duration-500 group-hover:w-10" />
+                <div className="text-body mt-3 font-semibold text-white/85">{f.label}</div>
+                <p className="md:text-body mt-2 text-base leading-[1.65] text-white/55">{f.desc}</p>
+                <div className="from-signal-500 to-signal-400/60 mt-5 h-px w-0 rounded-full bg-gradient-to-r transition-all duration-500 group-hover:w-10" />
               </div>
             </motion.div>
           ))}
@@ -197,17 +193,17 @@ export default function WhyNJTECH() {
               transition={{ duration: 0.7, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
               className="group relative overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.04] p-6 transition-all duration-500 hover:border-white/[0.11] hover:bg-white/[0.04]"
             >
-              <div className="pointer-events-none absolute -right-10 -top-10 size-28 rounded-full bg-signal-500/0 blur-2xl transition-all duration-500 group-hover:bg-signal-500/[0.07]" />
+              <div className="bg-signal-500/0 group-hover:bg-signal-500/[0.07] pointer-events-none absolute -top-10 -right-10 size-28 rounded-full blur-2xl transition-all duration-500" />
               <div className="relative">
-                <div className="mb-4 inline-flex size-9 items-center justify-center rounded-2xl border border-white/[0.11] bg-white/[0.04] text-signal-400">
+                <div className="text-signal-400 mb-4 inline-flex size-9 items-center justify-center rounded-2xl border border-white/[0.11] bg-white/[0.04]">
                   <s.icon className="size-4" />
                 </div>
-                <div className="text-h2 font-black leading-none tracking-[-0.04em] text-white">
+                <div className="text-h2 leading-none font-black tracking-[-0.04em] text-white">
                   <AnimatedCounter value={s.value} duration={1600} />
                   {s.unit && <span className="text-h3">{s.unit}</span>}
                 </div>
-                <div className="mt-2.5 text-body font-semibold text-white/70">{s.label}</div>
-                <p className="mt-1.5 text-caption leading-[1.6] text-white/55">{s.desc}</p>
+                <div className="text-body mt-2.5 font-semibold text-white/70">{s.label}</div>
+                <p className="text-caption mt-1.5 leading-[1.6] text-white/55">{s.desc}</p>
               </div>
             </motion.div>
           ))}

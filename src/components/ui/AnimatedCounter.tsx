@@ -68,17 +68,15 @@ export function AnimatedCounter({
     requestAnimationFrame(tick);
   }, [inView, value, duration]);
 
-  return <span ref={ref} className={className}>{display}</span>;
+  return (
+    <span ref={ref} className={className}>
+      {display}
+    </span>
+  );
 }
 
 /** Valeurs non numériques comme « 4G·5G » — révélation caractère par caractère */
-export function AnimatedReveal({
-  value,
-  className,
-}: {
-  value: string;
-  className?: string;
-}) {
+export function AnimatedReveal({ value, className }: { value: string; className?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   const [shown, setShown] = useState(0);
@@ -97,9 +95,7 @@ export function AnimatedReveal({
   return (
     <span ref={ref} className={className}>
       {value.slice(0, shown)}
-      {shown < value.length && (
-        <span className="animate-pulse text-signal-400/60">_</span>
-      )}
+      {shown < value.length && <span className="text-signal-400/60 animate-pulse">_</span>}
     </span>
   );
 }

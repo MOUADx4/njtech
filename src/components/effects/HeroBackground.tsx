@@ -8,7 +8,7 @@ const ParticleNetwork = dynamic(() => import("./ParticleNetwork"), { ssr: false 
 
 export default function HeroBackground({ interactive = true }: { interactive?: boolean }) {
   const [videoError, setVideoError] = useState(false);
-  const [isDesktop,  setIsDesktop]  = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 640px)");
@@ -20,7 +20,6 @@ export default function HeroBackground({ interactive = true }: { interactive?: b
 
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden">
-
       {/* Base dark layer */}
       <div className="absolute inset-0 bg-[#020816]" />
 
@@ -42,7 +41,7 @@ export default function HeroBackground({ interactive = true }: { interactive?: b
 
       {/* Image fixe façon Ken Burns — priorité Next/Image pour le LCP */}
       <div
-        className="absolute inset-0 opacity-25 overflow-hidden"
+        className="absolute inset-0 overflow-hidden opacity-25"
         style={{ animation: isDesktop ? "kenBurns 22s ease-in-out infinite alternate" : "none" }}
       >
         <Image
@@ -56,18 +55,38 @@ export default function HeroBackground({ interactive = true }: { interactive?: b
       </div>
 
       {/* Halos dégradés — allégés sur mobile */}
-      <div className="absolute -top-60 left-1/3 h-[600px] w-[600px] sm:h-[900px] sm:w-[900px] rounded-full opacity-100"
-        style={{ background: "radial-gradient(circle, rgba(14,165,233,0.14) 0%, transparent 65%)", animation: "blobA 18s ease-in-out infinite" }} />
-      <div className="absolute -bottom-40 right-1/4 h-[450px] w-[450px] sm:h-[700px] sm:w-[700px] rounded-full"
-        style={{ background: "radial-gradient(circle, rgba(56,189,248,0.09) 0%, transparent 65%)", animation: "blobB 22s ease-in-out infinite" }} />
+      <div
+        className="absolute -top-60 left-1/3 h-[600px] w-[600px] rounded-full opacity-100 sm:h-[900px] sm:w-[900px]"
+        style={{
+          background: "radial-gradient(circle, rgba(14,165,233,0.14) 0%, transparent 65%)",
+          animation: "blobA 18s ease-in-out infinite",
+        }}
+      />
+      <div
+        className="absolute right-1/4 -bottom-40 h-[450px] w-[450px] rounded-full sm:h-[700px] sm:w-[700px]"
+        style={{
+          background: "radial-gradient(circle, rgba(56,189,248,0.09) 0%, transparent 65%)",
+          animation: "blobB 22s ease-in-out infinite",
+        }}
+      />
 
       {/* Halos supplémentaires — desktop uniquement */}
       {isDesktop && (
         <>
-          <div className="absolute top-1/2 -left-60 h-[600px] w-[600px] rounded-full"
-            style={{ background: "radial-gradient(circle, rgba(79,70,229,0.07) 0%, transparent 65%)", animation: "blobC 26s ease-in-out infinite" }} />
-          <div className="absolute -top-10 right-1/3 h-[400px] w-[400px] rounded-full"
-            style={{ background: "radial-gradient(circle, rgba(14,165,233,0.06) 0%, transparent 65%)", animation: "blobD 20s ease-in-out infinite reverse" }} />
+          <div
+            className="absolute top-1/2 -left-60 h-[600px] w-[600px] rounded-full"
+            style={{
+              background: "radial-gradient(circle, rgba(79,70,229,0.07) 0%, transparent 65%)",
+              animation: "blobC 26s ease-in-out infinite",
+            }}
+          />
+          <div
+            className="absolute -top-10 right-1/3 h-[400px] w-[400px] rounded-full"
+            style={{
+              background: "radial-gradient(circle, rgba(14,165,233,0.06) 0%, transparent 65%)",
+              animation: "blobD 20s ease-in-out infinite reverse",
+            }}
+          />
 
           {/* Light streaks */}
           <svg className="absolute inset-0 h-full w-full opacity-25" aria-hidden>
@@ -83,12 +102,33 @@ export default function HeroBackground({ interactive = true }: { interactive?: b
                 <stop offset="100%" stopColor="transparent" />
               </linearGradient>
             </defs>
-            <line x1="-20%" y1="30%" x2="120%" y2="30%" stroke="url(#streak1)" strokeWidth="1"
-              style={{ animation: "streakPass 8s ease-in-out infinite", opacity: 0 }} />
-            <line x1="-20%" y1="55%" x2="120%" y2="52%" stroke="url(#streak1)" strokeWidth="0.5"
-              style={{ animation: "streakPass 11s ease-in-out infinite 3s", opacity: 0 }} />
-            <line x1="-20%" y1="72%" x2="120%" y2="70%" stroke="url(#streak2)" strokeWidth="0.8"
-              style={{ animation: "streakPass 9s ease-in-out infinite 5s", opacity: 0 }} />
+            <line
+              x1="-20%"
+              y1="30%"
+              x2="120%"
+              y2="30%"
+              stroke="url(#streak1)"
+              strokeWidth="1"
+              style={{ animation: "streakPass 8s ease-in-out infinite", opacity: 0 }}
+            />
+            <line
+              x1="-20%"
+              y1="55%"
+              x2="120%"
+              y2="52%"
+              stroke="url(#streak1)"
+              strokeWidth="0.5"
+              style={{ animation: "streakPass 11s ease-in-out infinite 3s", opacity: 0 }}
+            />
+            <line
+              x1="-20%"
+              y1="72%"
+              x2="120%"
+              y2="70%"
+              stroke="url(#streak2)"
+              strokeWidth="0.8"
+              style={{ animation: "streakPass 9s ease-in-out infinite 5s", opacity: 0 }}
+            />
           </svg>
 
           {/* Canvas de particules — desktop uniquement */}

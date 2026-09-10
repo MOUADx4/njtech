@@ -25,12 +25,11 @@ export default function PageHero({
     });
   }, []);
 
-  const onMouseLeave = useCallback(() =>
-    setSpotlight((s) => ({ ...s, active: false })), []);
+  const onMouseLeave = useCallback(() => setSpotlight((s) => ({ ...s, active: false })), []);
 
   return (
     <section
-      className="relative overflow-hidden bg-[#020816] pb-24 pt-44 text-white"
+      className="relative overflow-hidden bg-[#020816] pt-44 pb-24 text-white"
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
     >
@@ -46,7 +45,7 @@ export default function PageHero({
       />
 
       {/* Séparateur inférieur */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/12 to-transparent" />
+      <div className="pointer-events-none absolute right-0 bottom-0 left-0 h-px bg-gradient-to-r from-transparent via-white/12 to-transparent" />
 
       <Container className="relative z-10">
         <motion.p
@@ -62,7 +61,7 @@ export default function PageHero({
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-4xl text-balance font-semibold tracking-[-0.038em] text-white"
+          className="max-w-4xl font-semibold tracking-[-0.038em] text-balance text-white"
           style={{ fontSize: "clamp(2.6rem, 6vw, 5rem)", lineHeight: 1.05 }}
         >
           {title}
@@ -73,7 +72,7 @@ export default function PageHero({
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-8 max-w-2xl text-lead leading-[1.78] text-white/55"
+            className="text-lead mt-8 max-w-2xl leading-[1.78] text-white/55"
           >
             {description}
           </motion.p>
@@ -84,7 +83,7 @@ export default function PageHero({
           animate={{ scaleX: 1 }}
           transition={{ duration: 1.1, delay: 0.42, ease: [0.16, 1, 0.3, 1] }}
           style={{ transformOrigin: "left" }}
-          className="mt-16 h-px bg-gradient-to-r from-signal-500/45 via-signal-500/10 to-transparent"
+          className="from-signal-500/45 via-signal-500/10 mt-16 h-px bg-gradient-to-r to-transparent"
         />
       </Container>
     </section>
