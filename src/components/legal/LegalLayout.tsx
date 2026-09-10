@@ -42,10 +42,10 @@ export default function LegalLayout({ title, lastUpdated, sections, children }: 
         <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[28rem] w-[56rem] rounded-full bg-signal-600/[0.07] blur-[120px]" />
         <Container className="relative">
           <div className="section-label text-signal-400 mb-6">Informations légales</div>
-          <h1 className="text-[2.2rem] font-semibold tracking-[-0.033em] text-white md:text-[3rem]">
+          <h1 className="text-h2 font-semibold tracking-[-0.033em] text-white md:text-h1">
             {title}
           </h1>
-          <div className="mt-4 flex items-center gap-2 text-[0.75rem] text-white/55">
+          <div className="mt-4 flex items-center gap-2 text-body text-white/55">
             <Calendar className="size-3.5" />
             Dernière mise à jour : <strong className="font-semibold text-white/55">{lastUpdated}</strong>
           </div>
@@ -60,7 +60,7 @@ export default function LegalLayout({ title, lastUpdated, sections, children }: 
             {/* Sommaire latéral collant */}
             <aside className="hidden lg:block">
               <div className="sticky top-28">
-                <p className="mb-4 text-[0.58rem] font-bold uppercase tracking-[0.24em] text-navy-400/70">
+                <p className="mb-4 text-eyebrow font-bold uppercase tracking-[0.24em] text-navy-400/70">
                   Sommaire
                 </p>
                 <nav className="space-y-0.5">
@@ -69,7 +69,7 @@ export default function LegalLayout({ title, lastUpdated, sections, children }: 
                       key={s.id}
                       href={`#${s.id}`}
                       className={[
-                        "flex items-center gap-2 rounded-lg px-3 py-2 text-[0.76rem] font-medium leading-snug transition-all duration-200",
+                        "flex items-center gap-2 rounded-lg px-3 py-2 text-body font-medium leading-snug transition-all duration-200",
                         active === s.id
                           ? "bg-signal-50 text-signal-600"
                           : "text-navy-400 hover:bg-navy-50 hover:text-navy-800",

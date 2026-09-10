@@ -49,7 +49,7 @@ export default function SectionHeader({
         transition={{ duration: 0.95, ease: [0.16, 1, 0.3, 1], delay: label ? 0.07 : 0 }}
         className={cn(
           "text-balance font-semibold tracking-[-0.033em]",
-          "text-[2.3rem] leading-[1.08] md:text-[3rem] md:leading-[1.06] lg:text-[3.6rem] lg:leading-[1.05]",
+          "text-h2 leading-[1.08] md:text-h1 md:leading-[1.06] lg:text-[3.6rem] lg:leading-[1.05]",
           dark ? "text-white" : "text-navy-950",
         )}
       >
@@ -64,7 +64,7 @@ export default function SectionHeader({
           transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.17 }}
           className={cn(
             "mt-6 text-pretty leading-[1.8]",
-            "text-base md:text-[1.07rem]",
+            "text-base md:text-lead",
             dark ? "text-white/52" : "text-navy-700/65",
           )}
         >

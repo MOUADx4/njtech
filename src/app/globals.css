@@ -30,6 +30,24 @@
   --font-sans: var(--font-inter);
   --font-display: var(--font-space-grotesk);
   --font-mono: monospace;
+
+  /* Échelle typographique — texte courant et interface.
+     Chaque palier remplace un groupe de tailles qui ne différaient que de
+     quelques dixièmes de pixel. Utiliser ces tokens plutôt que des valeurs
+     arbitraires : text-eyebrow, text-caption, text-body, text-body-lg,
+     text-lead. */
+  --text-eyebrow: 0.625rem;   /* 10px   — majuscules espacées, sur-titres   */
+  --text-caption: 0.72rem;    /* 11.5px — mentions, légendes, méta          */
+  --text-body:    0.8125rem;  /* 13px   — texte courant compact             */
+  --text-body-lg: 0.9rem;     /* 14.4px — texte courant confortable         */
+  --text-lead:    1rem;       /* 16px   — chapô, introductions              */
+
+  /* Titres. Le héros et les grands titres de page conservent leur
+     typographie fluide en clamp(), définie au cas par cas. */
+  --text-h4: 1.2rem;          /* 19.2px */
+  --text-h3: 1.5rem;          /* 24px   */
+  --text-h2: 2.25rem;         /* 36px   */
+  --text-h1: 3rem;            /* 48px   */
 }
 
 html, body {
@@ -102,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.75rem 1rem;
   background: var(--color-signal-500);
   color: #fff;
-  font-size: 0.85rem;
+  font-size: var(--text-body-lg);
   font-weight: 600;
   border-radius: 2px;
 }
@@ -117,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    font-size: 0.65rem;
+    font-size: var(--text-eyebrow);
     font-weight: 700;
     letter-spacing: 0.24em;
     text-transform: uppercase;

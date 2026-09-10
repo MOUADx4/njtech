@@ -65,7 +65,7 @@ export default function About() {
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950/85 to-transparent p-7">
-                <div className="text-xs font-semibold uppercase tracking-[0.22em] text-signal-400">
+                <div className="text-caption font-semibold uppercase tracking-[0.22em] text-signal-400">
                   Équipes terrain
                 </div>
                 <div className="mt-1 text-base font-semibold text-white">
@@ -94,7 +94,7 @@ export default function About() {
                     <h3 className="mt-5 text-base font-semibold text-navy-900">
                       {p.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-navy-600/80">
+                    <p className="mt-2 text-body-lg leading-relaxed text-navy-600/80">
                       {p.text}
                     </p>
                   </div>
@@ -110,7 +110,7 @@ export default function About() {
               className="mt-5 rounded-2xl bg-navy-950 p-8 text-white"
             >
               <div className="mb-4 h-px w-10 bg-signal-500" />
-              <p className="text-lg leading-relaxed text-white/80">
+              <p className="text-h4 leading-relaxed text-white/80">
                 « Apporter aux opérateurs un partenaire fiable, agile et
                 technique — capable de livrer dans les délais des
                 infrastructures conformes, sécurisées et durables. »

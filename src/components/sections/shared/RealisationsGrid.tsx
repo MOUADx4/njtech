@@ -65,16 +65,16 @@ export default function RealisationsGrid() {
             >
               <div>
                 <div className="mb-3 flex items-center gap-2.5">
-                  <span className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-navy-400/60">
+                  <span className="text-eyebrow font-bold uppercase tracking-[0.28em] text-navy-400/60">
                     0{si + 1}
                   </span>
                   <span className="h-px w-6 bg-signal-500/50" />
                 </div>
-                <h2 className="text-[1.5rem] font-bold tracking-tight text-navy-950">
+                <h2 className="text-h3 font-bold tracking-tight text-navy-950">
                   {sec.title}
                 </h2>
               </div>
-              <p className="max-w-md text-[0.85rem] leading-[1.72] text-navy-500/70 md:text-right">
+              <p className="max-w-md text-body-lg leading-[1.72] text-navy-500/70 md:text-right">
                 {sec.description}
               </p>
             </motion.div>
@@ -108,9 +108,9 @@ export default function RealisationsGrid() {
                   </div>
 
                   <figcaption className="absolute inset-x-0 bottom-0 p-5 text-white">
-                    <div className="text-[1rem] font-semibold leading-tight">{it.title}</div>
+                    <div className="text-lead font-semibold leading-tight">{it.title}</div>
                     <div className="mt-2.5 translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                      <div className="text-[0.78rem] text-white/55">{it.subtitle}</div>
+                      <div className="text-body text-white/55">{it.subtitle}</div>
                     </div>
                   </figcaption>
                 </figure>

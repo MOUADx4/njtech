@@ -36,7 +36,7 @@ export default function HomeAbout() {
           >
             <div className="section-label text-signal-600 mb-8">Qui sommes-nous</div>
 
-            <h2 className="text-[2.3rem] font-semibold leading-[1.08] tracking-[-0.033em] text-navy-950 md:text-[3rem]">
+            <h2 className="text-h2 font-semibold leading-[1.08] tracking-[-0.033em] text-navy-950 md:text-h1">
               Le partenaire télécom
               <br />
               <span className="text-gradient-signal">de référence</span>
@@ -44,7 +44,7 @@ export default function HomeAbout() {
               en France.
             </h2>
 
-            <p className="mt-8 text-[1.02rem] leading-[1.82] text-navy-700/70">
+            <p className="mt-8 text-lead leading-[1.82] text-navy-700/70">
               Basée à Épinay-sur-Seine, NJTECH Solution accompagne les opérateurs
               et intégrateurs nationaux dans le déploiement, l'intégration et la
               maintenance des infrastructures télécom 4G et 5G.
@@ -52,7 +52,7 @@ export default function HomeAbout() {
 
             <ul className="mt-9 space-y-3.5">
               {pillars.map((p) => (
-                <li key={p} className="flex items-start gap-3 text-[0.85rem] text-navy-700/60">
+                <li key={p} className="flex items-start gap-3 text-body-lg text-navy-700/60">
                   <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-signal-500" />
                   {p}
                 </li>
@@ -61,7 +61,7 @@ export default function HomeAbout() {
 
             <Link
               href="/a-propos"
-              className="tap-target mt-10 inline-flex items-center gap-2 text-[0.85rem] font-semibold text-navy-900 transition-colors hover:text-signal-600"
+              className="tap-target mt-10 inline-flex items-center gap-2 text-body-lg font-semibold text-navy-900 transition-colors hover:text-signal-600"
             >
               En savoir plus sur NJTECH <ArrowRight className="size-4" />
             </Link>
@@ -93,10 +93,10 @@ export default function HomeAbout() {
                     {m.year}
                   </div>
 
-                  <div className="mt-2 text-[0.9rem] font-semibold leading-snug text-navy-900">
+                  <div className="mt-2 text-body-lg font-semibold leading-snug text-navy-900">
                     {m.label}
                   </div>
-                  <p className="mt-1 text-[0.79rem] leading-[1.66] text-navy-600/80">
+                  <p className="mt-1 text-body leading-[1.66] text-navy-600/80">
                     {m.desc}
                   </p>
                 </div>

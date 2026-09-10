@@ -73,7 +73,7 @@ export default function PageHero({
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-8 max-w-2xl text-[1.05rem] leading-[1.78] text-white/52"
+            className="mt-8 max-w-2xl text-lead leading-[1.78] text-white/52"
           >
             {description}
           </motion.p>

@@ -96,7 +96,7 @@ export default function WhyNJTECH() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.07 }}
-              className="text-[2.3rem] font-semibold leading-[1.08] tracking-[-0.033em] text-white md:text-[3rem]"
+              className="text-h2 font-semibold leading-[1.08] tracking-[-0.033em] text-white md:text-h1"
             >
               Ce qui nous distingue<br />
               <span className="text-gradient-signal">sur le terrain.</span>
@@ -107,7 +107,7 @@ export default function WhyNJTECH() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-            className="max-w-sm text-base md:text-[0.92rem] leading-[1.75] text-white/60"
+            className="max-w-sm text-base md:text-body-lg leading-[1.75] text-white/60"
           >
             NJTECH combine expertise technique, rigueur opérationnelle et réactivité
             pour devenir le partenaire de référence des opérateurs français.
@@ -135,7 +135,7 @@ export default function WhyNJTECH() {
                 <div className="text-[5rem] font-black leading-none tracking-[-0.05em] text-signal-400 md:text-[7rem]">
                   <AnimatedCounter value={hero.value} duration={1200} />
                 </div>
-                <div className="mt-1 text-[1rem] font-bold text-signal-300/80">
+                <div className="mt-1 text-lead font-bold text-signal-300/80">
                   {hero.label}
                 </div>
               </div>
@@ -143,14 +143,14 @@ export default function WhyNJTECH() {
 
             {/* Droite — description + indicateurs */}
             <div>
-              <p className="text-base md:text-[0.95rem] leading-[1.82] text-white/60 max-w-2xl">
+              <p className="text-base md:text-lead leading-[1.82] text-white/60 max-w-2xl">
                 {hero.desc}
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {hero.kpis.map((k) => (
                   <span
                     key={k}
-                    className="rounded-full border border-signal-500/20 bg-signal-500/[0.08] px-3.5 py-1.5 text-[0.72rem] font-semibold text-signal-300/80"
+                    className="rounded-full border border-signal-500/20 bg-signal-500/[0.08] px-3.5 py-1.5 text-caption font-semibold text-signal-300/80"
                   >
                     {k}
                   </span>
@@ -175,12 +175,12 @@ export default function WhyNJTECH() {
                 <div className="mb-5 inline-flex size-10 items-center justify-center rounded-xl border border-signal-500/20 bg-signal-500/[0.1] text-signal-400">
                   <f.icon className="size-4.5" />
                 </div>
-                <div className="text-[3.2rem] font-black leading-none tracking-[-0.04em] text-white">
+                <div className="text-h1 font-black leading-none tracking-[-0.04em] text-white">
                   <AnimatedCounter value={f.value} duration={1600} />
                   {f.unit && <span className="text-[2rem]">{f.unit}</span>}
                 </div>
-                <div className="mt-3 text-[0.82rem] font-semibold text-white/85">{f.label}</div>
-                <p className="mt-2 text-base md:text-[0.76rem] leading-[1.65] text-white/60">{f.desc}</p>
+                <div className="mt-3 text-body font-semibold text-white/85">{f.label}</div>
+                <p className="mt-2 text-base md:text-body leading-[1.65] text-white/60">{f.desc}</p>
                 <div className="mt-5 h-px w-0 rounded-full bg-gradient-to-r from-signal-500 to-signal-400/60 transition-all duration-500 group-hover:w-10" />
               </div>
             </motion.div>
@@ -202,12 +202,12 @@ export default function WhyNJTECH() {
                 <div className="mb-4 inline-flex size-9 items-center justify-center rounded-xl border border-white/[0.09] bg-white/[0.05] text-signal-400">
                   <s.icon className="size-4" />
                 </div>
-                <div className="text-[2.4rem] font-black leading-none tracking-[-0.04em] text-white">
+                <div className="text-h2 font-black leading-none tracking-[-0.04em] text-white">
                   <AnimatedCounter value={s.value} duration={1600} />
-                  {s.unit && <span className="text-[1.5rem]">{s.unit}</span>}
+                  {s.unit && <span className="text-h3">{s.unit}</span>}
                 </div>
-                <div className="mt-2.5 text-[0.75rem] font-semibold text-white/75">{s.label}</div>
-                <p className="mt-1.5 text-[0.72rem] leading-[1.6] text-white/55">{s.desc}</p>
+                <div className="mt-2.5 text-body font-semibold text-white/75">{s.label}</div>
+                <p className="mt-1.5 text-caption leading-[1.6] text-white/55">{s.desc}</p>
               </div>
             </motion.div>
           ))}

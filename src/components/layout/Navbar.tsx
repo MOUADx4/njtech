@@ -64,7 +64,7 @@ export default function Navbar() {
                 key={l.href}
                 href={l.href}
                 className={cn(
-                  "relative px-4 py-2 text-[0.82rem] font-medium tracking-[-0.005em] transition-colors duration-200",
+                  "relative px-4 py-2 text-body font-medium tracking-[-0.005em] transition-colors duration-200",
                   isDark
                     ? "text-white/60 hover:text-white"
                     : "text-navy-600 hover:text-navy-900",
@@ -85,7 +85,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               className={cn(
-                "btn-shimmer inline-flex items-center gap-2 px-5 py-2.5 text-[0.82rem] font-semibold transition-all duration-200 active:scale-[0.98]",
+                "btn-shimmer inline-flex items-center gap-2 px-5 py-2.5 text-body font-semibold transition-all duration-200 active:scale-[0.98]",
                 scrolled
                   ? "bg-navy-950 text-white hover:bg-navy-800"
                   : "border border-white/[0.18] text-white/80 hover:border-white/40 hover:text-white",
@@ -165,7 +165,7 @@ export default function Navbar() {
                       href={l.href}
                       onClick={() => setOpen(false)}
                       className={cn(
-                        "flex items-center justify-between rounded-xl px-4 py-3.5 text-[0.95rem] font-medium transition-colors",
+                        "flex items-center justify-between rounded-xl px-4 py-3.5 text-lead font-medium transition-colors",
                         pathname === l.href
                           ? "bg-white/[0.08] text-white"
                           : "text-white/55 hover:bg-white/[0.05] hover:text-white",
@@ -207,10 +207,10 @@ export default function Navbar() {
                 transition={{ delay: 0.42 }}
                 className="mt-auto"
               >
-                <a href={`tel:${contact.phone.switchboardE164}`} className="block text-[0.75rem] text-white/60 transition-colors hover:text-white/70">
+                <a href={`tel:${contact.phone.switchboardE164}`} className="block text-body text-white/60 transition-colors hover:text-white/70">
                   {contact.phone.switchboard}
                 </a>
-                <a href={mailtoHref} className="mt-1 block text-[0.75rem] text-white/60 transition-colors hover:text-white/70">
+                <a href={mailtoHref} className="mt-1 block text-body text-white/60 transition-colors hover:text-white/70">
                   {contact.email}
                 </a>
               </motion.div>

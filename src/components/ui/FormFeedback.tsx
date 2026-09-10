@@ -18,16 +18,16 @@ export default function FormFeedback({ status, onReset, dark = true }: Props) {
           <CheckCircle2 className="size-7 text-emerald-400" />
         </div>
         <div>
-          <p className={`text-[1.05rem] font-semibold ${dark ? "text-white" : "text-navy-900"}`}>
+          <p className={`text-lead font-semibold ${dark ? "text-white" : "text-navy-900"}`}>
             Message envoyé avec succès !
           </p>
-          <p className={`mt-2 text-[0.85rem] ${dark ? "text-white/60" : "text-navy-600/70"}`}>
+          <p className={`mt-2 text-body-lg ${dark ? "text-white/60" : "text-navy-600/70"}`}>
             Notre équipe vous répondra sous 24h ouvrées.
           </p>
         </div>
         <button
           onClick={onReset}
-          className={`inline-flex items-center gap-2 text-[0.78rem] font-medium transition-colors ${
+          className={`inline-flex items-center gap-2 text-body font-medium transition-colors ${
             dark
               ? "text-white/55 hover:text-white/70"
               : "text-navy-400 hover:text-navy-700"
@@ -50,16 +50,16 @@ export default function FormFeedback({ status, onReset, dark = true }: Props) {
         <AlertCircle className="size-6 text-red-400" />
       </div>
       <div>
-        <p className={`text-[0.95rem] font-semibold ${dark ? "text-white" : "text-navy-900"}`}>
+        <p className={`text-lead font-semibold ${dark ? "text-white" : "text-navy-900"}`}>
           Une erreur est survenue
         </p>
-        <p className={`mt-1.5 text-[0.82rem] ${dark ? "text-white/60" : "text-navy-600/65"}`}>
+        <p className={`mt-1.5 text-body ${dark ? "text-white/60" : "text-navy-600/65"}`}>
           Veuillez réessayer ou nous contacter par téléphone.
         </p>
       </div>
       <button
         onClick={onReset}
-        className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg border border-white/[0.1] bg-white/[0.05] px-5 py-2.5 text-[0.78rem] font-semibold text-white/60 transition-all hover:text-white"
+        className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg border border-white/[0.1] bg-white/[0.05] px-5 py-2.5 text-body font-semibold text-white/60 transition-all hover:text-white"
       >
         <RotateCcw className="size-3.5" /> Réessayer
       </button>

@@ -46,10 +46,10 @@ export default function Safety() {
               transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
               className="absolute -bottom-5 -right-5 hidden rounded-2xl bg-navy-950 px-6 py-5 shadow-2xl md:block"
             >
-              <div className="text-4xl font-bold text-white">
+              <div className="text-h2 font-bold text-white">
                 <AnimatedCounter value="0" duration={800} />
               </div>
-              <div className="mt-1 text-xs font-medium uppercase tracking-[0.16em] text-white/50">
+              <div className="mt-1 text-caption font-medium uppercase tracking-[0.16em] text-white/50">
                 Accident grave
               </div>
             </motion.div>
@@ -81,7 +81,7 @@ export default function Safety() {
                   <div className="grid size-10 shrink-0 place-items-center rounded-lg bg-signal-50 text-signal-600">
                     <p.icon className="size-4" />
                   </div>
-                  <span className="text-sm font-medium text-navy-800">{p.title}</span>
+                  <span className="text-body-lg font-medium text-navy-800">{p.title}</span>
                 </motion.div>
               ))}
             </div>
@@ -94,7 +94,7 @@ export default function Safety() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="mt-8 border-t border-navy-100 pt-8"
             >
-              <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.26em] text-navy-400/60">
+              <p className="mb-4 text-eyebrow font-bold uppercase tracking-[0.26em] text-navy-400/60">
                 Habilitations &amp; certifications
               </p>
               <div className="flex flex-wrap gap-2.5">
@@ -107,7 +107,7 @@ export default function Safety() {
                 ].map(({ icon: Icon, label }) => (
                   <span
                     key={label}
-                    className="inline-flex items-center gap-2 rounded-full border border-navy-200 bg-white px-3.5 py-1.5 text-[0.75rem] font-medium text-navy-700 shadow-sm"
+                    className="inline-flex items-center gap-2 rounded-full border border-navy-200 bg-white px-3.5 py-1.5 text-body font-medium text-navy-700 shadow-sm"
                   >
                     <Icon className="size-3.5 shrink-0 text-signal-500" />
                     {label}

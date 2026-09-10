@@ -64,7 +64,7 @@ export default function ContactPage() {
         <Container className="relative z-10">
           <div className="mb-9 flex items-center gap-3">
             <span className="h-px w-8 bg-signal-500" />
-            <span className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-white/55">
+            <span className="text-caption font-semibold uppercase tracking-[0.32em] text-white/55">
               Contact
             </span>
           </div>
@@ -72,7 +72,7 @@ export default function ContactPage() {
             Un projet télécom ?<br />
             <span className="text-signal-400">Parlons-en.</span>
           </h1>
-          <p className="mt-6 max-w-md text-[1rem] leading-[1.72] text-white/60">
+          <p className="mt-6 max-w-md text-lead leading-[1.72] text-white/60">
             Notre équipe vous répond dans les 24h ouvrées.
           </p>
         </Container>
@@ -96,10 +96,10 @@ export default function ContactPage() {
                     className="group flex items-start justify-between gap-4 py-5 transition-colors"
                   >
                     <div>
-                      <div className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/50">
+                      <div className="text-eyebrow font-bold uppercase tracking-[0.28em] text-white/50">
                         {label}
                       </div>
-                      <div className="mt-1.5 text-[0.875rem] font-medium text-white/55 transition-colors group-hover:text-white/90">
+                      <div className="mt-1.5 text-body-lg font-medium text-white/55 transition-colors group-hover:text-white/90">
                         {value}
                       </div>
                     </div>
@@ -111,14 +111,14 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-14">
-                <div className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/50">
+                <div className="text-eyebrow font-bold uppercase tracking-[0.28em] text-white/50">
                   Domaines d'intervention
                 </div>
                 <div className="mt-6 space-y-3.5">
                   {domains.map((d) => (
                     <div key={d} className="flex items-center gap-3.5">
                       <span className="h-px w-5 shrink-0 bg-signal-500/50" />
-                      <span className="text-[0.85rem] text-white/48">{d}</span>
+                      <span className="text-body-lg text-white/48">{d}</span>
                     </div>
                   ))}
                 </div>
@@ -134,10 +134,10 @@ export default function ContactPage() {
                   <MessageCircle className="size-5 text-[#25D366]" />
                 </div>
                 <div>
-                  <div className="text-[0.875rem] font-semibold text-white/80 transition-colors group-hover:text-white">
+                  <div className="text-body-lg font-semibold text-white/80 transition-colors group-hover:text-white">
                     WhatsApp
                   </div>
-                  <div className="mt-0.5 text-[0.72rem] text-white/55">
+                  <div className="mt-0.5 text-caption text-white/55">
                     Réponse en 2h
                   </div>
                 </div>
@@ -145,7 +145,7 @@ export default function ContactPage() {
             </div>
 
             <div className="lg:col-span-8 lg:border-l lg:border-white/[0.07] lg:pl-20">
-              <h2 className="text-[1.4rem] font-bold tracking-tight text-white/90">
+              <h2 className="text-h3 font-bold tracking-tight text-white/90">
                 Décrivez votre projet
               </h2>
 
@@ -165,13 +165,13 @@ export default function ContactPage() {
                   </div>
 
                   <div className="mt-8">
-                    <label htmlFor="contact-type" className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/50">
+                    <label htmlFor="contact-type" className="text-eyebrow font-bold uppercase tracking-[0.28em] text-white/50">
                       Type d'intervention
                     </label>
                     <select
                       id="contact-type"
                       name="type"
-                      className="mt-4 w-full appearance-none border-b border-white/[0.14] bg-transparent py-3 text-base md:text-[0.9rem] text-white/60 transition-colors focus:border-signal-400"
+                      className="mt-4 w-full appearance-none border-b border-white/[0.14] bg-transparent py-3 text-base md:text-body-lg text-white/60 transition-colors focus:border-signal-400"
                     >
                       <option className="bg-[#070d18]">Déploiement antennes 4G/5G</option>
                       <option className="bg-[#070d18]">Faisceaux hertziens</option>
@@ -182,7 +182,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="mt-8">
-                    <label htmlFor="contact-message" className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/50">
+                    <label htmlFor="contact-message" className="text-eyebrow font-bold uppercase tracking-[0.28em] text-white/50">
                       Votre message
                       <span className="ml-1 text-signal-400" aria-hidden="true">*</span>
                       <span className="sr-only">(obligatoire)</span>
@@ -194,7 +194,7 @@ export default function ContactPage() {
                       required
                       aria-required="true"
                       placeholder="Décrivez votre besoin — localisation, technologie, délais…"
-                      className="mt-4 w-full resize-none border-b border-white/[0.14] bg-transparent py-3 text-base md:text-[0.9rem] text-white/60 placeholder:text-white/50 transition-colors focus:border-signal-400"
+                      className="mt-4 w-full resize-none border-b border-white/[0.14] bg-transparent py-3 text-base md:text-body-lg text-white/60 placeholder:text-white/50 transition-colors focus:border-signal-400"
                     />
                   </div>
 
@@ -211,7 +211,7 @@ export default function ContactPage() {
                       href={whatsappHref}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-[0.8rem] font-medium text-[#25D366]/60 transition-colors hover:text-[#25D366]"
+                      className="inline-flex items-center gap-2 text-body font-medium text-[#25D366]/60 transition-colors hover:text-[#25D366]"
                     >
                       <MessageCircle className="size-3.5" />
                       WhatsApp — Réponse en 2h
@@ -226,10 +226,10 @@ export default function ContactPage() {
           <div className="mt-20 border-t border-white/[0.07] pt-20">
             <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
               <div>
-                <div className="mb-2 text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/50">
+                <div className="mb-2 text-eyebrow font-bold uppercase tracking-[0.28em] text-white/50">
                   Localisation
                 </div>
-                <p className="text-[0.875rem] text-white/55">
+                <p className="text-body-lg text-white/55">
                   {contact.address.street} — {contact.address.postalCode} {contact.address.city}
                 </p>
               </div>
@@ -237,7 +237,7 @@ export default function ContactPage() {
                 href={mapsLinkHref}
                 target="_blank"
                 rel="noreferrer"
-                className="tap-target inline-flex items-center gap-1.5 text-[0.75rem] text-white/55 transition-colors hover:text-white/60"
+                className="tap-target inline-flex items-center gap-1.5 text-body text-white/55 transition-colors hover:text-white/60"
               >
                 Voir sur Google Maps
                 <ExternalLink className="size-3" />
@@ -272,7 +272,7 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white/50">
+      <label htmlFor={name} className="text-eyebrow font-bold uppercase tracking-[0.28em] text-white/50">
         {label}
         {required && <span className="ml-1 text-signal-400" aria-hidden="true">*</span>}
         {required && <span className="sr-only">(obligatoire)</span>}
@@ -285,7 +285,7 @@ function Field({
         required={required}
         aria-required={required}
         autoComplete={autoComplete}
-        className="mt-4 w-full border-b border-white/[0.14] bg-transparent py-3 text-base md:text-[0.9rem] text-white/60 placeholder:text-white/50 transition-colors focus:border-signal-400"
+        className="mt-4 w-full border-b border-white/[0.14] bg-transparent py-3 text-base md:text-body-lg text-white/60 placeholder:text-white/50 transition-colors focus:border-signal-400"
       />
     </div>
   );

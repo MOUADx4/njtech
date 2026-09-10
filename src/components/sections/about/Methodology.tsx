@@ -72,13 +72,13 @@ export default function Methodology() {
                 </div>
 
                 <div className="rounded-2xl border border-navy-100 bg-white p-7 transition-all duration-300 hover:shadow-xl hover:shadow-navy-900/5">
-                  <div className="text-xs font-bold uppercase tracking-[0.2em] text-signal-500">
+                  <div className="text-caption font-bold uppercase tracking-[0.2em] text-signal-500">
                     {s.n}
                   </div>
-                  <h3 className="mt-3 text-lg font-semibold text-navy-900">
+                  <h3 className="mt-3 text-h4 font-semibold text-navy-900">
                     {s.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-navy-600/75">
+                  <p className="mt-2 text-body-lg leading-relaxed text-navy-600/75">
                     {s.text}
                   </p>
                   <div className="mt-6 h-0.5 w-10 rounded-full bg-gradient-to-r from-signal-400 to-signal-600 transition-all duration-500 group-hover:w-20" />
@@ -102,10 +102,10 @@ export default function Methodology() {
               { v: "1", l: "Local logistique en propre" },
             ].map((b) => (
               <div key={b.l} className="flex items-baseline gap-5">
-                <div className="text-5xl font-semibold tracking-tight text-white">
+                <div className="text-h1 font-semibold tracking-tight text-white">
                   <AnimatedCounter value={b.v} duration={1400} />
                 </div>
-                <div className="text-sm leading-snug text-white/60">{b.l}</div>
+                <div className="text-body-lg leading-snug text-white/60">{b.l}</div>
               </div>
             ))}
           </div>

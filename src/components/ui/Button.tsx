@@ -25,9 +25,9 @@ const VARIANTS: Record<Variant, string> = {
 };
 
 const SIZES: Record<Size, string> = {
-  sm: "px-5 py-2.5 text-[0.82rem]",
-  md: "px-7 py-3.5 text-[0.875rem]",
-  lg: "px-8 py-3.5 text-[0.9rem]",
+  sm: "px-5 py-2.5 text-body",
+  md: "px-7 py-3.5 text-body-lg",
+  lg: "px-8 py-3.5 text-body-lg",
 };
 
 /** Coins carrés : parti pris graphique du site, appliqué sans exception. */

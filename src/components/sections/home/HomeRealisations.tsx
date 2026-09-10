@@ -80,7 +80,7 @@ export default function Realisations() {
           />
           <Link
             href="/realisations"
-            className="tap-target group shrink-0 inline-flex items-center gap-2 text-[0.82rem] font-semibold text-navy-500 hover:text-navy-900 transition-colors"
+            className="tap-target group shrink-0 inline-flex items-center gap-2 text-body font-semibold text-navy-500 hover:text-navy-900 transition-colors"
           >
             Voir toutes les réalisations
             <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -123,12 +123,12 @@ export default function Realisations() {
 
               {/* Légende — les caractéristiques remontent au survol */}
               <figcaption className="absolute inset-x-0 bottom-0 p-5">
-                <div className="text-[1.05rem] font-semibold text-white leading-tight">
+                <div className="text-lead font-semibold text-white leading-tight">
                   {it.title}
                 </div>
 
                 <div className="mt-3 translate-y-3 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                  <div className="text-[0.78rem] text-white/60">{it.subtitle}</div>
+                  <div className="text-body text-white/60">{it.subtitle}</div>
                 </div>
               </figcaption>
             </motion.figure>

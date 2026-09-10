@@ -53,10 +53,10 @@ export default function FranceCoverageMap() {
           hovered ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1"
         } ${hovered === "11" ? "border-orange-200" : "border-navy-100"}`}
       >
-        <p className="text-[0.78rem] font-semibold leading-none text-navy-900">
+        <p className="text-body font-semibold leading-none text-navy-900">
           {hovered ? (REGION_LABELS[hovered] ?? "Région") : ""}
         </p>
-        <p className={`mt-1 text-[0.65rem] font-medium ${hovered === "11" ? "text-orange-500" : "text-signal-500"}`}>
+        <p className={`mt-1 text-eyebrow font-medium ${hovered === "11" ? "text-orange-500" : "text-signal-500"}`}>
           {hovered === "11" ? "Siège social NJTECH" : "Zone d'intervention NJTECH"}
         </p>
       </div>
@@ -136,7 +136,7 @@ export default function FranceCoverageMap() {
       </ComposableMap>
 
       {/* Légende */}
-      <div className="mt-3 flex flex-wrap items-center gap-5 text-[0.7rem] text-navy-500/65">
+      <div className="mt-3 flex flex-wrap items-center gap-5 text-caption text-navy-500/65">
         <span className="flex items-center gap-2">
           <span className="inline-block h-3 w-4 rounded-sm border border-orange-300 bg-[#FFF7ED]" />
           Île-de-France — Siège social

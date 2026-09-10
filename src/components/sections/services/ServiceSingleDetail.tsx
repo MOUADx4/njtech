@@ -35,7 +35,7 @@ export default function ServiceSingleDetail({ service }: { service: ServiceData 
           >
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-[0.78rem] font-medium text-navy-500/60 transition-colors hover:text-navy-900"
+              className="inline-flex items-center gap-2 text-body font-medium text-navy-500/60 transition-colors hover:text-navy-900"
             >
               <ArrowLeft className="size-3.5" />
               Toutes nos prestations
@@ -61,13 +61,13 @@ export default function ServiceSingleDetail({ service }: { service: ServiceData 
                 {service.title}
               </h2>
 
-              <p className="mt-6 text-[1.02rem] leading-[1.82] text-navy-700/70">
+              <p className="mt-6 text-lead leading-[1.82] text-navy-700/70">
                 {service.text}
               </p>
 
               <ul className="mt-10 space-y-3.5">
                 {service.points.map((p) => (
-                  <li key={p} className="flex items-center gap-3.5 text-[0.9rem] text-navy-800">
+                  <li key={p} className="flex items-center gap-3.5 text-body-lg text-navy-800">
                     <span className="h-px w-5 shrink-0 bg-signal-500" />
                     {p}
                   </li>
@@ -115,11 +115,11 @@ export default function ServiceSingleDetail({ service }: { service: ServiceData 
           >
             <div className="mb-3 flex items-center gap-3">
               <span className="h-px w-6 bg-signal-500" />
-              <span className="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-navy-400/70">
+              <span className="text-eyebrow font-bold uppercase tracking-[0.3em] text-navy-400/70">
                 Nos autres prestations
               </span>
             </div>
-            <h3 className="text-[1.6rem] font-semibold tracking-tight text-navy-950">
+            <h3 className="text-h3 font-semibold tracking-tight text-navy-950">
               Découvrez l'ensemble de nos expertises.
             </h3>
           </motion.div>
@@ -142,11 +142,11 @@ export default function ServiceSingleDetail({ service }: { service: ServiceData 
                     <div className="grid size-10 place-items-center rounded-xl bg-navy-950 text-signal-400">
                       <RelIcon className="size-4.5" />
                     </div>
-                    <h4 className="mt-4 text-[0.95rem] font-semibold text-navy-900">{r.title}</h4>
-                    <p className="mt-2 flex-1 text-base md:text-[0.8rem] leading-relaxed text-navy-600/65">
+                    <h4 className="mt-4 text-lead font-semibold text-navy-900">{r.title}</h4>
+                    <p className="mt-2 flex-1 text-base md:text-body leading-relaxed text-navy-600/65">
                       {r.points[0]} · {r.points[1]}
                     </p>
-                    <div className="mt-5 flex items-center gap-1.5 text-[0.75rem] font-semibold text-signal-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <div className="mt-5 flex items-center gap-1.5 text-body font-semibold text-signal-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                       Voir la prestation <ArrowRight className="size-3.5" />
                     </div>
                   </Link>

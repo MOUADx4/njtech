@@ -30,7 +30,7 @@ export default function LogoMarquee() {
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-32 bg-gradient-to-l from-white to-transparent" />
 
       <Container>
-        <p className="mb-8 text-center text-[0.6rem] font-bold uppercase tracking-[0.32em] text-navy-900/60">
+        <p className="mb-8 text-center text-eyebrow font-bold uppercase tracking-[0.32em] text-navy-900/60">
           Opérateurs &amp; intégrateurs partenaires
         </p>
       </Container>

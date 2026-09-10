@@ -45,7 +45,7 @@ export default function Services() {
           />
           <Link
             href="/services"
-            className="tap-target group shrink-0 inline-flex items-center gap-2 text-[0.78rem] font-semibold text-white/55 hover:text-signal-400 transition-colors"
+            className="tap-target group shrink-0 inline-flex items-center gap-2 text-body font-semibold text-white/55 hover:text-signal-400 transition-colors"
           >
             Voir toutes les prestations
             <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -79,19 +79,19 @@ export default function Services() {
                   </div>
 
                   {/* Titre */}
-                  <h3 className="text-[1.2rem] font-semibold leading-tight tracking-tight text-white">
+                  <h3 className="text-h4 font-semibold leading-tight tracking-tight text-white">
                     {s.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-3.5 text-base md:text-[0.83rem] leading-[1.75] text-white/50">
+                  <p className="mt-3.5 text-base md:text-body leading-[1.75] text-white/50">
                     {s.text}
                   </p>
 
                   {/* Bouton d'action */}
                   <Link
                     href={`/services/${s.slug}`}
-                    className="tap-target mt-7 inline-flex items-center gap-2 text-[0.75rem] font-semibold text-signal-400/70 transition-all duration-300 group-hover:gap-3 group-hover:text-signal-400"
+                    className="tap-target mt-7 inline-flex items-center gap-2 text-body font-semibold text-signal-400/70 transition-all duration-300 group-hover:gap-3 group-hover:text-signal-400"
                   >
                     En savoir plus <ArrowUpRight className="size-3.5" />
                   </Link>

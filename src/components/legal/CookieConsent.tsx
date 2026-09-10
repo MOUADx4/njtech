@@ -76,7 +76,7 @@ export default function CookieConsent() {
               height={48}
               className="h-7 w-auto object-contain brightness-0 invert"
             />
-            <span className="text-[0.82rem] font-semibold text-white">
+            <span className="text-body font-semibold text-white">
               Gestion des cookies
             </span>
           </div>
@@ -91,7 +91,7 @@ export default function CookieConsent() {
 
         {/* Corps */}
         <div className="px-5 pb-4">
-          <p className="text-[0.78rem] leading-[1.7] text-white/52">
+          <p className="text-body leading-[1.7] text-white/52">
             Nous utilisons des cookies pour améliorer votre expérience. Les cookies
             nécessaires assurent le bon fonctionnement du site. Les autres nécessitent
             votre accord.{" "}
@@ -103,7 +103,7 @@ export default function CookieConsent() {
           {/* Panneau de préférences dépliable */}
           <button
             onClick={() => setExpanded((v) => !v)}
-            className="mt-3 flex items-center gap-1.5 text-[0.72rem] font-medium text-white/55 transition-colors hover:text-white/65"
+            className="mt-3 flex items-center gap-1.5 text-caption font-medium text-white/55 transition-colors hover:text-white/65"
           >
             Personnaliser
             {expanded ? <ChevronUp className="size-3.5" /> : <ChevronDown className="size-3.5" />}
@@ -114,8 +114,8 @@ export default function CookieConsent() {
               {/* Cookies nécessaires — toujours actifs */}
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-[0.75rem] font-semibold text-white/80">Nécessaires</p>
-                  <p className="text-[0.68rem] text-white/55">Fonctionnement du site</p>
+                  <p className="text-body font-semibold text-white/80">Nécessaires</p>
+                  <p className="text-caption text-white/55">Fonctionnement du site</p>
                 </div>
                 <div className="flex h-5 w-9 items-center justify-end rounded-full bg-signal-500/60 px-1">
                   <div className="size-3.5 rounded-full bg-white" />
@@ -124,8 +124,8 @@ export default function CookieConsent() {
               {/* Analytics — toggleable */}
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-[0.75rem] font-semibold text-white/80">Analytiques</p>
-                  <p className="text-[0.68rem] text-white/55">Mesure d'audience anonymisée</p>
+                  <p className="text-body font-semibold text-white/80">Analytiques</p>
+                  <p className="text-caption text-white/55">Mesure d'audience anonymisée</p>
                 </div>
                 <button
                   role="switch"
@@ -147,21 +147,21 @@ export default function CookieConsent() {
         <div className="flex gap-2 border-t border-white/[0.06] px-5 py-4">
           <button
             onClick={() => dismiss(refuse)}
-            className="flex-1 rounded-lg border border-white/[0.1] bg-white/[0.05] py-2.5 text-[0.78rem] font-semibold text-white/70 transition-all hover:bg-white/[0.1] hover:text-white active:scale-[0.98]"
+            className="flex-1 rounded-lg border border-white/[0.1] bg-white/[0.05] py-2.5 text-body font-semibold text-white/70 transition-all hover:bg-white/[0.1] hover:text-white active:scale-[0.98]"
           >
             Tout refuser
           </button>
           {expanded ? (
             <button
               onClick={handleCustomize}
-              className="flex-1 rounded-lg bg-signal-600 py-2.5 text-[0.78rem] font-semibold text-white transition-all hover:bg-signal-500 active:scale-[0.98]"
+              className="flex-1 rounded-lg bg-signal-600 py-2.5 text-body font-semibold text-white transition-all hover:bg-signal-500 active:scale-[0.98]"
             >
               Enregistrer
             </button>
           ) : (
             <button
               onClick={() => dismiss(accept)}
-              className="flex-1 rounded-lg bg-signal-500 py-2.5 text-[0.78rem] font-semibold text-white transition-all hover:bg-signal-600 active:scale-[0.98]"
+              className="flex-1 rounded-lg bg-signal-500 py-2.5 text-body font-semibold text-white transition-all hover:bg-signal-600 active:scale-[0.98]"
             >
               Tout accepter
             </button>

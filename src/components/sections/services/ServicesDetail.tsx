@@ -61,14 +61,14 @@ function ServiceBlock({
                 <s.icon className="size-5" />
               </div>
             </div>
-            <h2 className="mt-6 text-3xl font-semibold leading-tight tracking-tight text-navy-950 md:text-4xl">
+            <h2 className="mt-6 text-h2 font-semibold leading-tight tracking-tight text-navy-950 md:text-h2">
               {s.title}
             </h2>
             <p className="mt-5 text-base leading-relaxed text-navy-700/70">{s.text}</p>
 
             <ul className="mt-8 space-y-3">
               {s.points.map((p) => (
-                <li key={p} className="flex items-center gap-3 text-sm text-navy-800">
+                <li key={p} className="flex items-center gap-3 text-body-lg text-navy-800">
                   <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-signal-500" />
                   {p}
                 </li>
@@ -77,7 +77,7 @@ function ServiceBlock({
 
             <Link
               href={`/services/${s.slug}`}
-              className="tap-target mt-8 inline-flex items-center gap-2 text-[0.82rem] font-semibold text-signal-600 transition-colors hover:text-signal-500"
+              className="tap-target mt-8 inline-flex items-center gap-2 text-body font-semibold text-signal-600 transition-colors hover:text-signal-500"
             >
               En savoir plus <ArrowRight className="size-3.5" />
             </Link>

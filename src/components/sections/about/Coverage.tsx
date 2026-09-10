@@ -45,8 +45,8 @@ export default function Coverage() {
                   <div className="grid size-10 place-items-center rounded-lg bg-signal-50 text-signal-600">
                     <f.icon className="size-4" />
                   </div>
-                  <div className="mt-4 text-sm font-semibold text-navy-900">{f.title}</div>
-                  <div className="mt-1 text-xs leading-relaxed text-navy-600/70">{f.text}</div>
+                  <div className="mt-4 text-body-lg font-semibold text-navy-900">{f.title}</div>
+                  <div className="mt-1 text-caption leading-relaxed text-navy-600/70">{f.text}</div>
                 </motion.div>
               ))}
             </div>
@@ -69,8 +69,8 @@ export default function Coverage() {
                   <Radio className="size-4" />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-navy-900">Métropole entière</div>
-                  <div className="text-xs text-navy-600/65">Réactivité 48h sur site</div>
+                  <div className="text-body-lg font-semibold text-navy-900">Métropole entière</div>
+                  <div className="text-caption text-navy-600/65">Réactivité 48h sur site</div>
                 </div>
               </div>
             </div>
