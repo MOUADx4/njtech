@@ -77,9 +77,9 @@ export default function Clients() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.9, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-2xl border border-white/[0.065] bg-white/[0.022] p-8 transition-all duration-500 hover:border-signal-500/20 hover:bg-white/[0.042]"
+              className="group relative overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.04] p-8 transition-all duration-500 hover:border-signal-500/20 hover:bg-white/[0.04]"
             >
-              <div className="pointer-events-none absolute -bottom-16 -right-16 size-44 rounded-full bg-signal-500/0 blur-3xl transition-all duration-700 group-hover:bg-signal-500/[0.11]" />
+              <div className="pointer-events-none absolute -bottom-16 -right-16 size-44 rounded-full bg-signal-500/0 blur-3xl transition-all duration-500 group-hover:bg-signal-500/[0.11]" />
 
               <div className="relative">
                 {/* Ligne logo + étiquette */}
@@ -91,7 +91,7 @@ export default function Clients() {
                     height={p.logoH}
                     className="h-8 w-auto object-contain opacity-85 transition-all duration-300 group-hover:opacity-100"
                   />
-                  <div className="shrink-0 rounded-md border border-white/[0.08] px-2.5 py-1 text-eyebrow font-semibold text-white/50">
+                  <div className="shrink-0 rounded-lg border border-white/[0.07] px-2.5 py-1 text-eyebrow font-semibold text-white/55">
                     {p.tag}
                   </div>
                 </div>
@@ -106,10 +106,10 @@ export default function Clients() {
                   {p.name}
                 </div>
 
-                <div className="mt-5 h-px bg-white/[0.08]" />
+                <div className="mt-5 h-px bg-white/[0.07]" />
 
                 {/* Description */}
-                <p className="mt-5 text-base md:text-body leading-[1.75] text-white/48">{p.desc}</p>
+                <p className="mt-5 text-base md:text-body leading-[1.75] text-white/55">{p.desc}</p>
 
                 {/* Geography */}
                 <div className="mt-5 flex items-center gap-2">
@@ -127,9 +127,9 @@ export default function Clients() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-14 border-t border-white/[0.065] pt-10"
+          className="mt-14 border-t border-white/[0.07] pt-10"
         >
-          <div className="mb-8 text-center text-eyebrow font-bold uppercase tracking-[0.3em] text-white/50">
+          <div className="mb-8 text-center text-eyebrow font-bold uppercase tracking-[0.3em] text-white/55">
             Également partenaires de
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
@@ -140,7 +140,7 @@ export default function Clients() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="transition-all duration-400"
+                className="transition-all duration-300"
               >
                 <Image
                   src={s.logo}
@@ -157,7 +157,7 @@ export default function Clients() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.36 }}
             >
-              <span className="text-body font-bold tracking-[0.2em] text-white/55 transition-colors duration-300 hover:text-white/65">
+              <span className="text-body font-bold tracking-[0.2em] text-white/55 transition-colors duration-300 hover:text-white/70">
                 HIVORY
               </span>
             </motion.div>

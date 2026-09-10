@@ -54,7 +54,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative mt-12 overflow-hidden rounded-3xl"
+              className="relative mt-12 overflow-hidden rounded-2xl"
             >
               <Image
                 src="/images/team-njtech.png"
@@ -88,7 +88,7 @@ export default function About() {
                 >
                   <div className="absolute -right-14 -top-14 size-28 rounded-full bg-signal-50 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110" />
                   <div className="relative">
-                    <div className="grid size-11 place-items-center rounded-xl bg-navy-950 text-signal-400">
+                    <div className="grid size-11 place-items-center rounded-2xl bg-navy-950 text-signal-400">
                       <p.icon className="size-5" />
                     </div>
                     <h3 className="mt-5 text-base font-semibold text-navy-900">
@@ -110,7 +110,7 @@ export default function About() {
               className="mt-5 rounded-2xl bg-navy-950 p-8 text-white"
             >
               <div className="mb-4 h-px w-10 bg-signal-500" />
-              <p className="text-h4 leading-relaxed text-white/80">
+              <p className="text-h4 leading-relaxed text-white/85">
                 « Apporter aux opérateurs un partenaire fiable, agile et
                 technique — capable de livrer dans les délais des
                 infrastructures conformes, sécurisées et durables. »

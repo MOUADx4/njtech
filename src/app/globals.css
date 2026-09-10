@@ -118,7 +118,8 @@ h1, h2, h3, h4, h5, h6 {
   left: -9999px;
   z-index: 60;
   padding: 0.75rem 1rem;
-  background: var(--color-signal-500);
+  /* signal-700 plutôt que 500 : blanc sur 500 ne donne que 3,19:1. */
+  background: var(--color-signal-700);
   color: #fff;
   font-size: var(--text-body-lg);
   font-weight: 600;

@@ -64,7 +64,7 @@ export default function CookieConsent() {
         !reduced && !leaving && "translate-y-0 opacity-100",
       ].filter(Boolean).join(" ")}
     >
-      <div className="overflow-hidden rounded-xl border border-white/[0.08] bg-[#0d1526] shadow-[0_8px_40px_rgba(0,0,0,0.55)] backdrop-blur-xl">
+      <div className="overflow-hidden rounded-2xl border border-white/[0.07] bg-[#0d1526] shadow-[0_8px_40px_rgba(0,0,0,0.55)] backdrop-blur-xl">
 
         {/* En-tête */}
         <div className="flex items-start justify-between gap-3 p-5 pb-4">
@@ -82,7 +82,7 @@ export default function CookieConsent() {
           </div>
           <button
             onClick={() => dismiss(refuse)}
-            className="rounded-md p-1 text-white/55 transition-colors hover:text-white/70"
+            className="rounded-lg p-1 text-white/55 transition-colors hover:text-white/70"
             aria-label="Refuser et fermer"
           >
             <X className="size-4" />
@@ -91,7 +91,7 @@ export default function CookieConsent() {
 
         {/* Corps */}
         <div className="px-5 pb-4">
-          <p className="text-body leading-[1.7] text-white/52">
+          <p className="text-body leading-[1.7] text-white/55">
             Nous utilisons des cookies pour améliorer votre expérience. Les cookies
             nécessaires assurent le bon fonctionnement du site. Les autres nécessitent
             votre accord.{" "}
@@ -103,7 +103,7 @@ export default function CookieConsent() {
           {/* Panneau de préférences dépliable */}
           <button
             onClick={() => setExpanded((v) => !v)}
-            className="mt-3 flex items-center gap-1.5 text-caption font-medium text-white/55 transition-colors hover:text-white/65"
+            className="mt-3 flex items-center gap-1.5 text-caption font-medium text-white/55 transition-colors hover:text-white/70"
           >
             Personnaliser
             {expanded ? <ChevronUp className="size-3.5" /> : <ChevronDown className="size-3.5" />}
@@ -114,7 +114,7 @@ export default function CookieConsent() {
               {/* Cookies nécessaires — toujours actifs */}
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-body font-semibold text-white/80">Nécessaires</p>
+                  <p className="text-body font-semibold text-white/85">Nécessaires</p>
                   <p className="text-caption text-white/55">Fonctionnement du site</p>
                 </div>
                 <div className="flex h-5 w-9 items-center justify-end rounded-full bg-signal-500/60 px-1">
@@ -124,7 +124,7 @@ export default function CookieConsent() {
               {/* Analytics — toggleable */}
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-body font-semibold text-white/80">Analytiques</p>
+                  <p className="text-body font-semibold text-white/85">Analytiques</p>
                   <p className="text-caption text-white/55">Mesure d'audience anonymisée</p>
                 </div>
                 <button
@@ -144,10 +144,10 @@ export default function CookieConsent() {
         </div>
 
         {/* Actions */}
-        <div className="flex gap-2 border-t border-white/[0.06] px-5 py-4">
+        <div className="flex gap-2 border-t border-white/[0.07] px-5 py-4">
           <button
             onClick={() => dismiss(refuse)}
-            className="flex-1 rounded-lg border border-white/[0.1] bg-white/[0.05] py-2.5 text-body font-semibold text-white/70 transition-all hover:bg-white/[0.1] hover:text-white active:scale-[0.98]"
+            className="flex-1 rounded-lg border border-white/[0.11] bg-white/[0.04] py-2.5 text-body font-semibold text-white/70 transition-all hover:bg-white/[0.11] hover:text-white active:scale-[0.98]"
           >
             Tout refuser
           </button>

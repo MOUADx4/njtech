@@ -52,7 +52,7 @@ export default function ServiceSingleDetail({ service }: { service: ServiceData 
             >
               <div className="flex items-baseline gap-4">
                 <span className="text-6xl font-bold text-navy-100 select-none">{service.n}</span>
-                <div className="grid size-12 place-items-center rounded-xl bg-navy-950 text-signal-400">
+                <div className="grid size-12 place-items-center rounded-2xl bg-navy-950 text-signal-400">
                   <Icon className="size-5" />
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default function ServiceSingleDetail({ service }: { service: ServiceData 
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-navy-950"
+              className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-navy-950"
             >
               <Image
                 src={service.image}
@@ -139,7 +139,7 @@ export default function ServiceSingleDetail({ service }: { service: ServiceData 
                     href={`/services/${r.slug}`}
                     className="group flex h-full flex-col rounded-2xl border border-navy-100 bg-white p-6 transition-all duration-300 hover:border-signal-200 hover:shadow-md"
                   >
-                    <div className="grid size-10 place-items-center rounded-xl bg-navy-950 text-signal-400">
+                    <div className="grid size-10 place-items-center rounded-2xl bg-navy-950 text-signal-400">
                       <RelIcon className="size-4.5" />
                     </div>
                     <h4 className="mt-4 text-lead font-semibold text-navy-900">{r.title}</h4>

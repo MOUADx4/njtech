@@ -61,7 +61,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.9, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-2xl border border-white/[0.065] bg-white/[0.022] p-9 transition-all duration-500 hover:border-signal-500/22 hover:bg-white/[0.042]"
+              className="group relative overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.04] p-9 transition-all duration-500 hover:border-signal-500/22 hover:bg-white/[0.04]"
             >
               {/* Number watermark */}
               <div className="pointer-events-none absolute -right-2 -top-5 select-none font-black text-[6rem] leading-none tracking-tight text-white/[0.035] transition-colors duration-500 group-hover:text-white/[0.055]">
@@ -69,12 +69,12 @@ export default function Services() {
               </div>
 
               {/* Halo au survol */}
-              <div className="pointer-events-none absolute -right-20 -top-20 size-56 rounded-full bg-signal-500/0 blur-3xl transition-all duration-700 group-hover:bg-signal-500/[0.09]" />
+              <div className="pointer-events-none absolute -right-20 -top-20 size-56 rounded-full bg-signal-500/0 blur-3xl transition-all duration-500 group-hover:bg-signal-500/[0.09]" />
 
               <div className="relative grid gap-8 md:grid-cols-[1fr_auto] md:items-start">
                 <div>
                   {/* Icône */}
-                  <div className="mb-6 inline-flex size-11 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.05] text-signal-400">
+                  <div className="mb-6 inline-flex size-11 items-center justify-center rounded-2xl border border-white/[0.07] bg-white/[0.04] text-signal-400">
                     <s.icon className="size-4.5" />
                   </div>
 
@@ -84,7 +84,7 @@ export default function Services() {
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-3.5 text-base md:text-body leading-[1.75] text-white/50">
+                  <p className="mt-3.5 text-base md:text-body leading-[1.75] text-white/55">
                     {s.text}
                   </p>
 
@@ -98,13 +98,13 @@ export default function Services() {
                 </div>
 
                 {/* Image */}
-                <div className="relative h-32 w-full overflow-hidden rounded-xl md:h-40 md:w-36">
+                <div className="relative h-32 w-full overflow-hidden rounded-2xl md:h-40 md:w-36">
                   <Image
                     src={s.image}
                     alt=""
                     fill
                     sizes="(min-width: 768px) 144px, 100vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#020816]/80 to-transparent" />
                 </div>

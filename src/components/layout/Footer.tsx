@@ -28,7 +28,7 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#020912] text-white">
 
-      <div className="relative border-b border-white/[0.06]">
+      <div className="relative border-b border-white/[0.07]">
         <div className="absolute inset-0 bg-gradient-to-r from-signal-600/[0.08] via-transparent to-transparent" />
         <Container className="relative flex flex-col items-start justify-between gap-6 py-10 md:flex-row md:items-center">
           <div>
@@ -60,7 +60,7 @@ export default function Footer() {
             <div className="mt-7 space-y-2">
               {trustBadges.map((b) => (
                 <div key={b.label} className="flex items-center gap-2.5">
-                  <div className="grid size-5 shrink-0 place-items-center rounded-md border border-signal-500/20 bg-signal-500/[0.1]">
+                  <div className="grid size-5 shrink-0 place-items-center rounded-lg border border-signal-500/20 bg-signal-500/[0.1]">
                     <b.icon className="size-3 text-signal-400" />
                   </div>
                   <span className="text-caption font-medium text-white/55">{b.label}</span>
@@ -73,7 +73,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label="NJTECH Solution sur LinkedIn"
-              className="tap-target mt-8 inline-flex items-center gap-2.5 border border-white/[0.09] px-4 py-2.5 text-caption font-semibold text-white/55 transition-all duration-200 hover:border-[#0A66C2]/50 hover:bg-[#0A66C2]/10 hover:text-white/80"
+              className="tap-target mt-8 inline-flex items-center gap-2.5 border border-white/[0.11] px-4 py-2.5 text-caption font-semibold text-white/55 transition-all duration-200 hover:border-[#0A66C2]/50 hover:bg-[#0A66C2]/10 hover:text-white/85"
             >
               <svg role="img" viewBox="0 0 24 24" className="size-3.5 shrink-0" fill="currentColor" aria-hidden="true">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -159,8 +159,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/[0.06] py-8">
-          <p className="mb-6 text-eyebrow font-bold uppercase tracking-[0.28em] text-white/50">
+        <div className="border-t border-white/[0.07] py-8">
+          <p className="mb-6 text-eyebrow font-bold uppercase tracking-[0.28em] text-white/55">
             Opérateurs &amp; intégrateurs partenaires
           </p>
           <div className="flex flex-wrap items-center gap-x-9 gap-y-4">
@@ -179,14 +179,14 @@ export default function Footer() {
         </div>
       </Container>
 
-      <div className="border-t border-white/[0.05]">
+      <div className="border-t border-white/[0.04]">
         <Container className="flex flex-col items-start justify-between gap-2 py-5 text-caption text-white/55 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} NJTECH Solution. Tous droits réservés.</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <span>Infrastructures télécom</span>
-            <span className="text-white/50">·</span>
+            <span className="text-white/55">·</span>
             <span>France métropolitaine</span>
-            <span className="text-white/50">·</span>
+            <span className="text-white/55">·</span>
             <span>Épinay-sur-Seine, 93</span>
           </div>
         </Container>

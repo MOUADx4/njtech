@@ -107,7 +107,7 @@ export default function WhyNJTECH() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-            className="max-w-sm text-base md:text-body-lg leading-[1.75] text-white/60"
+            className="max-w-sm text-base md:text-body-lg leading-[1.75] text-white/55"
           >
             NJTECH combine expertise technique, rigueur opérationnelle et réactivité
             pour devenir le partenaire de référence des opérateurs français.
@@ -122,7 +122,7 @@ export default function WhyNJTECH() {
           className="group relative overflow-hidden rounded-2xl border border-signal-500/25 bg-signal-500/[0.06] p-8 md:p-10"
         >
           {/* Emerald glow */}
-          <div className="pointer-events-none absolute -left-20 -top-20 size-72 rounded-full bg-signal-500/[0.12] blur-[80px] transition-all duration-700 group-hover:bg-signal-500/[0.18]" />
+          <div className="pointer-events-none absolute -left-20 -top-20 size-72 rounded-full bg-signal-500/[0.12] blur-[80px] transition-all duration-500 group-hover:bg-signal-500/[0.18]" />
           <div className="pointer-events-none absolute right-0 top-0 h-px w-1/2 bg-gradient-to-l from-transparent via-signal-500/30 to-transparent" />
 
           <div className="relative grid gap-10 md:grid-cols-[auto_1fr] md:items-center md:gap-16">
@@ -143,7 +143,7 @@ export default function WhyNJTECH() {
 
             {/* Droite — description + indicateurs */}
             <div>
-              <p className="text-base md:text-lead leading-[1.82] text-white/60 max-w-2xl">
+              <p className="text-base md:text-lead leading-[1.82] text-white/55 max-w-2xl">
                 {hero.desc}
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
@@ -168,11 +168,11 @@ export default function WhyNJTECH() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.8, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-2xl border border-white/[0.09] bg-white/[0.04] p-7 transition-all duration-500 hover:border-signal-500/30 hover:bg-white/[0.06]"
+              className="group relative overflow-hidden rounded-2xl border border-white/[0.11] bg-white/[0.04] p-7 transition-all duration-500 hover:border-signal-500/30 hover:bg-white/[0.07]"
             >
-              <div className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-signal-500/0 blur-3xl transition-all duration-700 group-hover:bg-signal-500/[0.1]" />
+              <div className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-signal-500/0 blur-3xl transition-all duration-500 group-hover:bg-signal-500/[0.1]" />
               <div className="relative">
-                <div className="mb-5 inline-flex size-10 items-center justify-center rounded-xl border border-signal-500/20 bg-signal-500/[0.1] text-signal-400">
+                <div className="mb-5 inline-flex size-10 items-center justify-center rounded-2xl border border-signal-500/20 bg-signal-500/[0.1] text-signal-400">
                   <f.icon className="size-4.5" />
                 </div>
                 <div className="text-h1 font-black leading-none tracking-[-0.04em] text-white">
@@ -180,7 +180,7 @@ export default function WhyNJTECH() {
                   {f.unit && <span className="text-[2rem]">{f.unit}</span>}
                 </div>
                 <div className="mt-3 text-body font-semibold text-white/85">{f.label}</div>
-                <p className="mt-2 text-base md:text-body leading-[1.65] text-white/60">{f.desc}</p>
+                <p className="mt-2 text-base md:text-body leading-[1.65] text-white/55">{f.desc}</p>
                 <div className="mt-5 h-px w-0 rounded-full bg-gradient-to-r from-signal-500 to-signal-400/60 transition-all duration-500 group-hover:w-10" />
               </div>
             </motion.div>
@@ -195,18 +195,18 @@ export default function WhyNJTECH() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.7, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-2xl border border-white/[0.065] bg-white/[0.022] p-6 transition-all duration-500 hover:border-white/[0.11] hover:bg-white/[0.04]"
+              className="group relative overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.04] p-6 transition-all duration-500 hover:border-white/[0.11] hover:bg-white/[0.04]"
             >
-              <div className="pointer-events-none absolute -right-10 -top-10 size-28 rounded-full bg-signal-500/0 blur-2xl transition-all duration-700 group-hover:bg-signal-500/[0.07]" />
+              <div className="pointer-events-none absolute -right-10 -top-10 size-28 rounded-full bg-signal-500/0 blur-2xl transition-all duration-500 group-hover:bg-signal-500/[0.07]" />
               <div className="relative">
-                <div className="mb-4 inline-flex size-9 items-center justify-center rounded-xl border border-white/[0.09] bg-white/[0.05] text-signal-400">
+                <div className="mb-4 inline-flex size-9 items-center justify-center rounded-2xl border border-white/[0.11] bg-white/[0.04] text-signal-400">
                   <s.icon className="size-4" />
                 </div>
                 <div className="text-h2 font-black leading-none tracking-[-0.04em] text-white">
                   <AnimatedCounter value={s.value} duration={1600} />
                   {s.unit && <span className="text-h3">{s.unit}</span>}
                 </div>
-                <div className="mt-2.5 text-body font-semibold text-white/75">{s.label}</div>
+                <div className="mt-2.5 text-body font-semibold text-white/70">{s.label}</div>
                 <p className="mt-1.5 text-caption leading-[1.6] text-white/55">{s.desc}</p>
               </div>
             </motion.div>

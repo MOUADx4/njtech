@@ -108,7 +108,7 @@ export default function Realisations() {
                 alt={it.title}
                 fill
                 sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                className="object-cover opacity-75 transition-all duration-700 group-hover:scale-[1.06] group-hover:opacity-95"
+                className="object-cover opacity-75 transition-all duration-500 group-hover:scale-[1.06] group-hover:opacity-95"
               />
 
               {/* Voile dégradé */}
@@ -116,7 +116,7 @@ export default function Realisations() {
 
               {/* Tag */}
               <div className="absolute inset-x-0 top-0 flex items-center justify-between p-4">
-                <span className="inline-flex items-center rounded-full bg-white/[0.1] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white backdrop-blur-sm">
+                <span className="inline-flex items-center rounded-full bg-white/[0.11] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white backdrop-blur-sm">
                   {it.tag}
                 </span>
               </div>
@@ -128,7 +128,7 @@ export default function Realisations() {
                 </div>
 
                 <div className="mt-3 translate-y-3 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                  <div className="text-body text-white/60">{it.subtitle}</div>
+                  <div className="text-body text-white/55">{it.subtitle}</div>
                 </div>
               </figcaption>
             </motion.figure>

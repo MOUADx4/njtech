@@ -93,7 +93,7 @@ export default function Methodology() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 rounded-3xl bg-navy-950 p-10 text-white"
+          className="mt-16 rounded-2xl bg-navy-950 p-10 text-white"
         >
           <div className="grid gap-8 md:grid-cols-3">
             {[
@@ -105,7 +105,7 @@ export default function Methodology() {
                 <div className="text-h1 font-semibold tracking-tight text-white">
                   <AnimatedCounter value={b.v} duration={1400} />
                 </div>
-                <div className="text-body-lg leading-snug text-white/60">{b.l}</div>
+                <div className="text-body-lg leading-snug text-white/55">{b.l}</div>
               </div>
             ))}
           </div>

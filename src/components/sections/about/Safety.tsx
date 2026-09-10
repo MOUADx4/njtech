@@ -28,7 +28,7 @@ export default function Safety() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="relative lg:col-span-5"
           >
-            <div className="relative overflow-hidden rounded-3xl">
+            <div className="relative overflow-hidden rounded-2xl">
               <Image
                 src="/images/safety-ppe.png"
                 alt="Équipements de protection individuelle"
@@ -36,7 +36,7 @@ export default function Safety() {
                 height={1100}
                 className="h-full w-full object-cover"
               />
-              <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-navy-900/10" />
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-navy-900/10" />
             </div>
 
             <motion.div
@@ -49,7 +49,7 @@ export default function Safety() {
               <div className="text-h2 font-bold text-white">
                 <AnimatedCounter value="0" duration={800} />
               </div>
-              <div className="mt-1 text-caption font-medium uppercase tracking-[0.16em] text-white/50">
+              <div className="mt-1 text-caption font-medium uppercase tracking-[0.16em] text-white/55">
                 Accident grave
               </div>
             </motion.div>
@@ -76,7 +76,7 @@ export default function Safety() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
-                  className="flex items-center gap-3 rounded-xl border border-navy-100 bg-white p-4 transition-colors hover:border-signal-200"
+                  className="flex items-center gap-3 rounded-2xl border border-navy-100 bg-white p-4 transition-colors hover:border-signal-200"
                 >
                   <div className="grid size-10 shrink-0 place-items-center rounded-lg bg-signal-50 text-signal-600">
                     <p.icon className="size-4" />

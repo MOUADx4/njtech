@@ -89,7 +89,7 @@ export default function HomeAbout() {
                 {/* Contenu */}
                 <div className="flex-1 overflow-hidden pb-2">
                   {/* Année en filigrane, repère visuel */}
-                  <div className="select-none text-[2.6rem] font-black leading-[0.85] tracking-[-0.05em] text-navy-100 transition-colors duration-400 group-hover:text-signal-100">
+                  <div className="select-none text-[2.6rem] font-black leading-[0.85] tracking-[-0.05em] text-navy-100 transition-colors duration-300 group-hover:text-signal-100">
                     {m.year}
                   </div>
 

@@ -48,7 +48,7 @@ export default function HomeCta() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.18 }}
-          className="mx-auto mt-7 max-w-md text-lead leading-[1.75] text-white/60"
+          className="mx-auto mt-7 max-w-md text-lead leading-[1.75] text-white/55"
         >
           Déploiement, intégration, bureau d'étude, maintenance.
           <br />Notre équipe répond sous 24h.
@@ -79,7 +79,7 @@ export default function HomeCta() {
           transition={{ duration: 0.9, delay: 0.45 }}
           className="mt-16 flex flex-col items-center gap-6"
         >
-          <p className="text-eyebrow font-bold uppercase tracking-[0.3em] text-white/50">
+          <p className="text-eyebrow font-bold uppercase tracking-[0.3em] text-white/55">
             Ils nous font confiance
           </p>
 

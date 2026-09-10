@@ -57,7 +57,7 @@ function ServiceBlock({
           >
             <div className="flex items-baseline gap-4">
               <span className="text-6xl font-bold text-navy-100 select-none">{s.n}</span>
-              <div className="grid size-11 place-items-center rounded-xl bg-navy-950 text-signal-400">
+              <div className="grid size-11 place-items-center rounded-2xl bg-navy-950 text-signal-400">
                 <s.icon className="size-5" />
               </div>
             </div>
@@ -89,14 +89,14 @@ function ServiceBlock({
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="group relative aspect-[4/3] overflow-hidden rounded-3xl bg-navy-950"
+            className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-navy-950"
           >
             <Image
               src={s.image}
               alt={s.title}
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
               priority={index === 0}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy-950/30 to-transparent" />

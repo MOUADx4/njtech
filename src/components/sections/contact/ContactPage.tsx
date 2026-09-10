@@ -72,7 +72,7 @@ export default function ContactPage() {
             Un projet télécom ?<br />
             <span className="text-signal-400">Parlons-en.</span>
           </h1>
-          <p className="mt-6 max-w-md text-lead leading-[1.72] text-white/60">
+          <p className="mt-6 max-w-md text-lead leading-[1.72] text-white/55">
             Notre équipe vous répond dans les 24h ouvrées.
           </p>
         </Container>
@@ -96,29 +96,29 @@ export default function ContactPage() {
                     className="group flex items-start justify-between gap-4 py-5 transition-colors"
                   >
                     <div>
-                      <div className="text-eyebrow font-bold uppercase tracking-[0.28em] text-white/50">
+                      <div className="text-eyebrow font-bold uppercase tracking-[0.28em] text-white/55">
                         {label}
                       </div>
-                      <div className="mt-1.5 text-body-lg font-medium text-white/55 transition-colors group-hover:text-white/90">
+                      <div className="mt-1.5 text-body-lg font-medium text-white/55 transition-colors group-hover:text-white/95">
                         {value}
                       </div>
                     </div>
                     {external && (
-                      <ExternalLink className="mt-1 size-3.5 shrink-0 text-white/50 transition-colors group-hover:text-white/50" />
+                      <ExternalLink className="mt-1 size-3.5 shrink-0 text-white/55 transition-colors group-hover:text-white/55" />
                     )}
                   </a>
                 ))}
               </div>
 
               <div className="mt-14">
-                <div className="text-eyebrow font-bold uppercase tracking-[0.28em] text-white/50">
+                <div className="text-eyebrow font-bold uppercase tracking-[0.28em] text-white/55">
                   Domaines d'intervention
                 </div>
                 <div className="mt-6 space-y-3.5">
                   {domains.map((d) => (
                     <div key={d} className="flex items-center gap-3.5">
                       <span className="h-px w-5 shrink-0 bg-signal-500/50" />
-                      <span className="text-body-lg text-white/48">{d}</span>
+                      <span className="text-body-lg text-white/55">{d}</span>
                     </div>
                   ))}
                 </div>
@@ -134,7 +134,7 @@ export default function ContactPage() {
                   <MessageCircle className="size-5 text-[#25D366]" />
                 </div>
                 <div>
-                  <div className="text-body-lg font-semibold text-white/80 transition-colors group-hover:text-white">
+                  <div className="text-body-lg font-semibold text-white/85 transition-colors group-hover:text-white">
                     WhatsApp
                   </div>
                   <div className="mt-0.5 text-caption text-white/55">
@@ -145,7 +145,7 @@ export default function ContactPage() {
             </div>
 
             <div className="lg:col-span-8 lg:border-l lg:border-white/[0.07] lg:pl-20">
-              <h2 className="text-h3 font-bold tracking-tight text-white/90">
+              <h2 className="text-h3 font-bold tracking-tight text-white/95">
                 Décrivez votre projet
               </h2>
 
@@ -165,13 +165,13 @@ export default function ContactPage() {
                   </div>
 
                   <div className="mt-8">
-                    <label htmlFor="contact-type" className="text-eyebrow font-bold uppercase tracking-[0.28em] text-white/50">
+                    <label htmlFor="contact-type" className="text-eyebrow font-bold uppercase tracking-[0.28em] text-white/55">
                       Type d'intervention
                     </label>
                     <select
                       id="contact-type"
                       name="type"
-                      className="mt-4 w-full appearance-none border-b border-white/[0.14] bg-transparent py-3 text-base md:text-body-lg text-white/60 transition-colors focus:border-signal-400"
+                      className="mt-4 w-full appearance-none border-b border-white/[0.18] bg-transparent py-3 text-base md:text-body-lg text-white/55 transition-colors focus:border-signal-400"
                     >
                       <option className="bg-[#070d18]">Déploiement antennes 4G/5G</option>
                       <option className="bg-[#070d18]">Faisceaux hertziens</option>
@@ -182,7 +182,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="mt-8">
-                    <label htmlFor="contact-message" className="text-eyebrow font-bold uppercase tracking-[0.28em] text-white/50">
+                    <label htmlFor="contact-message" className="text-eyebrow font-bold uppercase tracking-[0.28em] text-white/55">
                       Votre message
                       <span className="ml-1 text-signal-400" aria-hidden="true">*</span>
                       <span className="sr-only">(obligatoire)</span>
@@ -194,7 +194,7 @@ export default function ContactPage() {
                       required
                       aria-required="true"
                       placeholder="Décrivez votre besoin — localisation, technologie, délais…"
-                      className="mt-4 w-full resize-none border-b border-white/[0.14] bg-transparent py-3 text-base md:text-body-lg text-white/60 placeholder:text-white/50 transition-colors focus:border-signal-400"
+                      className="mt-4 w-full resize-none border-b border-white/[0.18] bg-transparent py-3 text-base md:text-body-lg text-white/55 placeholder:text-white/55 transition-colors focus:border-signal-400"
                     />
                   </div>
 
@@ -226,7 +226,7 @@ export default function ContactPage() {
           <div className="mt-20 border-t border-white/[0.07] pt-20">
             <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
               <div>
-                <div className="mb-2 text-eyebrow font-bold uppercase tracking-[0.28em] text-white/50">
+                <div className="mb-2 text-eyebrow font-bold uppercase tracking-[0.28em] text-white/55">
                   Localisation
                 </div>
                 <p className="text-body-lg text-white/55">
@@ -237,7 +237,7 @@ export default function ContactPage() {
                 href={mapsLinkHref}
                 target="_blank"
                 rel="noreferrer"
-                className="tap-target inline-flex items-center gap-1.5 text-body text-white/55 transition-colors hover:text-white/60"
+                className="tap-target inline-flex items-center gap-1.5 text-body text-white/55 transition-colors hover:text-white/55"
               >
                 Voir sur Google Maps
                 <ExternalLink className="size-3" />
@@ -272,7 +272,7 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="text-eyebrow font-bold uppercase tracking-[0.28em] text-white/50">
+      <label htmlFor={name} className="text-eyebrow font-bold uppercase tracking-[0.28em] text-white/55">
         {label}
         {required && <span className="ml-1 text-signal-400" aria-hidden="true">*</span>}
         {required && <span className="sr-only">(obligatoire)</span>}
@@ -285,7 +285,7 @@ function Field({
         required={required}
         aria-required={required}
         autoComplete={autoComplete}
-        className="mt-4 w-full border-b border-white/[0.14] bg-transparent py-3 text-base md:text-body-lg text-white/60 placeholder:text-white/50 transition-colors focus:border-signal-400"
+        className="mt-4 w-full border-b border-white/[0.18] bg-transparent py-3 text-base md:text-body-lg text-white/55 placeholder:text-white/55 transition-colors focus:border-signal-400"
       />
     </div>
   );

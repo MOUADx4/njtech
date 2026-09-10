@@ -49,7 +49,7 @@ export default function FranceCoverageMap() {
 
       {/* Tooltip */}
       <div
-        className={`pointer-events-none absolute left-3 top-3 z-10 rounded-xl border bg-white px-3.5 py-2.5 shadow-lg transition-all duration-150 ${
+        className={`pointer-events-none absolute left-3 top-3 z-10 rounded-2xl border bg-white px-3.5 py-2.5 shadow-lg transition-all duration-200 ${
           hovered ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1"
         } ${hovered === "11" ? "border-orange-200" : "border-navy-100"}`}
       >
@@ -138,11 +138,11 @@ export default function FranceCoverageMap() {
       {/* Légende */}
       <div className="mt-3 flex flex-wrap items-center gap-5 text-caption text-navy-500/65">
         <span className="flex items-center gap-2">
-          <span className="inline-block h-3 w-4 rounded-sm border border-orange-300 bg-[#FFF7ED]" />
+          <span className="inline-block h-3 w-4 rounded-lg border border-orange-300 bg-[#FFF7ED]" />
           Île-de-France — Siège social
         </span>
         <span className="flex items-center gap-2">
-          <span className="inline-block h-3 w-4 rounded-sm border border-blue-200 bg-[#EFF6FF]" />
+          <span className="inline-block h-3 w-4 rounded-lg border border-blue-200 bg-[#EFF6FF]" />
           Couverture nationale
         </span>
       </div>

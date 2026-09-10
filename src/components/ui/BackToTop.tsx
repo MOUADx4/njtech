@@ -31,13 +31,13 @@ export default function BackToTop() {
       className={[
         "fixed bottom-6 left-6 z-50",
         "grid size-11 cursor-pointer place-items-center rounded-lg",
-        "bg-navy-950/90 text-white/60 shadow-lg shadow-black/30 backdrop-blur-md",
+        "bg-navy-950/90 text-white/55 shadow-lg shadow-black/30 backdrop-blur-md",
         "transition-all duration-300 hover:bg-navy-900 hover:text-white hover:-translate-y-0.5",
         "active:scale-95",
         visible ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-4 pointer-events-none",
       ].join(" ")}
     >
-      {/* Progress arc — rounded-rect outline, pathLength="1" normalises dash math */}
+      {/* Arc de progression — contour arrondi ; pathLength="1" normalise le calcul des tirets */}
       <svg
         className="pointer-events-none absolute -inset-[3px]"
         width={50}
@@ -59,7 +59,7 @@ export default function BackToTop() {
           stroke="currentColor"
           strokeWidth={2}
           strokeLinecap="round"
-          className="text-signal-500 transition-[stroke-dashoffset] duration-150"
+          className="text-signal-500 transition-[stroke-dashoffset] duration-200"
           pathLength="1"
           strokeDasharray="1"
           strokeDashoffset={1 - progress}

@@ -65,7 +65,7 @@ export default function SectionHeader({
           className={cn(
             "mt-6 text-pretty leading-[1.8]",
             "text-base md:text-lead",
-            dark ? "text-white/52" : "text-navy-700/65",
+            dark ? "text-white/55" : "text-navy-700/65",
           )}
         >
           {description}

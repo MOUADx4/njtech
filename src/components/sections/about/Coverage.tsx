@@ -59,7 +59,7 @@ export default function Coverage() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="relative lg:col-span-6"
           >
-            <div className="overflow-hidden rounded-3xl border border-navy-100 bg-navy-50/30 p-5">
+            <div className="overflow-hidden rounded-2xl border border-navy-100 bg-navy-50/30 p-5">
               <FranceCoverageMap />
             </div>
 

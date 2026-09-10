@@ -63,7 +63,7 @@ function AnimatedStat({ value, label }: { value: string; label: string }) {
       >
         {value}
       </motion.div>
-      <div className="mt-2 text-eyebrow font-semibold uppercase tracking-[0.22em] text-white/60">
+      <div className="mt-2 text-eyebrow font-semibold uppercase tracking-[0.22em] text-white/55">
         {label}
       </div>
     </div>
@@ -110,7 +110,7 @@ export default function Hero() {
             {/* Overline */}
             <div className="mb-10 flex items-center gap-3">
               <span className="h-px w-8 shrink-0 bg-signal-500" />
-              <span className="text-caption font-semibold uppercase tracking-[0.32em] text-white/60">
+              <span className="text-caption font-semibold uppercase tracking-[0.32em] text-white/55">
                 Infrastructures Télécom &middot; France Métropolitaine
               </span>
             </div>
@@ -141,10 +141,10 @@ export default function Hero() {
             </h1>
 
             {/* Séparateur */}
-            <div className="my-9 h-px w-14 bg-white/[0.14]" />
+            <div className="my-9 h-px w-14 bg-white/[0.18]" />
 
             {/* Description */}
-            <p className="max-w-[50ch] text-lead leading-[1.78] text-white/48">
+            <p className="max-w-[50ch] text-lead leading-[1.78] text-white/55">
               Déploiement, intégration et maintenance d'infrastructures
               télécom 4G et 5G pour les grands opérateurs nationaux —
               Bouygues Telecom, Free Mobile, Orange, SFR — partout en France.
@@ -161,7 +161,7 @@ export default function Hero() {
               </Button>
               <a
                 href={`tel:${contact.phone.switchboardE164}`}
-                className="hidden items-center gap-2 text-body font-medium text-white/60 transition-colors hover:text-white/75 md:flex"
+                className="hidden items-center gap-2 text-body font-medium text-white/55 transition-colors hover:text-white/70 md:flex"
               >
                 <PhoneCall className="size-3.5" />
                 {contact.phone.switchboard}

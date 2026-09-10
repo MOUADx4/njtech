@@ -197,7 +197,7 @@ export default function ChatBot() {
 
       <div
         className={cn(
-          "mb-3 flex w-[340px] max-w-[calc(100vw-3rem)] flex-col border border-white/[0.09] bg-[#070d18] shadow-2xl shadow-black/60 transition-all duration-300",
+          "mb-3 flex w-[340px] max-w-[calc(100vw-3rem)] flex-col border border-white/[0.11] bg-[#070d18] shadow-2xl shadow-black/60 transition-all duration-300",
           open
             ? "scale-100 opacity-100 pointer-events-auto"
             : "scale-95 opacity-0 pointer-events-none",
@@ -225,7 +225,7 @@ export default function ChatBot() {
           <div className="flex items-center gap-1">
             <button
               onClick={reset}
-              className="grid size-9 place-items-center text-white/50 hover:text-white/70 transition-colors tap-target"
+              className="grid size-9 place-items-center text-white/55 hover:text-white/70 transition-colors tap-target"
               aria-label="Réinitialiser"
               title="Nouvelle conversation"
             >
@@ -233,7 +233,7 @@ export default function ChatBot() {
             </button>
             <button
               onClick={() => setOpen(false)}
-              className="grid size-9 place-items-center text-white/50 hover:text-white transition-colors tap-target"
+              className="grid size-9 place-items-center text-white/55 hover:text-white transition-colors tap-target"
               aria-label="Fermer"
             >
               <X className="size-4" />
@@ -261,7 +261,7 @@ export default function ChatBot() {
                 className={cn(
                   "max-w-[86%] px-3.5 py-2.5 text-base md:text-body leading-[1.68]",
                   msg.role === "bot"
-                    ? "border border-white/[0.07] bg-white/[0.04] text-white/72"
+                    ? "border border-white/[0.07] bg-white/[0.04] text-white/70"
                     : "bg-signal-500 text-white",
                 )}
               >
@@ -292,14 +292,14 @@ export default function ChatBot() {
         {/* Suggestions */}
         {!animating && suggestions.length > 0 && (
           <div className="shrink-0 border-t border-white/[0.07] p-3 space-y-1.5 overflow-y-auto" style={{ maxHeight: "180px" }}>
-            <p className="text-eyebrow font-bold uppercase tracking-[0.22em] text-white/50 px-1 pb-0.5">
+            <p className="text-eyebrow font-bold uppercase tracking-[0.22em] text-white/55 px-1 pb-0.5">
               Choisissez une option
             </p>
             {suggestions.map((s) => (
               <button
                 key={s.label}
                 onClick={() => handleSuggestion(s)}
-                className="tap-target w-full cursor-pointer text-left px-3.5 py-2.5 text-body text-white/55 border border-white/[0.07] transition-all duration-150 hover:border-signal-500/40 hover:bg-white/[0.04] hover:text-white/90 active:scale-[0.99]"
+                className="tap-target w-full cursor-pointer text-left px-3.5 py-2.5 text-body text-white/55 border border-white/[0.07] transition-all duration-200 hover:border-signal-500/40 hover:bg-white/[0.04] hover:text-white/95 active:scale-[0.99]"
               >
                 {s.label}
               </button>
