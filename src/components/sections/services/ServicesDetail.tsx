@@ -57,9 +57,7 @@ function ServiceBlock({
           >
             <div className="flex items-baseline gap-4">
               <span className="text-navy-100 text-6xl font-bold select-none">{s.n}</span>
-              <div className="bg-navy-950 text-signal-400 grid size-11 place-items-center rounded-2xl">
-                <s.icon className="size-5" />
-              </div>
+              <s.icon className="text-signal-600 size-11" strokeWidth={1.5} />
             </div>
             <h2 className="text-h2 text-navy-950 md:text-h2 mt-6 leading-tight font-semibold tracking-tight">
               {s.title}

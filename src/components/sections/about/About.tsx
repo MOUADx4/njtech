@@ -31,7 +31,7 @@ const pillars = [
 
 export default function About() {
   return (
-    <section id="about" className="relative overflow-hidden bg-white py-32">
+    <section id="about" className="bg-surface-muted relative overflow-hidden py-32">
       <Container className="relative">
         <div className="grid gap-20 lg:grid-cols-12 lg:gap-24">
           <div className="lg:col-span-5">
@@ -82,13 +82,11 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.7, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
-                  className="group border-navy-100 hover:border-signal-200 hover:shadow-navy-900/6 relative overflow-hidden rounded-2xl border bg-white p-7 transition-all hover:-translate-y-1.5 hover:shadow-2xl"
+                  className="group border-navy-100 hover:border-signal-200 shadow-card hover:shadow-card-hover relative overflow-hidden rounded-2xl border bg-white p-7 transition-all hover:-translate-y-1.5"
                 >
                   <div className="bg-signal-50 absolute -top-14 -right-14 size-28 rounded-full opacity-0 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100" />
                   <div className="relative">
-                    <div className="bg-navy-950 text-signal-400 grid size-11 place-items-center rounded-2xl">
-                      <p.icon className="size-5" />
-                    </div>
+                    <p.icon className="text-signal-600 size-11" strokeWidth={1.5} />
                     <h3 className="text-navy-900 mt-5 text-base font-semibold">{p.title}</h3>
                     <p className="text-body-lg text-navy-600/80 mt-2 leading-relaxed">{p.text}</p>
                   </div>

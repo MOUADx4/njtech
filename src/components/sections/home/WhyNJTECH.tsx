@@ -126,9 +126,7 @@ export default function WhyNJTECH() {
           <div className="relative grid gap-10 md:grid-cols-[auto_1fr] md:items-center md:gap-16">
             {/* Gauche — chiffre clé */}
             <div className="flex items-center gap-6 md:flex-col md:items-start md:gap-4">
-              <div className="border-signal-500/30 bg-signal-500/[0.12] inline-flex size-14 items-center justify-center rounded-2xl border">
-                <hero.icon className="text-signal-400 size-7" />
-              </div>
+              <hero.icon className="text-signal-400 size-14" strokeWidth={1.5} />
               <div>
                 <div className="text-signal-400 text-[5rem] leading-none font-black tracking-[-0.05em] md:text-[7rem]">
                   <AnimatedCounter value={hero.value} duration={1200} />
@@ -168,9 +166,7 @@ export default function WhyNJTECH() {
             >
               <div className="bg-signal-500/0 group-hover:bg-signal-500/[0.1] pointer-events-none absolute -top-10 -right-10 size-40 rounded-full blur-3xl transition-all duration-500" />
               <div className="relative">
-                <div className="border-signal-500/20 bg-signal-500/[0.1] text-signal-400 mb-5 inline-flex size-10 items-center justify-center rounded-2xl border">
-                  <f.icon className="size-4.5" />
-                </div>
+                <f.icon className="text-signal-400 mb-5 size-10" strokeWidth={1.5} />
                 <div className="text-h1 leading-none font-black tracking-[-0.04em] text-white">
                   <AnimatedCounter value={f.value} duration={1600} />
                   {f.unit && <span className="text-[2rem]">{f.unit}</span>}
@@ -195,9 +191,7 @@ export default function WhyNJTECH() {
             >
               <div className="bg-signal-500/0 group-hover:bg-signal-500/[0.07] pointer-events-none absolute -top-10 -right-10 size-28 rounded-full blur-2xl transition-all duration-500" />
               <div className="relative">
-                <div className="text-signal-400 mb-4 inline-flex size-9 items-center justify-center rounded-2xl border border-white/[0.11] bg-white/[0.04]">
-                  <s.icon className="size-4" />
-                </div>
+                <s.icon className="text-signal-400 mb-4 size-10" strokeWidth={1.5} />
                 <div className="text-h2 leading-none font-black tracking-[-0.04em] text-white">
                   <AnimatedCounter value={s.value} duration={1600} />
                   {s.unit && <span className="text-h3">{s.unit}</span>}

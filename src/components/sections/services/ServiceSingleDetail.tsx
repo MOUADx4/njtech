@@ -3,27 +3,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Building2, Antenna, Cable, Wrench, ArrowRight, ArrowLeft } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { SERVICES, type ServiceData } from "@/lib/services-data";
-
-const ICONS: Record<ServiceData["icon"], LucideIcon> = {
-  Building2,
-  Antenna,
-  Cable,
-  Wrench,
-};
+import { SERVICE_ICONS } from "@/lib/service-icons";
 
 export default function ServiceSingleDetail({ service }: { service: ServiceData }) {
-  const Icon = ICONS[service.icon];
+  const Icon = SERVICE_ICONS[service.icon];
   const related = SERVICES.filter((s) => s.slug !== service.slug);
 
   return (
     <>
       {/* ── Contenu principal ── */}
-      <section className="bg-white py-20">
+      <section className="bg-surface-muted py-20">
         <Container>
           {/* Breadcrumb */}
           <motion.div
@@ -50,9 +43,7 @@ export default function ServiceSingleDetail({ service }: { service: ServiceData 
             >
               <div className="flex items-baseline gap-4">
                 <span className="text-navy-100 text-6xl font-bold select-none">{service.n}</span>
-                <div className="bg-navy-950 text-signal-400 grid size-12 place-items-center rounded-2xl">
-                  <Icon className="size-5" />
-                </div>
+                <Icon className="text-signal-600 size-12" strokeWidth={1.5} />
               </div>
 
               <h2 className="text-navy-950 mt-6 text-[2rem] leading-tight font-semibold tracking-tight md:text-[2.6rem]">
@@ -122,7 +113,7 @@ export default function ServiceSingleDetail({ service }: { service: ServiceData 
 
           <div className="grid gap-4 sm:grid-cols-3">
             {related.map((r, i) => {
-              const RelIcon = ICONS[r.icon];
+              const RelIcon = SERVICE_ICONS[r.icon];
               return (
                 <motion.div
                   key={r.slug}
@@ -133,11 +124,9 @@ export default function ServiceSingleDetail({ service }: { service: ServiceData 
                 >
                   <Link
                     href={`/services/${r.slug}`}
-                    className="group border-navy-100 hover:border-signal-200 flex h-full flex-col rounded-2xl border bg-white p-6 transition-all duration-300 hover:shadow-md"
+                    className="group border-navy-100 hover:border-signal-200 shadow-card hover:shadow-card-hover flex h-full flex-col rounded-2xl border bg-white p-6 transition-all duration-300"
                   >
-                    <div className="bg-navy-950 text-signal-400 grid size-10 place-items-center rounded-2xl">
-                      <RelIcon className="size-4.5" />
-                    </div>
+                    <RelIcon className="text-signal-600 size-10" strokeWidth={1.5} />
                     <h4 className="text-lead text-navy-900 mt-4 font-semibold">{r.title}</h4>
                     <p className="md:text-body text-navy-600/65 mt-2 flex-1 text-base leading-relaxed">
                       {r.points[0]} · {r.points[1]}

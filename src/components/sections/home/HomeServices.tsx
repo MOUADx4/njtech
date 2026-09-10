@@ -22,7 +22,10 @@ const services = SERVICES.map((s) => ({
 
 export default function Services() {
   return (
-    <section id="services" className="noise bg-navy-950 relative overflow-hidden py-36 text-white">
+    <section
+      id="services"
+      className="noise bg-navy-950 relative overflow-hidden border-t border-white/[0.07] py-36 text-white"
+    >
       <div className="bg-signal-600/[0.065] pointer-events-none absolute top-0 left-1/2 -z-0 h-[52rem] w-[72rem] -translate-x-1/2 rounded-full blur-[130px]" />
 
       <Container className="relative">
@@ -71,9 +74,7 @@ export default function Services() {
               <div className="relative grid gap-8 md:grid-cols-[1fr_auto] md:items-start">
                 <div>
                   {/* Icône */}
-                  <div className="text-signal-400 mb-6 inline-flex size-11 items-center justify-center rounded-2xl border border-white/[0.07] bg-white/[0.04]">
-                    <s.icon className="size-4.5" />
-                  </div>
+                  <s.icon className="text-signal-400 mb-6 size-11" strokeWidth={1.5} />
 
                   {/* Titre */}
                   <h3 className="text-h4 leading-tight font-semibold tracking-tight text-white">

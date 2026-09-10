@@ -17,7 +17,7 @@ const trustedLogos = [
 
 export default function HomeCta() {
   return (
-    <section className="noise bg-navy-950 relative overflow-hidden py-36 text-white">
+    <section className="noise bg-navy-950 relative overflow-hidden border-t border-white/[0.07] py-36 text-white">
       <div className="from-signal-600/[0.11] to-navy-800/20 pointer-events-none absolute inset-0 bg-gradient-to-br via-transparent" />
       <div className="absolute top-0 left-1/2 h-px w-[36rem] -translate-x-1/2 bg-gradient-to-r from-transparent via-white/18 to-transparent" />
 

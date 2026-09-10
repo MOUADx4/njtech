@@ -35,7 +35,7 @@ const trustBadges = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-[#020912] text-white">
+    <footer className="bg-navy-950 relative overflow-hidden text-white">
       <div className="relative border-b border-white/[0.07]">
         <div className="from-signal-600/[0.08] absolute inset-0 bg-gradient-to-r via-transparent to-transparent" />
         <Container className="relative flex flex-col items-start justify-between gap-6 py-10 md:flex-row md:items-center">

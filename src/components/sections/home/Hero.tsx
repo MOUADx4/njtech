@@ -88,7 +88,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative flex min-h-screen flex-col overflow-hidden bg-[#070d18] text-white">
+    <section className="bg-surface-raised relative flex min-h-screen flex-col overflow-hidden text-white">
       {showVideo && (
         <video
           autoPlay
@@ -103,8 +103,8 @@ export default function Hero() {
         </video>
       )}
 
-      <div className="absolute inset-0 bg-gradient-to-b from-[#070d18]/70 via-[#070d18]/30 to-[#070d18]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#070d18]/80 via-transparent to-transparent" />
+      <div className="from-surface-raised/70 via-surface-raised/30 to-surface-raised absolute inset-0 bg-gradient-to-b" />
+      <div className="from-surface-raised/80 absolute inset-0 bg-gradient-to-r via-transparent to-transparent" />
 
       <div className="relative z-10 flex flex-1 items-center">
         <Container className="pt-40 pb-16">

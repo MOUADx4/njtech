@@ -35,7 +35,10 @@ const steps = [
 
 export default function Methodology() {
   return (
-    <section id="methodology" className="relative scroll-mt-20 overflow-hidden bg-white py-32">
+    <section
+      id="methodology"
+      className="bg-surface-muted relative scroll-mt-20 overflow-hidden py-32"
+    >
       <Container>
         <SectionHeader
           align="center"
@@ -71,7 +74,7 @@ export default function Methodology() {
                   </div>
                 </div>
 
-                <div className="border-navy-100 hover:shadow-navy-900/5 rounded-2xl border bg-white p-7 transition-all duration-300 hover:shadow-xl">
+                <div className="border-navy-100 shadow-card hover:shadow-card-hover rounded-2xl border bg-white p-7 transition-all duration-300">
                   <div className="text-caption text-signal-500 font-bold tracking-[0.2em] uppercase">
                     {s.n}
                   </div>

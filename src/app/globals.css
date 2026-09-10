@@ -15,6 +15,10 @@
   --color-navy-800: #081542;
   --color-navy-900: #040d2a;
   --color-navy-950: #020816;
+  /* Surface sombre élevée — héros, page contact, panneau du chatbot.
+     Volontairement un cran plus claire que navy-950 pour détacher ces
+     surfaces du fond de section. */
+  --color-surface-raised: #070d18;
 
   --color-signal-50: #eff8ff;
   --color-signal-100: #dbeefe;
@@ -26,6 +30,15 @@
   --color-signal-700: #005f9e;
   --color-signal-800: #044f82;
   --color-signal-900: #09426c;
+
+  /* Fond des sections claires. Les cartes blanches s'y détachent, au lieu
+     de disparaître sur un fond blanc identique. */
+  --color-surface-muted: #f5f6f8;
+
+  /* Ombres — halo ambiant diffus plutôt qu'une ombre portée dure : la carte
+     semble posée sur la page, sans effet « collé au-dessus ». */
+  --shadow-card: 0 0 24px 4px rgb(2 8 22 / 0.05);
+  --shadow-card-hover: 0 4px 28px 2px rgb(2 8 22 / 0.1);
 
   --font-sans: var(--font-inter);
   --font-display: var(--font-space-grotesk);
@@ -97,6 +110,14 @@ h6 {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* Les navigateurs appliquent `cursor: default` aux <button>. On rétablit le
+   curseur main partout, plutôt que de l'ajouter au cas par cas — ce qui
+   laissait quatre boutons sans retour visuel. */
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]) {
+  cursor: pointer;
 }
 
 /* ── Cibles tactiles ───────────────────────────────────────────────────────

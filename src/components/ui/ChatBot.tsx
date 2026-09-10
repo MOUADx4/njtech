@@ -214,7 +214,7 @@ export default function ChatBot() {
     <div className="pointer-events-none fixed right-6 bottom-6 z-50 flex flex-col items-end">
       <div
         className={cn(
-          "mb-3 flex w-[340px] max-w-[calc(100vw-3rem)] flex-col border border-white/[0.11] bg-[#070d18] shadow-2xl shadow-black/60 transition-all duration-300",
+          "bg-surface-raised mb-3 flex w-[340px] max-w-[calc(100vw-3rem)] flex-col border border-white/[0.11] shadow-2xl shadow-black/60 transition-all duration-300",
           open
             ? "pointer-events-auto scale-100 opacity-100"
             : "pointer-events-none scale-95 opacity-0",

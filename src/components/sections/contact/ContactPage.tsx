@@ -90,7 +90,7 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      <section className="bg-[#070d18] pt-4 pb-32 text-white">
+      <section className="bg-surface-raised pt-4 pb-32 text-white">
         <Container>
           {/* Bordure supérieure */}
           <div className="mb-20 h-px bg-white/[0.07]" />
@@ -217,11 +217,11 @@ export default function ContactPage() {
                       name="type"
                       className="md:text-body-lg focus:border-signal-400 mt-4 w-full appearance-none border-b border-white/[0.18] bg-transparent py-3 text-base text-white/55 transition-colors"
                     >
-                      <option className="bg-[#070d18]">Déploiement antennes 4G/5G</option>
-                      <option className="bg-[#070d18]">Faisceaux hertziens</option>
-                      <option className="bg-[#070d18]">Bureau d'étude / Plans</option>
-                      <option className="bg-[#070d18]">Maintenance & SAV</option>
-                      <option className="bg-[#070d18]">Autre</option>
+                      <option className="bg-surface-raised">Déploiement antennes 4G/5G</option>
+                      <option className="bg-surface-raised">Faisceaux hertziens</option>
+                      <option className="bg-surface-raised">Bureau d'étude / Plans</option>
+                      <option className="bg-surface-raised">Maintenance & SAV</option>
+                      <option className="bg-surface-raised">Autre</option>
                     </select>
                   </div>
 

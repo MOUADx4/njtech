@@ -31,7 +31,7 @@ const features = [
 
 export default function Coverage() {
   return (
-    <section id="coverage" className="relative scroll-mt-20 overflow-hidden bg-white py-32">
+    <section id="coverage" className="bg-surface-muted relative scroll-mt-20 overflow-hidden py-32">
       <Container className="relative">
         <div className="grid items-center gap-16 lg:grid-cols-12">
           <div className="lg:col-span-6">
@@ -53,7 +53,7 @@ export default function Coverage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.7, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
-                  className="border-navy-100 hover:border-signal-200 rounded-2xl border bg-white p-5 transition-colors"
+                  className="border-navy-100 hover:border-signal-200 shadow-card rounded-2xl border bg-white p-5 transition-colors"
                 >
                   <div className="bg-signal-50 text-signal-600 grid size-10 place-items-center rounded-lg">
                     <f.icon className="size-4" />
@@ -76,7 +76,7 @@ export default function Coverage() {
               <FranceCoverageMap />
             </div>
 
-            <div className="border-navy-100 absolute -bottom-5 -left-4 hidden rounded-2xl border bg-white px-5 py-4 shadow-2xl md:block">
+            <div className="border-navy-100 shadow-card absolute -bottom-5 -left-4 hidden rounded-2xl border bg-white px-5 py-4 shadow-2xl md:block">
               <div className="flex items-center gap-3">
                 <div className="bg-navy-950 text-signal-400 grid size-10 place-items-center rounded-lg">
                   <Radio className="size-4" />

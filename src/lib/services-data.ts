@@ -4,7 +4,7 @@ export type ServiceSlug =
 export type ServiceData = {
   n: string;
   slug: ServiceSlug;
-  icon: "Building2" | "Antenna" | "Cable" | "Wrench";
+  icon: "pylone" | "antenne" | "plan" | "cle";
   title: string;
   hero: {
     label: string;
@@ -28,7 +28,7 @@ export const SERVICES: ServiceData[] = [
   {
     n: "01",
     slug: "amenagement-sites-radio",
-    icon: "Building2",
+    icon: "pylone",
     title: "Aménagement de sites radio",
     hero: {
       label: "Aménagement de sites radio",
@@ -62,7 +62,7 @@ export const SERVICES: ServiceData[] = [
   {
     n: "02",
     slug: "deploiement-antennes",
-    icon: "Antenna",
+    icon: "antenne",
     title: "Déploiement antennes & faisceaux",
     hero: {
       label: "Déploiement antennes & faisceaux",
@@ -96,7 +96,7 @@ export const SERVICES: ServiceData[] = [
   {
     n: "03",
     slug: "bureau-etude",
-    icon: "Cable",
+    icon: "plan",
     title: "Bureau d'étude",
     hero: {
       label: "Bureau d'étude",
@@ -130,7 +130,7 @@ export const SERVICES: ServiceData[] = [
   {
     n: "04",
     slug: "maintenance-sav",
-    icon: "Wrench",
+    icon: "cle",
     title: "Maintenance & SAV",
     hero: {
       label: "Maintenance & SAV",
