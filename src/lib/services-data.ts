@@ -57,7 +57,7 @@ export const SERVICES: ServiceData[] = [
       "Préparation des ancrages et supports",
       "Mise en conformité des sites existants",
     ],
-    image: "/images/rural-tower.png",
+    image: "/images/rural-tower.webp",
   },
   {
     n: "02",
@@ -91,7 +91,7 @@ export const SERVICES: ServiceData[] = [
       "Équipements RAN (Nokia, Ericsson, Huawei)",
       "Calage azimutal et électrique",
     ],
-    image: "/images/technician-climbing.png",
+    image: "/images/technician-climbing.webp",
   },
   {
     n: "03",
@@ -125,7 +125,7 @@ export const SERVICES: ServiceData[] = [
       "Études de propagation et couverture",
       "Suivi de conformité et dossiers réglementaires",
     ],
-    image: "/images/bts-cabinet.png",
+    image: "/images/bts-cabinet.webp",
   },
   {
     n: "04",
@@ -159,7 +159,7 @@ export const SERVICES: ServiceData[] = [
       "Préparation et gestion du matériel",
       "Vérification avant remise en service",
     ],
-    image: "/images/install-5g.png",
+    image: "/images/install-5g.webp",
   },
 ];
 

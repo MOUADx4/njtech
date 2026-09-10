@@ -55,7 +55,7 @@ export default function About() {
               className="relative mt-12 overflow-hidden rounded-2xl"
             >
               <Image
-                src="/images/team-njtech.png"
+                src="/images/team-njtech.webp"
                 alt="Équipe NJTECH sur site"
                 width={1200}
                 height={900}

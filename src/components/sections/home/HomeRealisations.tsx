@@ -9,7 +9,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 
 const items = [
   {
-    image: "/images/install-5g.png",
+    image: "/images/install-5g.webp",
     tag: "5G — Urbain",
     title: "Pylône 5G en milieu dense",
     subtitle: "Calage faisceaux + intégration baseband",
@@ -17,7 +17,7 @@ const items = [
     rowSpan: "",
   },
   {
-    image: "/images/technician-climbing.png",
+    image: "/images/technician-climbing.webp",
     tag: "Antennes",
     title: "Intervention en hauteur",
     subtitle: "Travaux sur pylône — EPI complets",
@@ -25,7 +25,7 @@ const items = [
     rowSpan: "sm:row-span-2",
   },
   {
-    image: "/images/team-njtech.png",
+    image: "/images/team-njtech.webp",
     tag: "Équipe terrain",
     title: "Coordination chantier",
     subtitle: "Deux équipes mobiles + supervision",
@@ -33,7 +33,7 @@ const items = [
     rowSpan: "",
   },
   {
-    image: "/images/bts-cabinet.png",
+    image: "/images/bts-cabinet.webp",
     tag: "BTS",
     title: "Armoire technique",
     subtitle: "Chemin de câbles, intégration baie",
@@ -41,7 +41,7 @@ const items = [
     rowSpan: "",
   },
   {
-    image: "/images/rural-tower.png",
+    image: "/images/rural-tower.webp",
     tag: "Zone rurale",
     title: "Couverture zone blanche",
     subtitle: "Déploiement et mise en service",
@@ -49,7 +49,7 @@ const items = [
     rowSpan: "",
   },
   {
-    image: "/images/hero-tower-sunset.png",
+    image: "/images/hero-tower-sunset.webp",
     tag: "Infrastructure",
     title: "Site finalisé & réceptionné",
     subtitle: "Conformité validée, mise en exploitation",

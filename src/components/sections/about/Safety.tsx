@@ -39,7 +39,7 @@ export default function Safety() {
           >
             <div className="relative overflow-hidden rounded-2xl">
               <Image
-                src="/images/safety-ppe.png"
+                src="/images/safety-ppe.webp"
                 alt="Équipements de protection individuelle"
                 width={1100}
                 height={1100}

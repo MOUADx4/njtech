@@ -12,21 +12,21 @@ const sections = [
       "Sites neufs ou existants — toits terrasses, pylônes, infrastructures en milieu urbain et rural. Coordination complète des travaux de génie civil et d'installation.",
     items: [
       {
-        image: "/images/rural-tower.png",
+        image: "/images/rural-tower.webp",
         tag: "Zone rurale",
         title: "Couverture zone blanche",
         subtitle: "Déploiement et mise en service",
         span: "",
       },
       {
-        image: "/images/hero-tower-sunset.png",
+        image: "/images/hero-tower-sunset.webp",
         tag: "Infrastructure",
         title: "Site finalisé & réceptionné",
         subtitle: "Conformité validée, mise en exploitation",
         span: "",
       },
       {
-        image: "/images/team-njtech.png",
+        image: "/images/team-njtech.webp",
         tag: "Équipe terrain",
         title: "Coordination chantier",
         subtitle: "Deux équipes mobiles + supervision",
@@ -41,14 +41,14 @@ const sections = [
       "Installation et calage d'antennes sectorielles, faisceaux hertziens, équipements RAN. Mise en service et optimisation des paramètres RF.",
     items: [
       {
-        image: "/images/install-5g.png",
+        image: "/images/install-5g.webp",
         tag: "5G — Urbain",
         title: "Pylône 5G en milieu dense",
         subtitle: "Calage faisceaux + intégration baseband",
         span: "lg:col-span-2",
       },
       {
-        image: "/images/technician-climbing.png",
+        image: "/images/technician-climbing.webp",
         tag: "Antennes",
         title: "Intervention en hauteur",
         subtitle: "Travaux sur pylône — EPI complets",
@@ -63,7 +63,7 @@ const sections = [
       "Plans DP / DTB / DIM / APS / APD / DOE, photomontages et suivi de conformité. Expertise technique au service de vos projets les plus complexes.",
     items: [
       {
-        image: "/images/bts-cabinet.png",
+        image: "/images/bts-cabinet.webp",
         tag: "BTS",
         title: "Armoire technique & raccordements",
         subtitle: "Chemin de câbles, intégration baie",
@@ -78,14 +78,14 @@ const sections = [
       "Préparation matériel, interventions correctives, vérification avant remise en service. Réactivité garantie sous 48h sur l'ensemble du territoire.",
     items: [
       {
-        image: "/images/install-5g.png",
+        image: "/images/install-5g.webp",
         tag: "Maintenance",
         title: "Intervention corrective",
         subtitle: "Diagnostic & remise en service",
         span: "",
       },
       {
-        image: "/images/team-njtech.png",
+        image: "/images/team-njtech.webp",
         tag: "SAV",
         title: "Préparation matériel",
         subtitle: "Contrôle qualité avant déploiement",
